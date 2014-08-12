@@ -1,0 +1,36 @@
+{
+  "name": "freelancer",
+  "description": "A one page HTML theme for freelancers created by Start Bootstrap",
+  "version": "1.0",
+  "author": "David Miller",
+  "homepage": "http://startbootstrap.com/template-overviews/freelancer/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IronSummitMedia/startbootstrap-freelancer.git"
+  },
+  "license": "Apache 2.0",
+  "main": [
+    "less/freelancer.less",
+    "dist/*"
+  ],
+  "ignore": [
+    "README.md",
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0"
+  },
+  "devDependencies": {
+    "font-awesome": "~4.1.0",
+    "html5shiv": "~3.7.0",
+    "respond": "~1.4.2"
+  },
+  "authors": [
+    "David Miller <david@ironsummitmedia.com>"
+  ],
+  "private": true
+}
