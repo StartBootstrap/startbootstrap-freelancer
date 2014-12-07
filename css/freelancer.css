@@ -443,3 +443,8 @@ footer .footer-below {
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
 }
+
+.portfolio-modal .modal-backdrop {
+    display: none;
+    opacity: 0;
+}
