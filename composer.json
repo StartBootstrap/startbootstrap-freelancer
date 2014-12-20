@@ -1,0 +1,5 @@
+{
+    "require": {
+        "symfony/yaml": "3.0.*@dev"
+    }
+}
