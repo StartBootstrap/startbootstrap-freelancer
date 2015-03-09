@@ -6,12 +6,15 @@ $(function() {
             // additional error messages or events
         },
         submitSuccess: function($form, event) {
-            event.preventDefault(); // prevent default submit behaviour
+            // Prevent spam click and default submit behaviour
+            $("#btnSubmit").attr("disabled", true); 
+            event.preventDefault();
+            
             // get values from FORM
-            var name = $("input#name").val();
-            var email = $("input#email").val();
-            var phone = $("input#phone").val();
-            var message = $("textarea#message").val();
+            var name = $("#name").val();
+            var email = $("#email").val();
+            var phone = $("#phone").val();
+            var message = $("#message").val();
             var firstName = name; // For Success/Failure Message
             // Check for white space in name for Success/Fail message
             if (firstName.indexOf(' ') >= 0) {
@@ -28,7 +31,8 @@ $(function() {
                 },
                 cache: false,
                 success: function() {
-                    // Success message
+                    // Enable button & show success message
+                    $("#btnSubmit").attr("disabled", false);
                     $('#success').html("<div class='alert alert-success'>");
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
@@ -36,7 +40,6 @@ $(function() {
                         .append("<strong>Your message has been sent. </strong>");
                     $('#success > .alert-success')
                         .append('</div>');
-
                     //clear all fields
                     $('#contactForm').trigger("reset");
                 },
@@ -62,7 +65,6 @@ $(function() {
         $(this).tab("show");
     });
 });
-
 
 /*When clicking on Full hide fail/success boxes */
 $('#name').focus(function() {
