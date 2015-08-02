@@ -260,6 +260,17 @@ section.success a.active {
     }
 }
 
+.btn-color:hover,
+.btn-color:focus,
+.btn-color:active,
+.btn-color{
+  /*Change to update Submit button color when changing your main colors*/
+  /*background: #116493;
+  color: #fff;
+  border: solid 2px #fff;
+  */
+}
+
 .btn-outline {
     margin-top: 15px;
     border: solid 2px #fff;
