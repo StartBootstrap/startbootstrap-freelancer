@@ -184,6 +184,15 @@ section.success {
     background: #18bc9c;
 }
 
+section.success a,
+section.success a:hover,
+section.success a:focus,
+section.success a:active,
+section.success a.active {
+    outline: 0;
+    color: #2c3e50;
+}
+
 @media(max-width:767px) {
     section {
         padding: 75px 0;
@@ -442,4 +451,9 @@ footer .footer-below {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
+}
+
+.portfolio-modal .modal-backdrop {
+    display: none;
+    opacity: 0;
 }
