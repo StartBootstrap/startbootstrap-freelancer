@@ -23,7 +23,7 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #2B60DE;
+
 }
 
 h1,
@@ -64,15 +64,15 @@ hr.star-light {
 
 hr.star-light:after {
     color: #fff;
-    background-color: #2B60DE;
+    background-color: #15317E;
 }
 
 hr.star-primary {
-    border-color: #2B60DE;
+    border-color: #15317E;
 }
 
 hr.star-primary:after {
-    color: #2B60DE;
+    color: #15317E;
     background-color: #fff;
 }
 
@@ -83,7 +83,7 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #fff;
-    background: #2B60DE;
+    background: #15317E;
 }
 
 header .container {
@@ -142,7 +142,7 @@ header .intro-text .skills {
     }
 
     .navbar-fixed-top .navbar-brand:hover {
-    color:#2B60DE;
+    color:#fff;
     }
 
     .navbar-fixed-top.navbar-shrink {
@@ -155,7 +155,7 @@ header .intro-text .skills {
 }
 
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus:hover{
-  color:#2B60DE;
+  color:#fff;
 }
 
 .navbar {
@@ -184,7 +184,7 @@ header .intro-text .skills {
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
-  background-color:#2B60DE;
+  background-color:#15317E;
 }
 
 section {
@@ -198,7 +198,7 @@ section h2 {
 
 section.success {
     color: #fff;
-    background: #2B60DE;
+    background: #15317E;
 }
 
 section.success a,
@@ -220,11 +220,11 @@ section.success a.active {
     }
 }
 #portfolio {
-  color:#2B60DE;
+  color:#15317E;
 }
 
 #contact{
-  color:#2B60DE;
+  color:#15317E;
 }
 
 #contactme{
@@ -244,19 +244,23 @@ section.success a.active {
     max-width: 400px;
 }
 
+.img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img{
+  max-width:400px;
+}
+
 #portfolio .portfolio-item .portfolio-link .caption {
     position: absolute;
     width: 345px;
     height: 260px;
     opacity: 0;
-    background: #2B60DE;
+    background: #15317E;
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption:hover {
-    opacity: 1;
+    opacity: .5;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption .caption-content {
@@ -303,7 +307,7 @@ section.success a.active {
 .btn-outline:active,
 .btn-outline.active {
     border: solid 2px #fff;
-    color: #2B60DE;
+    color: #15317E;
     background: #fff;
 }
 
@@ -355,7 +359,7 @@ footer h3 {
 
 footer .footer-above {
     padding-top: 50px;
-    background-color: #2B60DE;
+    background-color: #15317E;
 }
 
 footer .footer-col {
@@ -364,7 +368,7 @@ footer .footer-col {
 
 footer .footer-below {
     padding: 25px 0;
-    background-color: #2B60DE;
+    background-color: #15317E;
     text-align: center;
 }
 
@@ -424,6 +428,8 @@ footer .footer-below {
 
 .portfolio-modal .modal-content img {
     margin-bottom: 30px;
+    height:300px;
+    width:400px;
 }
 
 .portfolio-modal .modal-content .item-details {
@@ -473,4 +479,8 @@ footer .footer-below {
 .pic {
   height:260px;
   width:345px;
+}
+
+.portfolio-modal .modal-content h2{
+  color:#15317E;
 }
