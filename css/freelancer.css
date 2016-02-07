@@ -69,8 +69,8 @@ hr.star-primary:after {
 }
 header {
   text-align: center;
-  background: #18bc9c;
-  color: white;
+  background: #ffffff;
+  color:#777777;
 }
 header .container {
   padding-top: 100px;
@@ -125,7 +125,7 @@ header .intro-text .skills {
 }
 .navbar {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
+  #text-transform: uppercase;
   font-weight: 700;
 }
 .navbar a:focus {
@@ -142,15 +142,15 @@ header .intro-text .skills {
   border: none;
 }
 section {
-  padding: 100px 0;
+  padding: 70px 0;
 }
 section h2 {
   margin: 0;
   font-size: 3em;
 }
 section.success {
-  background: #18bc9c;
-  color: white;
+  background: #ffffff;
+  color: #777777;
 }
 section.success a,
 section.success a:hover,
