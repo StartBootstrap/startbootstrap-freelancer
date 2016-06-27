@@ -8,9 +8,16 @@
 $(function() {
     $('body').on('click', '.page-scroll a', function(event) {
         var $anchor = $(this);
-        $('html, body').stop().animate({
+
+        $('html, body')
+        .bind('scroll mousedown DOMMouseScroll mousewheel keyup', function(){
+          $('html, body').stop();
+        })
+        .stop()
+        .animate({
             scrollTop: $($anchor.attr('href')).offset().top
         }, 1500, 'easeInOutExpo');
+
         event.preventDefault();
     });
 });
@@ -29,7 +36,7 @@ $(function() {
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({
     target: '.navbar-fixed-top'
-})
+});
 
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a:not(.dropdown-toggle)').click(function() {
