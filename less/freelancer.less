@@ -2,6 +2,7 @@
 @import "mixins.less";
 
 body {
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	overflow-x: hidden;
 }
 
@@ -18,7 +19,7 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-	color: @brand-success;
+	color: @theme-success;
 	outline: none;
 }
 
@@ -54,17 +55,17 @@ hr.star-light {
 }
 
 hr.star-light:after {
-    background-color: @brand-success;
+    background-color: @theme-success;
     color: white;
 }
 
 hr.star-primary {
-    border-color: @brand-primary;
+    border-color: @theme-primary;
 }
 
 hr.star-primary:after {
     background-color: white;
-    color: @brand-primary;
+    color: @theme-primary;
 }
 
 .img-centered {
@@ -73,7 +74,7 @@ hr.star-primary:after {
 
 header {
 	text-align: center;
-	background: @brand-success;
+	background: @theme-success;
 	color: white;
 	.container {
 		padding-top: 100px;
@@ -115,8 +116,68 @@ header {
 	}
 }
 
+.navbar-custom {
+	background: @theme-primary;
+	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	border: none;
+	a:focus {
+		outline: none;
+	}
+	.navbar-brand {
+		color: white;
+		&:hover,
+		&:focus,
+		&:active,
+		&.active {
+			color: white;
+		}
+	}
+	.navbar-nav {
+		letter-spacing: 1px;
+		li {
+			a {
+				color: white;
+				&:hover {
+					color: @theme-success;
+					outline: none;
+				}
+				&:focus,
+				&:active {
+					color: white;
+				}
+			}
+			&.active {
+				a {
+					color: white;
+					background: @theme-success;
+					&:hover,
+					&:focus,
+					&:active {
+						color: white;
+						background: @theme-success;
+					}
+				}
+			}
+		}
+	}
+	.navbar-toggle {
+		color: white;
+		text-transform: uppercase;
+		font-size: 10px;
+		border-color: white;
+		&:hover,
+		&:focus {
+			background-color: @theme-success;
+			color: white;
+			border-color: @theme-success;
+		}
+	}
+}
+
 @media(min-width:768px) {
-    .navbar-fixed-top {
+    .navbar-custom {
         padding: 25px 0;
         -webkit-transition: padding 0.3s;
         -moz-transition: padding 0.3s;
@@ -128,34 +189,12 @@ header {
 	        transition: all 0.3s;
 	    }
     }
-    .navbar-fixed-top.navbar-shrink {
+    .navbar-custom.affix {
         padding: 10px 0;
 		.navbar-brand {
 	        font-size: 1.5em;
 	    }
 	}
-}
-
-.navbar {
-	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	text-transform: uppercase;
-	font-weight: 700;
-	a:focus {
-		outline: none;
-	}
-	.navbar-nav {
-		letter-spacing: 1px;
-		li {
-			a:focus {
-				outline: none;
-			}
-		}
-	}
-}
-
-.navbar-default,
-.navbar-inverse {
-	border: none;
 }
 
 section {
@@ -167,17 +206,8 @@ section {
 }
 
 section.success {
-	background: @brand-success;
+	background: @theme-success;
 	color: white;
-
-    a,
-    a:hover,
-    a:focus,
-    a:active,
-    a.active {
-      color: @brand-primary;
-      outline: none;
-    }
 }
 
 @media(max-width:767px) {
@@ -199,7 +229,7 @@ section.success {
             max-width: 400px;
             margin: 0 auto;
             .caption {
-                background: fade(@brand-success, 90%);
+                background: fade(@theme-success, 90%);
                 position: absolute;
                 width: 100%;
                 height: 100%;
@@ -241,23 +271,6 @@ section.success {
             margin: 0 0 30px;
         }
     }
-}
-
-.btn-outline {
-	color: white;
-	font-size: 20px;
-	border: solid 2px white;
-	background: transparent;
-	transition: all 0.3s ease-in-out;
-	margin-top: 15px;
-	&:hover,
-	&:focus,
-	&:active,
-	&.active {
-		color: @brand-success;
-		background: white;
-		border: solid 2px white;
-	}
 }
 
 .floating-label-form-group {
@@ -309,7 +322,7 @@ section.success {
 
 .floating-label-form-group-with-focus {
 	label {
-	    color: @brand-success;
+	    color: @theme-success;
 	}
 }
 
@@ -324,15 +337,44 @@ footer {
 	}
 	.footer-above {
 		padding-top: 50px;
-		background-color: @brand-primary;
+		background-color: @theme-primary;
 	}
 	.footer-col {
 		margin-bottom: 50px;
 	}
 	.footer-below {
 		padding: 25px 0;
-		background-color: darken(@brand-primary, 5%);
+		background-color: darken(@theme-primary, 5%);
 	}
+}
+
+// Buttons
+
+.btn-outline {
+	color: white;
+	font-size: 20px;
+	border: solid 2px white;
+	background: transparent;
+	transition: all 0.3s ease-in-out;
+	margin-top: 15px;
+	&:hover,
+	&:focus,
+	&:active,
+	&.active {
+		color: @theme-success;
+		background: white;
+		border: solid 2px white;
+	}
+}
+
+.btn-primary {
+	.button-variant(white; @theme-primary; @theme-primary);
+	font-weight: 700;
+}
+
+.btn-success {
+	.button-variant(white; @theme-success; @theme-success);
+	font-weight: 700;
 }
 
 .btn-social {
@@ -407,7 +449,7 @@ footer {
             height:75px;
             width:1px;
             margin-left:35px;
-            background-color:@brand-primary;
+            background-color:@theme-primary;
             transform: rotate(45deg);
             -ms-transform: rotate(45deg);
             /* IE 9 */
@@ -417,7 +459,7 @@ footer {
             .rl {
                 height:75px;
                 width:1px;
-                background-color:@brand-primary;
+                background-color:@theme-primary;
                 transform: rotate(90deg);
                 -ms-transform: rotate(90deg);
                 /* IE 9 */
