@@ -42,7 +42,7 @@ hr.star-primary {
 }
 hr.star-light:after,
 hr.star-primary:after {
-  content: "\f005";
+  content: "\f0f4";
   font-family: FontAwesome;
   display: inline-block;
   position: relative;
