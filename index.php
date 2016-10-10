@@ -242,7 +242,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; Marc O'Leary 2016
+                        Copyright &copy; Marc O'Leary <?php date_default_timezone_set('Europe/London'); echo date('Y'); ?>
                     </div>
                 </div>
             </div>
