@@ -10,17 +10,42 @@ if(empty($_POST['name'])  		||
 	return false;
    }
 	
-$name = strip_tags(htmlspecialchars($_POST['name']));
-$email_address = strip_tags(htmlspecialchars($_POST['email']));
-$phone = strip_tags(htmlspecialchars($_POST['phone']));
-$message = strip_tags(htmlspecialchars($_POST['message']));
-	
-// Create the email and send the message
-$to = 'yourname@yourdomain.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
-$email_subject = "Website Contact Form:  $name";
-$email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
-$headers = "From: noreply@yourdomain.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
-$headers .= "Reply-To: $email_address";	
-mail($to,$email_subject,$email_body,$headers);
-return true;			
+date_default_timezone_set('your-time-zone'); //http://php.net/manual/en/function.date-default-timezone-set.php
+require ('../mail/PHPMailer-master/PHPMailerAutoload.php');
+require ('../mail/PHPMailer-master/class.phpmaileroauthgoogle.php'); // altough autoloader works, I had to set google auth to test gmail smtp
+//download the mailer class and set the directory. //https://github.com/PHPMailer/PHPMailer // you will need latest versions.
+
+
+$mail = new PHPMailer();
+
+$mail->IsSMTP();
+$mail->Host       = "yourhost.domain.com"; 
+$mail->SMTPDebug  = 1;                     // enables SMTP debug information (for testing)
+$mail->SMTPSecure = 'ssl';
+$mail->SMTPAuth   = true;                  // enable SMTP authentication
+
+$mail->SMTPAuth   = true;                    // enable SMTP authentication
+$mail->Port       = 465;                    // set the SMTP port for ssl
+$mail->Username   = "sender@yourdomain.com"; // SMTP account username example
+$mail->Password   = "password_of_sender_mail";
+
+
+$mail->addAddress("reciever_adress@domain.com");
+$mail->SetFrom('from_who@domain.com','name');
+$mail->Subject    = "Subject";
+
+$mail->CharSet    = 'UTF-8';
+$mail->MsgHTML("");
+$mail->Body       = "You have received a new message from your website contact form.\n\nHere are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message" ;
+
+
+
+
+
+if(!$mail->Send()) {
+echo "Mailer Error: " . $mail->ErrorInfo;
+} else {
+echo "Message sent!";
+
+}			
 ?>
