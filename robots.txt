@@ -4,4 +4,3 @@ Allow: /sitemap.xml
 Disallow: /
 
 Sitemap: https://aaronhorler.com/sitemap.xml
-
