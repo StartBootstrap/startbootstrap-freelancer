@@ -19,7 +19,6 @@ a:focus,
 a:active,
 a.active {
   color: #18BC9C;
-  outline: none;
 }
 h1,
 h2,
@@ -110,9 +109,6 @@ header .intro-text .skills {
   font-weight: 700;
   border: none;
 }
-.navbar-custom a:focus {
-  outline: none;
-}
 .navbar-custom .navbar-brand {
   color: white;
 }
@@ -130,7 +126,6 @@ header .intro-text .skills {
 }
 .navbar-custom .navbar-nav li a:hover {
   color: #18BC9C;
-  outline: none;
 }
 .navbar-custom .navbar-nav li a:focus,
 .navbar-custom .navbar-nav li a:active {
@@ -421,11 +416,6 @@ fieldset[disabled] .btn-success.active {
   font-size: 20px;
   line-height: 45px;
 }
-.btn:focus,
-.btn:active,
-.btn.active {
-  outline: none;
-}
 .scroll-top {
   position: fixed;
   right: 2%;
@@ -440,9 +430,6 @@ fieldset[disabled] .btn-success.active {
   height: 50px;
   border-radius: 100%;
   line-height: 28px;
-}
-.scroll-top .btn:focus {
-  outline: none;
 }
 .portfolio-modal .modal-content {
   border-radius: 0;
