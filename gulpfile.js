@@ -5,6 +5,7 @@ var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
+var filter = require('gulp-filter');
 var pkg = require('./package.json');
 
 // Set the banner content
@@ -18,7 +19,9 @@ var banner = ['/*!\n',
 
 // Compile LESS files from /less into /css
 gulp.task('less', function() {
-    return gulp.src('less/freelancer.less')
+    var f = filter(['*', '!mixins.less', '!variables.less']);
+    return gulp.src('less/*.less')
+        .pipe(f)
         .pipe(less())
         .pipe(header(banner, { pkg: pkg }))
         .pipe(gulp.dest('css'))
