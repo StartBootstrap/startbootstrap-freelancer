@@ -2,7 +2,7 @@
 @import "mixins.less";
 
 body {
-	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: @font-body;
 	overflow-x: hidden;
 }
 
@@ -23,8 +23,17 @@ a.active {
 	outline: none;
 }
 
+section.success a:not(.btn),
+section.success a:hover:not(.btn),
+section.success a:focus:not(.btn),
+section.success a:active:not(.btn),
+section.success a.active:not(.btn) {
+	color: @anchor-success;
+	outline: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: @font-heading;
 	text-transform: uppercase;
 	font-weight: 700;
 }
@@ -87,7 +96,7 @@ header {
 	.intro-text {
 		.name {
 			display: block;
-			font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-family: @font-heading;
 			text-transform: uppercase;
 			font-weight: 700;
 			font-size: 2em;
@@ -118,7 +127,7 @@ header {
 
 .navbar-custom {
 	background: @theme-primary;
-	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: @font-heading;
 	text-transform: uppercase;
 	font-weight: 700;
 	border: none;
