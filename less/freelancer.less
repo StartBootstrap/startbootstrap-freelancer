@@ -20,7 +20,6 @@ a:focus,
 a:active,
 a.active {
 	color: @theme-success;
-	outline: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -122,9 +121,6 @@ header {
 	text-transform: uppercase;
 	font-weight: 700;
 	border: none;
-	a:focus {
-		outline: none;
-	}
 	.navbar-brand {
 		color: white;
 		&:hover,
@@ -141,7 +137,6 @@ header {
 				color: white;
 				&:hover {
 					color: @theme-success;
-					outline: none;
 				}
 				&:focus,
 				&:active {
@@ -388,12 +383,6 @@ footer {
 	line-height: 45px;
 }
 
-.btn:focus,
-.btn:active,
-.btn.active {
-	outline: none;
-}
-
 .scroll-top {
     position: fixed;
     right: 2%;
@@ -407,9 +396,6 @@ footer {
 	    height: 50px;
 	    border-radius: 100%;
 	    line-height: 28px;
-	    &:focus {
-	    	outline: none;
-	    }
     }
 }
 
@@ -473,4 +459,30 @@ footer {
     	opacity: 0;
     	display: none;
     }
+}
+
+#skipnav a {
+	padding: 6px;
+	position: absolute;
+	top: -40px;
+	left: 0px;
+	color: white;
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+	border-bottom-right-radius: 8px;
+	background: transparent;
+  transition: top 1s ease-out, background 1s linear;
+  z-index: 2000;
+	&:focus{
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		background: @theme-success;
+		outline: 0;
+		transition: top .1s ease-in, background .5s linear;
+	}
+}
+
+div#maincontent{
+	outline: none;
 }
