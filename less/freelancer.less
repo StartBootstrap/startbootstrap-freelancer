@@ -23,10 +23,18 @@ a.active {
 	outline: none;
 }
 
+.profile-pic {
+	width: 256px;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
 	font-weight: 700;
+}
+
+.img-map {
+	border-radius: 10px;
 }
 
 hr.star-light,
@@ -351,19 +359,19 @@ footer {
 // Buttons
 
 .btn-outline {
-	color: white;
+	color: @theme-success;
 	font-size: 20px;
-	border: solid 2px white;
+	border: solid 2px @theme-success;
 	background: transparent;
 	transition: all 0.3s ease-in-out;
-	margin-top: 15px;
+	margin-top: 25px;
 	&:hover,
 	&:focus,
 	&:active,
 	&.active {
 		color: @theme-success;
 		background: white;
-		border: solid 2px white;
+		border: solid 2px @theme-success;
 	}
 }
 
