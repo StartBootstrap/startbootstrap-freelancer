@@ -372,8 +372,11 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-success:hover,
 .btn-success:focus,
+.btn-success:focus:active,
 .btn-success:active,
+.btn-success:active:focus,
 .btn-success.active,
+.btn-success.active:focus,
 .open .dropdown-toggle.btn-success {
   color: white;
   background-color: #128f76;
