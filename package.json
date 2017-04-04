@@ -1,29 +1,44 @@
 {
-    "name": "startbootstrap-freelancer",
     "title": "Freelancer",
+    "name": "startbootstrap-freelancer",
     "version": "4.0.0-alpha",
+    "description": "A freelancer portfolio HTML theme for Bootstrap.",
+    "keywords": [
+        "css",
+        "sass",
+        "html",
+        "responsive",
+        "theme",
+        "template"
+    ],
     "homepage": "http://startbootstrap.com/template-overviews/freelancer",
+    "bugs": {
+        "url": "https://github.com/BlackrockDigital/startbootstrap-freelancer/issues",
+        "email": "feedback@startbootstrap.com"
+    },
+    "license": "MIT",
     "author": "Start Bootstrap",
-    "license": {
-        "type": "MIT",
-        "url": "https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE"
-    },
-    "devDependencies": {
-        "bootstrap": "^4.0.0-alpha.6",
-        "browser-sync": "^2.13.0",
-        "font-awesome": "^4.6.3",
-        "gulp": "^3.9.1",
-        "gulp-clean-css": "^2.0.10",
-        "gulp-header": "^1.8.7",
-        "gulp-less": "^3.1.0",
-        "gulp-rename": "^1.2.2",
-        "gulp-sass": "^3.1.0",
-        "gulp-uglify": "^1.5.4",
-        "jquery": "^3.1.1",
-        "tether": "^1.4.0"
-    },
+    "contributors": [
+        "David Miller (http://davidmiller.io/)"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/BlackrockDigital/startbootstrap-freelancer.git"
+    },
+    "dependencies": {
+        "bootstrap": "^4.0.0-alpha.6",
+        "font-awesome": "4.7.0",
+        "jquery": "^3.2.1",
+        "jquery.easing": "^1.4.1",
+        "tether": "^1.4.0"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.18.8",
+        "gulp": "^3.9.1",
+        "gulp-clean-css": "^3.0.4",
+        "gulp-header": "1.8.8",
+        "gulp-rename": "^1.2.2",
+        "gulp-sass": "^3.1.0",
+        "gulp-uglify": "^2.1.2"
     }
 }

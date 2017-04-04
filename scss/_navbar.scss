@@ -1,0 +1,82 @@
+// Styling for the navbar
+#mainNav {
+    background: $theme-primary;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    a:focus {
+        outline: none;
+    }
+    .navbar-brand {
+        color: white;
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            color: white;
+        }
+    }
+    .navbar-nav {
+        letter-spacing: 1px;
+        li.nav-item {
+            a.nav-link {
+                color: white;
+                &:hover {
+                    color: $theme-success;
+                    outline: none;
+                }
+                &:focus,
+                &:active {
+                    color: white;
+                }
+            }
+            &.active {
+                a {
+                    color: white;
+                    background: $theme-success;
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        color: white;
+                        background: $theme-success;
+                    }
+                }
+            }
+        }
+    }
+    .navbar-toggler {
+        color: white;
+        text-transform: uppercase;
+        font-size: 14px;
+        border-color: white;
+        padding: 11px;
+        &:hover,
+        &:focus {
+            background-color: $theme-success;
+            color: white;
+            border-color: $theme-success;
+        }
+    }
+}
+
+@media(min-width:992px) {
+    #mainNav {
+        padding: 25px 0;
+        -webkit-transition: padding 0.3s;
+        -moz-transition: padding 0.3s;
+        transition: padding 0.3s;
+        .navbar-brand {
+            font-size: 2em;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+    }
+    #mainNav.navbar-shrink {
+        padding: 10px 0;
+        .navbar-brand {
+            font-size: 1.5em;
+        }
+    }
+}

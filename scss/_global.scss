@@ -1,0 +1,118 @@
+// Global styling for this template
+body {
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+p {
+    font-size: 20px;
+}
+
+p.small {
+    font-size: 16px;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+    color: $theme-success;
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+hr.star-light,
+hr.star-primary {
+    padding: 0;
+    border: none;
+    border-top: solid 5px;
+    text-align: center;
+    max-width: 250px;
+    margin: 25px auto 30px;
+}
+
+hr.star-light:after,
+hr.star-primary:after {
+    content: "\f005";
+    font-family: FontAwesome;
+    display: inline-block;
+    position: relative;
+    top: -0.8em;
+    font-size: 2em;
+    padding: 0 0.25em;
+}
+
+hr.star-light {
+    border-color: white;
+}
+
+hr.star-light:after {
+    background-color: $theme-success;
+    color: white;
+}
+
+hr.star-primary {
+    border-color: $theme-primary;
+}
+
+hr.star-primary:after {
+    background-color: white;
+    color: $theme-primary;
+}
+
+.img-centered {
+    margin: 0 auto;
+}
+
+section {
+    padding: 100px 0;
+    h2 {
+        margin: 0;
+        font-size: 3em;
+    }
+}
+
+section.success {
+    background: $theme-success;
+    color: white;
+}
+
+@media(max-width:767px) {
+    section {
+        padding: 75px 0;
+    }
+    section.first {
+        padding-top: 75px;
+    }
+}
+
+.scroll-top {
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    width: 50px;
+    height: 50px;
+    z-index: 1049;
+    .btn {
+        font-size: 16px;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        line-height: 28px;
+        text-align: center;
+        &:focus {
+            outline: none;
+        }
+    }
+}
