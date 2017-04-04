@@ -121,12 +121,6 @@ section.success {
         outline: none; }
       #mainNav .navbar-nav li.nav-item a.nav-link:focus, #mainNav .navbar-nav li.nav-item a.nav-link:active {
         color: white; }
-    #mainNav .navbar-nav li.nav-item.active a {
-      color: white;
-      background: #18BC9C; }
-      #mainNav .navbar-nav li.nav-item.active a:hover, #mainNav .navbar-nav li.nav-item.active a:focus, #mainNav .navbar-nav li.nav-item.active a:active {
-        color: white;
-        background: #18BC9C; }
   #mainNav .navbar-toggler {
     color: white;
     text-transform: uppercase;
@@ -149,6 +143,13 @@ section.success {
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       transition: all 0.3s; }
+    #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
+      color: white;
+      background: #18BC9C;
+      border-radius: 3px; }
+      #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active {
+        color: white;
+        background: #18BC9C; }
   #mainNav.navbar-shrink {
     padding: 10px 0; }
     #mainNav.navbar-shrink .navbar-brand {

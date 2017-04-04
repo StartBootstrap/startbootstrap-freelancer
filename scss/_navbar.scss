@@ -31,18 +31,6 @@
                     color: white;
                 }
             }
-            &.active {
-                a {
-                    color: white;
-                    background: $theme-success;
-                    &:hover,
-                    &:focus,
-                    &:active {
-                        color: white;
-                        background: $theme-success;
-                    }
-                }
-            }
         }
     }
     .navbar-toggler {
@@ -71,6 +59,17 @@
             -webkit-transition: all 0.3s;
             -moz-transition: all 0.3s;
             transition: all 0.3s;
+        }
+        .navbar-nav > li.nav-item > a.nav-link.active {
+            color: white;
+            background: $theme-success;
+            border-radius: 3px;
+            &:hover,
+            &:focus,
+            &:active {
+                color: white;
+                background: $theme-success;
+            }
         }
     }
     #mainNav.navbar-shrink {
