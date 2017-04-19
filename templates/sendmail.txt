@@ -1,0 +1,9 @@
+dnl #
+define(`confCACERT_PATH', `/etc/letsencrypt/live/example.com')dnl
+define(`confCACERT', `/etc/letsencrypt/live/example.com/chain.pem')dnl
+define(`confSERVER_CERT', `/etc/letsencrypt/live/example.com/cert.pem')dnl
+define(`confCLIENT_CERT', `/etc/letsencrypt/live/example.com/cert.pem')dnl
+define(`confSERVER_KEY', `/etc/letsencrypt/live/example.com/privkey.pem')dnl
+define(`confCLIENT_KEY', `/etc/letsencrypt/live/example.com/privkey.pem')dnl
+dnl#
+

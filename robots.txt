@@ -1,5 +1,6 @@
 User-Agent: *
 Allow: /$
+Allow: /articles
 Allow: /sitemap.xml
 Disallow: /
 

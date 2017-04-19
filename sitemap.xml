@@ -9,4 +9,12 @@
   <loc>https://aaronhorler.com/</loc>
   <changefreq>never</changefreq>
 </url>
+<url>
+  <loc>https://aaronhorler.com/articles/apache.html</loc>
+  <changefreq>never</changefreq>
+</url>
+<url>
+  <loc>https://aaronhorler.com/articles/sendmail.html</loc>
+  <changefreq>never</changefreq>
+</url>
 </urlset>
