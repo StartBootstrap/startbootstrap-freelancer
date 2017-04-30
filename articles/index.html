@@ -6,15 +6,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Using Let's Encrypt to secure outgoing Sendmail emails.">
-    <meta name="author" content="Aaron Horler">
-    <meta name="url" content="https://aaronhorler.com/articles/sendmail.html">
+    <meta name="description" content="This is just a (very bland) placeholder.">
+    <meta name="author" content="Articles by Aaron Horler">
+    <meta name="url" content="https://aaronhorler.com/articles/">
 
     <!-- Privacy -->
     <meta name="referrer" content="no-referrer">
     <meta http-equiv="x-dns-prefetch-control" content="off">
 
-    <title>Using Let's Encrypt to secure outgoing Sendmail emails. | Aaron Horler</title>
+    <title>Articles | Aaron Horler</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -90,61 +90,32 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <!-- Portfolio Grid Section -->
-    <section>
+    <section id="portfolio">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <br><h3>Using Let's Encrypt to secure outgoing Sendmail emails.</h3>
+                    <br><br><br><br><br><br><h2>Articles</h2>
                     <hr class="star-primary">
                 </div>
             </div>
-            <div class="row" id="article-pad">
-                <p>The mail-transfer program Sendmail can easily be configured for STARTTLS transport security using your Let's Encrypt credentials.</p><br>
-
-                <h4>1. Locate your Let's Encrypt directory.</h4>
-
-                <p><code>sudo ls /etc/letsencrypt/live/example.com/</code></p>
-
-                <p>Replace example.com with your domain. The output should look like this:</p>
-
-                <p><code>cert.pem  chain.pem  fullchain.pem  privkey.pem</code></p>
-
-                <p id="article-note">Note: you need to have run letsencrypt first.</p><br>
-
-                <h4>2. Modify sendmail.mc</h4>
-
-                <p><code>sudo nano /etc/mail/sendmail.mc</code></p>
-
-                <pre><code class="code-scroll">dnl#
-define(`confCACERT_PATH', `/etc/letsencrypt/live/example.com')dnl
-define(`confCACERT', `/etc/letsencrypt/live/example.com/chain.pem')dnl
-define(`confSERVER_CERT', `/etc/letsencrypt/live/example.com/cert.pem')dnl
-define(`confCLIENT_CERT', `/etc/letsencrypt/live/example.com/cert.pem')dnl
-define(`confSERVER_KEY', `/etc/letsencrypt/live/example.com/privkey.pem')dnl
-define(`confCLIENT_KEY', `/etc/letsencrypt/live/example.com/privkey.pem')dnl
-dnl#</code></pre>
-
-                <p>Append the above to the end of the file, replacing example.com with your domain.</p>
-
-                <p>This will also work with an ECDSA private key and Let's Encrypt.</p>
-
-                <pre><code class="code-scroll">dnl#
-define(`confCACERT_PATH', `/etc/letsencrypt/ecdsa/example.com')dnl
-define(`confCACERT', `/etc/letsencrypt/live/example.com/0001_chain.pem')dnl
-define(`confSERVER_CERT', `/etc/letsencrypt/ecdsa/example.com/0000_cert.pem')dnl
-define(`confCLIENT_CERT', `/etc/letsencrypt/ecdsa/example.com/0000_cert.pem')dnl
-define(`confSERVER_KEY', `/etc/letsencrypt/ecdsa/example.com/privkey.pem')dnl
-define(`confCLIENT_KEY', `/etc/letsencrypt/ecdsa/example.com/privkey.pem')dnl
-dnl#
-</code></pre><br>
-
-                <h4>2. Restart Sendmail</h4>
-
-                <p><code>sudo /etc/init.d/sendmail restart</code></p>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p><a href="/articles/apache.html">Apache and Let's Encrypt best practices.</a></p>
+                </div>
+                <div class="col-lg-4">
+                    <p><a href="/articles/sendmail.html">Using Let's Encrypt with Sendmail.</a></p>
+                </div>
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p><a href="/articles/php-reporturi.html">Accepting secuirty header reports using PHP.</a></p>
+                </div>
+                <div class="col-lg-4">
+                    <p><a href="/articles/openpgpjs.html">Creating a JavaScript PGP contact form.</a></p>
+                </div>
             </div>
         </div>
     </section>
+
+    <br><br>
 
     <!-- Footer -->
     <footer class="text-center">

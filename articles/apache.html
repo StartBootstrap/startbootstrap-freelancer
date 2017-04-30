@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Apache and Let's Encrypt best practices.">
+    <meta name="description" content="Apache and Let's Encrypt best practices for security.">
     <meta name="author" content="Aaron Horler">
     <meta name="url" content="https://aaronhorler.com/articles/apache.html">
 
@@ -14,7 +14,7 @@
     <meta name="referrer" content="no-referrer">
     <meta http-equiv="x-dns-prefetch-control" content="off">
 
-    <title>Apache and Let's Encrypt best practices. | Aaron Horler</title>
+    <title>Apache and Let's Encrypt best practices for security. | Aaron Horler</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -72,7 +72,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
-                        <a href="/#page-top"></a>
+                        <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
                         <a href="/#portfolio">Articles</a>
@@ -95,16 +95,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <br><h3>Apache and Let's Encrypt best practices.</h3>
+                    <br><h3>Apache and Let's Encrypt best practices for security.</h3>
                     <hr class="star-primary">
                 </div>
             </div>
             <div class="row" id="article-pad">
-                <p>This is a simple multi-part guide for configuring Apache and Let's Encrypt with optimal security settings under Ubuntu 16.04.</p><br>
+                <p>This is a simple multi-part guide for configuring Apache and Let's Encrypt with optimal security settings under Ubuntu 16.04+.</p><br>
+
+                <hr>
 
                 <h3>Configuring Apache</h3>
 
-                <h4>1. Disable broadcasting of Apache version</h4>
+                <p>This assumes you have installed Apache via apt.</p>
+
+                <h4>1. Disable broadcasting of the Apache version</h4>
 
                 <p><code>sudo nano /etc/apache2/apache2.conf</code></p>
 
@@ -114,69 +118,209 @@
 
                 <p><code>ServerSignature Off</code></p>
 
-                <p>This will prevent Apache from sending its version in the response header and on error pages.</p>
+                <p>This will prevent Apache from sending its version in the response header and on error pages.</p><br>
 
                 <h4>2. Disable the ETag response header</h4>
 
-                <p>Append the option below to the same configuration file as above.</p>
+                <p>Append the option below to the same configuration file as in point 1.</p>
 
                 <p><code>FileETag None</code></p><br>
 
+                <h4>4. Set the OCSP stapling cache</h4>
+
+                <p>You will configure OCSP stapling later.</p>
+
+                <p>Append the option below to the same configuration file as in point 1.</p>
+
+                <p><code>SSLStaplingCache shmcb:/var/run/apache2/stapling_cache(128000)</code></p><br>
+
+                <h4>3. Enable the HTTP/2 module (optional)</h4>
+
+                <p><code>sudo a2enmod http2</code></p>
+
+                <p>If the above command produces an error, you need to upgrade to a newer version of Apache.</p>
+
+                <p>Using apt, add <a href="https://launchpad.net/~ondrej/+archive/ubuntu/apache2">Ondřej Surý's Apache2 PPA</a> and upgrade.</p>
+
+                <p><code>sudo add-apt-repository ppa:ondrej/apache2</code></p>
+
+                <p><code>sudo apt-get update</code></p>
+
+                <p>Upgrading using this method should not affect your existing configurations, but you should backup as a precaution.</p>
+
+                <p><code>sudo apt-get --only-upgrade install apache2</code></p>
+
+                <p>This should now work.</p>
+
+                <p><code>sudo a2enmod http2</code></p><br>
+
+                <hr>
+
                 <h3>Running Let's Encrypt</h3>
 
-                <p>This requires you've setup Apache VirtualHosts. See <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-16-04" title="I'm not affiliated with Digital Ocean."> this</a> guide.</p>
+                <p>This requires you've setup at least one Apache VirtualHost. See <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-16-04" title="I'm not affiliated with Digital Ocean."> this</a> guide.</p>
 
                 <h4>1. Install Let's Encrypt</h4>
 
-                <p><code>sudo apt-get install letsencrypt</code></p>
+                <p><code>sudo apt-get install letsencrypt</code></p><br>
 
-                <h4>2. Modify global SSL/TLS configurations set by Let's Encrypt</h4>
-
-                <p><code>sudo nano /etc/letsencrypt/options-ssl-apache.conf</code></p>
-
-                <p>Alter the file <a href="/templates/letsencrypt.txt">accordingly</a>. This configuration complies with Mozilla's <em>modern</em> SSL/TLS recommendations. You can find the <em>intermediate</em> recommendations for <em>SSLProtocol</em> and <em>SSLCipherSuite</em> <a href="https://mozilla.github.io/server-side-tls/ssl-config-generator/">here</a>.</p>
-
-                <p>The <em>modern</em> recommendations will prevents access via certain older clients by, for example, disabling every SSL/TLS protocol except TLS 1.2.</p>
-
-                <h4>3. Run Let's Encrypt</h4>
+                <h4>2. Run Let's Encrypt</h4>
 
                 <p><code>sudo letsencrypt --redirect --must-staple --rsa-key-size 4096 -d example.com -d www.example.com</code></p>
 
-                <p>This command will request a certificate with the OCSP Must-Staple flag set, and with a large keysize of 4096 bits.</p><br>
+                <p>This command will request a certificate with the OCSP Must-Staple flag set, and produce an RSA key with a large keysize of 4096 bits.</p><br>
+
+                <h4>3. Use an ECDSA private key instead (very optional)</h4>
+
+                <p>ECDSA is a faster and more secure alternative to RSA.</p>
+
+                <p>I recommend you test Let's Encrypt normally first.</p>
+
+                <p>First, create a new directory and move to it.</p>
+
+                <p><code>sudo mkdir -p /etc/letsencrypt/ecdsa/example.com</code></p>
+
+                <p><code>cd /etc/letsencrypt/ecdsa/example.com</code></p>
+
+                <p>Now, generate an ECDSA private key.</p>
+
+                <p><code>openssl ecparam -genkey -name secp384r1 > ./privkey.pem</code></p>
+
+                <p>And a Certificate Signing Request (CSR).</p>
+
+                <pre><code class="code-scroll">openssl req -new -sha256 -key privkey.pem -subj "/C=AU/ST=VIC/O=RMIT/CN=example.com" -reqexts SAN -config <(cat /etc/ssl/openssl.cnf <(printf "[SAN]\nsubjectAltName=DNS:example.com,DNS:www.example.com\n1.3.6.1.5.5.7.1.24=DER:30:03:02:01:05")) -out example.com.csr</code></pre>
+
+                <p>Replace every instance of <em>example.com</em> with your domain.</p>
+
+                <p>Replace <em>AU</em> with an acronym for your country of residence, or server location.</p>
+
+                <p>Replace <em>VIC</em> with an acronym for your state or other locality of residence, or server location.</p>
+
+                <p>Replace <em>RMIT</em> with your organisation, or simply your name.</p>
+
+                <p>In case you were wondering, <code>1.3.6.1.5.5.7.1.24=DER:30:03:02:01:05</code> will be used to request the certificate have the Must-Staple flag set. Do not alter this.</p>
+
+                <p>Request a certificate from Let's Encrypt.</p>
+
+                <p>You may need to temporarily stop Apache so that letsencrypt can bind to port 443.</p>
+
+                <p><code>sudo service apache2 stop</code></p>
+
+                <p><code>letsencrypt certonly --standalone --csr example.com.csr</code></p>
+
+                <p>Finally, set correct permissions on this directory and its contents.</p>
+
+                <p><code>sudo chown -R root: /etc/letsencrypt/ecdsa/</code></p>
+
+                <p><code>sudo chmod -R 700 /etc/letsencrypt/ecdsa/</code></p>
+
+                <p><code>sudo chmod 600 /etc/letsencrypt/ecdsa/*/*</code></p><br>
+
+                <hr>
 
                 <h3>Configuring Apache VirtualHosts</h3>
 
-                <p>This requires you've run Let's Encrypt. A template of these options is available <a href="/templates/virtualhost.txt">here</a>.</p>
+                <p>This requires you've run Let's Encrypt.</p>
 
-                <h4>1. Open the relevant Let's Encrypt-generated configuration file.</h4>
+                <h4>1. Replace the Let's Encrypt-generated configuration file.</h4>
 
-                <p><code>sudo nano /etc/sites-available/example.com-le-ssl.conf</code></p>
+                <p>Let's Encrypt generates a configuration file for your VirtualHost. We're going to heavily change it.</p>
 
-                <h4>2. Configure OCSP stapling and other SSL/TLS best practices.</h4>
+                <p>First, remove the current file.</p>
 
-                <p><code>SSLUseStapling On</code></p>
+                <p><code>sudo rm -f /etc/sites-available/example.com-le-ssl.conf</code></p>
 
-                <p><code>SSLSessionTickets Off</code></p>
+                <p>Now you can manipulate my template VirtualHost configuration to your liking.</p>
 
-                <p><code>SSLStaplingResponderTimeout 5</code></p>
+                <pre><code class="code-scroll">&lt;IfModule mod_ssl.c&gt;
+&lt;VirtualHost *:443&gt;
+    # Uncomment this to enable HTTP/2. You must have enabled the module.
+    # Protocols h2 http/1.1
 
-                <p><code>SSLStaplingReturnResponderErrors Off</code></p>
+    # Enable TLS 1.2 only, with modern ciphers and generally good practices.
+    SSLEngine On
+    SSLProtocol all -SSLv3 -TLSv1 -TLSv1.1
+    SSLCipherSuite ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256
+    SSLHonorCipherOrder On
+    SSLCompression Off
+    SSLSessionTickets Off
+    SSLOptions +StrictRequire   
 
-                <p><code>SSLStaplingCache shmcb:/var/run/apache2/stapling_cache(128000)</code></p>
+    # Enable OSCP stapling.
+    # You must have configured SSLStaplingCache in the global configuration file.
+    SSLUseStapling On
+    SSLStaplingResponderTimeout 5
+    SSLStaplingReturnResponderErrors Off
 
-                <h4>3. Configure and set security headers.</h4>
+    # Secuirty headers.
+    # Write your CSP. 
+    # This will break your site. You'll need to use trial and error. 
+    # Do not use 'unsafe-inline' or 'unsafe-eval', and no not change default-src to anything but 'none'.
+    Header always set Content-Security-Policy "default-src 'none'; child-src 'none'; connect-src 'none'; font-src 'none'; frame-ancestors 'none'; img-src 'none'; media-src 'none'; object-src 'none'; sandbox; script-src 'none'; style-src 'none';"
+
+    # Enable HSTS
+    Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
+
+    # Instruct browsers not to render your domain in frames, iframes, or objects.
+    Header always set X-Frame-Options "DENY"
+
+    # Instruct browsers not to send the Referer header.
+    Header always set Referrer-Policy "no-referrer"
+
+    # Instruct browsers not to MIME sniff.
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Enable XSS filtering, and block rendering of the page if an attack is detected.
+    Header always set X-XSS-Protection "1; mode=block"
+
+    # Opt-out of DNS prefetching.
+    Header always set X-DNS-Prefetch-Control "off"
+
+    # Ensure that all cookies have the secure flag set.
+    Header edit Set-Cookie (?i)^(.*)(;\s*secure)??((\s*;)?(.*)) "$1; Secure$3$4"
+
+    # Change this to your domain.
+    ServerName example.com
+    ServerAlias www.example.com
+
+    ServerAdmin admin@example.com
+    DocumentRoot /var/www/example.com/html
+
+    # Standard logging.
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+    LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-agent}i\"" vhost_combined
+    LogFormat "%v %h %l %u %t \"%r\" %>s %b" vhost_common
+
+    # Standard Let's Encrypt configuration
+    # Remove this if you're using ECDSA.
+    SSLCertificateFile /etc/letsencrypt/live/example.com/fullchain.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/example.com/privkey.pem
+
+    # Uncomment this for my ECDSA configuration.
+    # For SSLCertificateFile use the 0000_chain.pem with the highest number.
+    # SSLCertificateFile /etc/letsencrypt/ecdsa/example.com/0001_chain.pem
+    # SSLCertificateKeyFile /etc/letsencrypt/ecdsa/example.com/privkey.pem
+&lt;/VirtualHost&gt;
+&lt;/IfModule&gt;</code></pre>
+
+                <p>This configuration complies with Mozilla's <em>modern</em> SSL/TLS recommendations. You can find the <em>intermediate</em> recommendations for <em>SSLProtocol</em> and <em>SSLCipherSuite</em> <a href="https://mozilla.github.io/server-side-tls/ssl-config-generator/">here</a>.</p>
+
+                <p>The <em>modern</em> recommendations will prevent access from certain older clients by, for example, disabling every SSL/TLS protocol except TLS 1.2.</p><br>
+
+                <h4>3. Configure and set security headers in my template.</h4>
                 
                 <h5>HTTP Strict Transport Security (HSTS)</h5>
 
-                <p><code>Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"</code></p>
+                <p><code>Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"</code></p>
 
-                <p>Instruct browsers to remember for a year (31536000 seconds) to force HTTPS-only connections on your domain, and every subdomain. Optionally you can include the <code>preload</code> option and add your domain to <a href="https://hstspreload.org/">this list</a> to enforce your domain's HSTS policy as part of future browser releases.</p>
+                <p>Instruct browsers to remember for two years (63072000 seconds) to force HTTPS-only connections on your domain, and every subdomain. Optionally you can include the <code>preload</code> option and add your domain to <a href="https://hstspreload.org/">this list</a> to enforce your domain's HSTS policy as part of future browser releases.</p>
 
                 <h5>Content Security Policy (CSP)</h5>
 
                 <p><code>Header always set Content-Security-Policy "default-src 'none'; frame-ancestors 'none';</code></p>
 
-                <p>Instruct browsers what resources are allowed. Refer to <a href="https://content-security-policy.com/">this</a> for all options, the above is just what you should start with.</p>
+                <p>Instruct browsers what resources are allowed. Refer to <a href="https://content-security-policy.com/">this</a> for all options.</p>
 
                 <h5>Referrer-Policy</h5>
 
@@ -188,7 +332,7 @@
 
                 <p><code>Header always set X-Frame-Options "DENY"</code></p>
 
-                <p>Instruct browsers not to render your domain in a frames, iframe, or object.</p>
+                <p>Instruct browsers not to render your domain in frames, iframes, or objects.</p>
 
                 <h5>X-XSS-Protection</h5>
 
@@ -201,6 +345,35 @@
                 <p><code>Header always set X-Content-Type-Options "nosniff"</code></p>
 
                 <p>Instruct browsers not to MIME sniff.</p>
+
+                <h4>4. Create your new VirtualHost file, and reboot Apache.</h4>
+
+                <p>Once you've modified my template, create a new file with the same name and paste your configuration.</p>
+
+                <p><code>sudo nano /etc/sites-available/example.com-le-ssl.conf</code></p>
+
+                <p><code>sudo service apache2 restart</code></p><br>
+
+                <hr>
+
+                <h3>Securing PHP slightly (optional)</h3>
+
+                <p>This is only required if you have PHP installed, and assumes PHP 7.</p>
+
+                <h4>1. Create a user.ini configuration file.</h4>
+
+                <p><code>sudo nano /etc/php/7.0/apache2/conf.d/user.ini</code></p>
+
+                <pre><code class="code-scroll">session.cookie_httponly = 1
+session.use_only_cookies = 1
+session.cookie_secure = 1
+
+expose_php = Off
+display_errors = Off
+
+allow_url_fopen = Off
+allow_url_include = Off
+</code></pre><br>
             </div>
         </div>
     </section>
@@ -261,10 +434,6 @@
 
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="/js/jqBootstrapValidation.js"></script>
-    <script src="/js/contact_me.js"></script>
 
     <!-- Theme JavaScript -->
     <script src="/js/freelancer.min.js"></script>

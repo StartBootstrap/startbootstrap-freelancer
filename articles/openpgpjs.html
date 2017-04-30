@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Allowing users to encrypt a message using OpenPGP.js in the browser.">
+    <meta name="author" content="Aaron Horler">
+    <meta name="url" content="https://aaronhorler.com/articles/openpgpjs.html">
+
+    <!-- Privacy -->
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="x-dns-prefetch-control" content="off">
+
+    <title>Allowing users to encrypt a message using OpenPGP.js in the browser. | Aaron Horler</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="/css/freelancer.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#102a45">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#102a45">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="/">Aaron Horler</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/#portfolio">Articles</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/#about">About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Portfolio Grid Section -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <br><h3>Allowing users to encrypt a message using OpenPGP.js in the browser.</h3>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row" id="article-pad">
+                <p>Like I have implemented on <a href="/#contact">my contact form</a>, you can very easily allow users to PGP encrypt a message using your public key via your website.</p><br>
+
+                <h4>1. Download OpenPGP.js</h4>
+
+                <p>Download the latest release from <a href="https://github.com/openpgpjs/openpgpjs/releases">here</a>, and extract openpgp.min.js only.</p>
+
+                <p>Put this file somewhere in your website directory.</p>
+
+                <p>It's a good idea you periodly check for new releases, and upgrade to any newer releases.</p><br>
+
+                <h4>2. Create your form</h4>
+
+                <p>This step can vary widely depending on your current setup and preference. But all you <em>need</em> is a <a href="https://www.w3schools.com/tags/tag_textarea.asp">textarea</a>, and a <a href="https://www.w3schools.com/tags/tag_button.asp">button</a> - both with an id attribute.</p>
+
+                <p><code>&lt;textarea id="message" rows="4" cols="50"&gt;&lt;/textarea&gt;</code></p>
+
+                <p><code>&lt;button id="encrypt" type="button"&gt;Encrypt&lt;/button&gt;</code></p><br>
+
+                <h4>3. Create your custom JavaScript</h4>
+
+                <p>This JavaScript will use OpenPGP.js to encrypt a message entered into the textarea when the button is clicked.</p>
+
+                <pre><code class="code-scroll">function encryptMessage(){  
+    if(window.crypto.getRandomValues){
+        if(document.getElementById("message").value != ""){
+            var publicKeyString = "-----BEGIN PGP PUBLIC KEY BLOCK-----\n" +
+                "Version: GnuPG v1\n" +
+                "\n" +
+                "mQINBFgcbeUBEADfVxYEfyZmBAgEtLlXocxEcD2NDwhAIrWXYYN+0kHY1ucqQlYz\n" +
+                "Tti+aai8j1wbqNp2QQb/L23opH7CTy+QxI7hkWFXg1O8hZ+/GxqcLiDcy3vkf3yC\n" +
+                "VQzS4tk6xxO0puhhAHStVGpIVD3mMLmCaLtQWs4jE4B7N5b6Z7XwNos5YXMrX7fu\n" +
+                "YU9uuX8qTlVxkAte0moULgrujjsEUNSb8L160GvG27SA4cg1iiRjykmJwaKMDHNJ\n" +
+                "b2IhLb+lxQifkwETU/b/fTY6w+nljfBOt+uqY8fDpqIn0zg0fK2GeDbuyOGeaBgJ\n" +
+                "JFG18nIaMsVTgIeS70VyLMp9OvbcwF9s26RFgHes7QhQbBP+rqEUMXKC7iwFtlSQ\n" +
+                "+F/SwcTqU0YsoA7e4PHRIkkYkWdGSELALamA5yXFH7ccK+2vWFgy5VR5ScRWPZCl\n" +
+                "hkIWHw7I2pVKUuzCfYQn+9iFSxn+vLWRGG2GDajc8IljHNV2zTwtEXhOLr+77eSh\n" +
+                "dagclarXF6VIPhSu7ZiOcL6xJpmzKVcgOL31anTZzwhoZWF/vjBz4pEH+7rvD3ah\n" +
+                "sraBw5Xt1siEA2ZQ48xtZl8Ix7ZAdeLXOqyokTagCV0513wNh4JQI5Rr7pz913bJ\n" +
+                "+jJbnJNmBSVTu6/vgzpOm1VHvto1hitST2l2puWnGpHXJkBsgF09ohsWZQARAQAB\n" +
+                "tCFBYXJvbiBIb3JsZXIgPGFnaG9ybGVyQGdtYWlsLmNvbT6JAj4EEwECACgFAlgc\n" +
+                "beUCGwMFCQHhM4AGCwkIBwMCBhUIAgkKCwQWAgMBAh4BAheAAAoJEDKpjp+jPVDF\n" +
+                "Jd0P/ieTt1nHPyR5yG1JLEUlI/w0DPG6UVnJ/jfY44Ai8HIi7xHVKzCzVIUapc+Q\n" +
+                "Dsu5GLNrnOceFG7wQBxY2KmWytZAoCqrwl/k/3rpGRpmTOotdwjddQ03M7/YoByK\n" +
+                "S0TFOiIEtZlygwT6cABVrZJV9Ll8H12zL0jX7NfZNWp1JokH7KUC+p9lL89vB1NQ\n" +
+                "YLfGBaK7qFwz9MwBsYLJdvfZ+vxAoIpWnoH258JuFHc/cQrlIRtrOMg6mAAKN1Oj\n" +
+                "jJE8WU8JSy23CcyFc8RDbJJhkqZyWgdiZtWdxIpRfaxhYeZ/7QfXSjFE+YbpucEc\n" +
+                "t5BjMtvsdj0XAOEZQ46yDz84PL6UZUCQU/0HD4GNZ51xWAdfSHtX2Ww/PObML3rx\n" +
+                "3VZXh3vOWxLDtzl7GWtMdlqwb1FY725Q/IuwUuGL0TYAoXQf1d9ex712Vj9ooVkf\n" +
+                "1SQt8Nt9A+VyL6PvTb4R7IAhgAWR7jy7zlA2IKPcu6yrycj6EwUDdZKXeaJMxjV2\n" +
+                "p0LHypJX/HMZ4y9LdP43b/j+Q63rzPZ0ugl6jahaWwV4qJhDSZEOy3BLGL2GYxkv\n" +
+                "6DU12yZwM9H4OTuHFGD+Tc4++mQbujYxcMdO7BF0EUiXM5yi+aMC9SAoE/0o2qhZ\n" +
+                "iXNWc9rs0DimOUetiTTGqDyuxAWDlgwmViBFEv3loNAmp65KuQINBFgcbeUBEAC+\n" +
+                "opgbJcNuia1hNAq2kSxmtHqGRGznI5JH5OZVOB2uQadhnr4Lp3+e38Mh+fL9y9fw\n" +
+                "uPPWeFHOpMa38kf4lznsz4xnWvPnz0rFykXrMXGqxqoZQHuEWE9u0xkbnJeZzndb\n" +
+                "UvhUMNn16GnBSRM8S/CuQ8RwZImV9paxsXUoQN9J8PS++RkGzCYMcZztwU+af0WC\n" +
+                "zkMq7EYLOrNkbknjcsuVC8A7dzEf20MdgQE1o4omZ/FMdlOnWIsvmqEPLme9EaVF\n" +
+                "JTC1E9uppywNXAAxU/nURlDB2r2tzQlTyD/JTNLIdrr2wqXuxMZVN4PdVSmHxA+U\n" +
+                "sOjhwwRpghdDc3MwB7pnzDS2Xi7XkZAodXlph24rtRY2JMOHb6IcUVibWEA+qN9y\n" +
+                "FTFY1BBJdpLiKkJfXigS/x35RFqz30zHZOrD1BeAPl95FYURjCQ2QOz/gQ9FyXD2\n" +
+                "MaoH9zubmhfUgX6b1jSbL/n5omJHsZUQXKgZbSl4YlqzsPaxS9Scer4qXoOUqMvl\n" +
+                "yYriT1n1sMCloDtNV+bMg+o3y5Cc8KJ9h/lVrz0sbGGXr69+Q9a6vjXCx6oL+KG6\n" +
+                "cNgKsK1ZNE/+OZ3GYJoLOydHCcNz/rXtZCsre0USPK1WVaxSrLN1v6LLsFWHdi08\n" +
+                "/XGdCQ9UKS2dqiIRRzRpb1+pOPPwaoHvGNE3l3mFTwARAQABiQIlBBgBAgAPBQJY\n" +
+                "HG3lAhsMBQkB4TOAAAoJEDKpjp+jPVDFrykP/AtJbmoxkuS+6pwisK2t0eJeP3a6\n" +
+                "NbvBqvokResZcJMGHi7tTWasc2JH1i2mCP6++Cc4V9I3u8IIA+gZrfRk+kUQnQOz\n" +
+                "Ouur0ah+yu2KW52Z7wXLrw8pUDndMneoPCvOAz+6gbplxMaro0n5T2jN/GlWCfa8\n" +
+                "CLII/4uasQNJOy/gBSeYmS1GWsu3dg0SuJDTmc7iqnkWg/9ve1klzOtVST1xEmze\n" +
+                "IRvSFuMYDA78w93ELqXFIFyIS70OW6rNNMmTg7f7JkgHrifaarhUrfjQK0DkSRtS\n" +
+                "nreH2dCUwNDzkjIdXli1yVEr/Svk+xNKjwi7bf4jZc2zeTnFQElKETl16Y4ttLQh\n" +
+                "p+WgqxOPF1P5dmv7oHK8SwZqozntOSLw0yt8oVpm2lIaO1Hu3evgIztNR4fArsOd\n" +
+                "PvCiRdy8OMASDaBkBqTVpTQ+ECqGovC17AOYt7MZIrmwgr+Wwp+SvSz6NWhqJlFN\n" +
+                "Be1HYBIiW6VtRgai4wIgLK8orbBUys5HEKTOH/5dvkK8wfgXuizUZI/sKwfmOIeT\n" +
+                "trxI2mgMFmUEVloCAqoaIPQ+2VSH/Pl/cZwAt02PfocxaSC93k93JZSgDqZho8ZS\n" +
+                "w09s/0VNg7+3xZkwf4su+38C2fyupehLxKotz5rK32OpjMYEOMN6VeHIHzse4DLV\n" +
+                "7005JriejAzEBEnx\n" +
+                "=djMy\n" +
+                "-----END PGP PUBLIC KEY BLOCK-----";
+
+            var options = {
+                data: document.getElementById("message").value,
+                publicKeys: openpgp.key.readArmored(publicKeyString).keys
+            };
+
+            openpgp.encrypt(options).then(function(ciphertext){
+                document.getElementById("message").value = ciphertext.data;
+            });
+
+            document.getElementById("encrypt").disabled = true;
+            document.getElementById("encrypt").title = "You may only encrypt once.";
+            document.getElementById("encrypt").removeEventListener("click", encryptMessage);
+        }
+    }
+    else{
+        window.alert("This browser does not support basic cryptography!");
+    }
+}
+
+document.getElementById("encrypt").addEventListener("click", encryptMessage);</code></pre>
+
+            <p>The above code will encrypt a message using my public key. Obviously, you need to replace my public key with your own.</p><br>
+
+            <h4>4. Add the scripts to your HTML.</h4>
+
+            <p><code>&lt;script src="openpgp.min.js"&gt;&lt;/script&gt;</code></p>
+
+            <p><code>&lt;script src="encrypt.js"&gt;&lt;/script&gt;</code></p><br>
+
+            <h4>5. You are done.</h4>
+
+            <p>Congratulations! You can now receive PGP encrypted messages from any user of your website.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Location</h3>
+                        <p><a class="light-link" href="https://en.wikipedia.org/wiki/John_Batman">Batmania</a>.<p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="https://github.com/aghorler" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://linkedin.com/in/aghorler" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/aghorler" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>About Me</h3>
+                        <p>I am an Information Technology student.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Aaron Horler 2017, using <a class="light-link" href="https://github.com/aghorler/aaronhorler.com">Freelancer</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- jQuery -->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="/js/freelancer.min.js"></script>
+
+</body>
+
+</html>

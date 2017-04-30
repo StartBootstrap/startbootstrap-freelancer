@@ -1,0 +1,79 @@
+==================================================================
+https://keybase.io/aghorler
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://aaronhorler.com
+  * I am aghorler (https://keybase.io/aghorler) on keybase.
+  * I have a public key with fingerprint D1A3 B36C 2E65 C324 485D  AB97 32A9 8E9F A33D 50C5
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01010e97ab00d0ae8bed9d00ec9f7b10d4ed737348849c51ef8321ba389ef6469b630a",
+            "fingerprint": "d1a3b36c2e65c324485dab9732a98e9fa33d50c5",
+            "host": "keybase.io",
+            "key_id": "32a98e9fa33d50c5",
+            "kid": "01010e97ab00d0ae8bed9d00ec9f7b10d4ed737348849c51ef8321ba389ef6469b630a",
+            "uid": "fdd450924f81e72b22af52a8a0df1b19",
+            "username": "aghorler"
+        },
+        "revoke": {
+            "sig_ids": [
+                "4ef887bf0d7a5c71fc225fa8d2075950290b7eb465a1819e01073ce715e4998b0f"
+            ]
+        },
+        "service": {
+            "hostname": "aaronhorler.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1492669123,
+    "expire_in": 157680000,
+    "prev": "df236addfb1388913994b462ba86ff77027d654913ab76cbc56947149bfb8b4a",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owGtUm1QVFUY3gUFkg8htA8gda4jUCBzvz+2mKlMx7AZjMEpE1ruuffc5fKxd7m7
+oEhYIcXkgEATRjjJTsxiLgZIkIYpw1aKEgEOIzEIKUjoYMEAwyQmdC/lv352zo8z
+57zP+zzP+76nItDb4GfETx2trYvf/aOx+y4wvPln0pUCBChiPmIqQDLhygGzRGh3
+mDNlETEhKKZtyDE8QFER5SELoMiJKAoFTmIAhookFBmCIUiWJTmBwqDEEjgGeILl
+oESTNAdoAuWRWESSrRao2lTZ6tBoRYwnAEELOKQpgcBJkqVEHnAMgfMcCzmJJwiR
+QgVKS0xX7HqGZg7wdhgnK9qbdjGv2PsP/P/sO3eFThJFkkI5nJRYDDI4wHFeonCe
+5VFRwgDG6UA7VK18NtTQvCVdUbOgihTGIirMUzKh3le7bNFM2xHTPoTU5FgGSKjI
+8JTAYJKA45TEsyKOMhRHoTiHAgYCkqZ4jMU4qNXCEAJkMAqSHMcCVEJSNW5NMU8W
+Vsj1Lj1S51XF+o+BOEHJ1qzZVMWhCEqWFkx3OGx2k27MkX/WpsP3Q2D+l8gMZKuo
+zUlLyYOqXVasiAnToIJD1pkxksNpmsNwIhaBB2yyCs2yjqAYmkW1pQvBPH26Ek7Q
+vChKACNYlsMIjiO1YnDAs7QkMQyKMyJNkVqABwwtAIGiOZLR6IEEWEDqbbfDHKuC
+mEjNJ2/RKLXmWXlHrgqRwjUfeUWsMhj9DD6rvfQPbFjzWPCjXx0+tnY5PdV9jhqQ
+k9OM1KHM8aZX+s+MBk6lbMW/ONZ4M7PmRFWqaXmvy2M4ctNZbfl59uH9/aNOr693
+DJWIE55ocvTB9ycPD7SpddHymOfVZu/4837jDXfCP9/y3HuRL2/esO/Le+StBf7d
+O/J8dnFS2fiFq6VD7dlFLy6MJUUEveMJatrtrCeE88Ux+cqk+FvJMPtxx5iv69qg
+T2iIK7G0si9jmriSVrfY1HnXlezzTcC9D3wuuitDqR+m2k+fWXQ29F9tbHoi9Pa8
+1GUWNk3NJ0TuSYrNaotwM0nXs359KrE51T/euC6gcqehPqN9W8q5+zWuBCYRC1uq
+8kvcM//pbP9l9/M3bO6FwaHumfxIOWit81TtZ90R0ugLjWLPrbZydSZ1w9HDkxfR
+GKeUs2vVLtW8viNw76FNKRPRStRXhavLPQnrG6Ja2bAlS9UDYzm1WEBUT2UELj57
+rPiv2OPberf+Xnz6u2X/2emu0rYitaeL/iR5+1Lu9nWvYyP+bzvev1a55USfvNk3
+uzUnZuPT+MmMhTfOhpR2DB4c+CMstL6prOc1v+G5kLhfPmzlYnbm1aW6AkjvjUc6
+04RyS0u1u+Z21DPD+ckzAZM3Ch/2LgdfaPb8BMbj5+IulR33Ep9Mr8Vbvi16XO1E
+fBSmNWik8cBLixUlcGT4cu9bFb7X+w62XNoxETw3PR3+Nw==
+=qIL8
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/aghorler
+
+==================================================================
+

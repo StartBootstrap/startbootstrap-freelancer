@@ -47,7 +47,6 @@
     <meta name="theme-color" content="#102a45">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -123,6 +122,12 @@
                 <div class="col-lg-4">
                     <p><a href="articles/sendmail.html">Using Let's Encrypt with Sendmail.</a></p>
                 </div>
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p><a href="articles/php-reporturi.html">Accepting secuirty header reports using PHP.</a></p>
+                </div>
+                <div class="col-lg-4">
+                    <p><a href="articles/openpgpjs.html">Creating a JavaScript PGP contact form.</a></p>
+                </div>
             </div>
         </div>
     </section>
@@ -142,12 +147,12 @@
                     <p>I've previously completed the Certificate IV in Information Technology Networking, and the Associate Degree of Information Technology - both at RMIT.</p>
                 </div>
                 <div class="col-lg-4">
-                    <p>My primary interests are web security, GNU/Linux, and web development.</p>
+                    <p>My primary interests are information security, GNU/Linux, and web development.</p>
                     <p>Use the button below to test my web server implementation.</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <a href="https://observatory.mozilla.org/analyze.html?host=aaronhorler.com" class="btn btn-lg btn-outline">
-                        <i class="fa fa-server"></i> Test my server
+                        <i class="fa fa-server"></i> Test this host
                     </a>
                 </div>
             </div>
@@ -186,12 +191,14 @@
                                 <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
                                 <p class="help-block text-danger"></p>
                                 <a href="public.asc" target="_blank">PGP public key</a>
+                                
                             </div>
                         </div>
                         <br>
                         <div id="success"></div>
                         <div class="row">
                             <div class="form-group col-xs-12">
+                                <a id="btnEncrypt" class="btn btn-success btn-lg" title="Optionally, you may encrypt your message using OpenPGP before you send it."><i class="fa fa-fw fa-lock"></i>Encrypt</a>
                                 <button id="btnSubmit" type="submit" class="btn btn-success btn-lg" title="Please don't spam me.">Send</button>
                             </div>
                         </div>
@@ -260,7 +267,8 @@
 
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <script src="js/openpgp.min.js"></script>
+    <script src="js/contact_me.min.js"></script>
 
     <!-- Theme JavaScript -->
     <script src="js/freelancer.min.js"></script>
