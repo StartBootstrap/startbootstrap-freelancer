@@ -1,0 +1,39 @@
+url: "http://leet.cloud"
+logo: "/img/alex.png"
+formspreeemail: "info@leet.cloud"
+
+maincolor: "#189cd7"
+secondarydarkcolor: "#233140"
+secondarylightcolor: "white"
+dropdowncolor: "#11866f"
+
+headertitle: leet.cloud
+title: Alex Simpson
+blurb: "Virtualisation Engineer turned aspiring cloud all rounder"
+
+portfolioheading: "My Blogs"
+portfoliofadecolor: "#189cd7" 
+#these images should be 900x650px
+portfolioimg1: "/img/portfolio/cloud-portfolio2.png"
+portfolioimg2: "/img/portfolio/bus-portfolio.png"
+portfolioimg3: #"/img/portfolio/circus.png"
+portfolioimg4: #"/img/portfolio/game.png"
+portfolioimg5: #"/img/portfolio/safe.png"
+portfolioimg6: #"/img/portfolio/submarine.png"
+
+aboutcolumn1: "I have been working with VMware for 3 years and am looking to branch out into all things public cloud."
+aboutcolumn2: "At the same time I am also planning on converting an old american schoolbus into our dream tinyhouse/housebus"
+aboutbutton:  
+aboutbuttonlink: 
+
+address1: Brisbane
+address2: Australia
+
+facebook: "https://www.facebook.com/ajsimpson69"
+stackoverflow: "http://stackoverflow.com/users/7040399/vendablefall"
+twitter: "https://twitter.com/VendableFall"
+linkedin: "https://www.linkedin.com/in/alexander-simpson-35716189/"
+github: "https://github.com/vendablefall"
+
+aboutfooter:
+aboutfooterbody:

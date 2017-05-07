@@ -1,7 +1,3 @@
----
----
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,7 +42,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#page-top">{{ site.headertitle }}</a>
+                <a class="navbar-brand" href="#page-top">leet.cloud</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -56,7 +52,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">{{ site.portfolioheading }}</a>
+                        <a href="#portfolio">My Blogs</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#about">About</a>
@@ -76,11 +72,11 @@
         <div class="container" id="maincontent" tabindex="-1">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-responsive" src="{{ site.logo }}" alt="">
+                    <img class="img-responsive" src="/img/alex.png" alt="">
                     <div class="intro-text">
-                        <h1 class="name">{{ site.title }}</h1>
+                        <h1 class="name">Alex Simpson</h1>
                         <hr class="star-light">
-                        <span class="skills">{{ site.blurb }}</span>
+                        <span class="skills">Virtualisation Engineer turned aspiring cloud all rounder</span>
                     </div>
                 </div>
             </div>
@@ -92,12 +88,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>{{ site.portfolioheading }}</h2>
+                    <h2>My Blogs</h2>
                     <hr class="star-primary">
                 </div>
             </div>
             <div class="row">
-				{% if site.portfolioimg1 %}
+				
                 <div class="col-sm-6 portfolio-item">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
@@ -105,11 +101,11 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="{{ site.portfolioimg1 }}" class="img-responsive" alt="Cabin">
+                        <img src="/img/portfolio/cloud-portfolio2.png" class="img-responsive" alt="Cabin">
                     </a>
                 </div>
-				{% endif %}
-				{% if site.portfolioimg2 %}
+				
+				
                 <div class="col-sm-6 portfolio-item">
                     <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
@@ -117,58 +113,14 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="{{ site.portfolioimg2 }}" class="img-responsive" alt="Slice of cake">
+                        <img src="/img/portfolio/bus-portfolio.png" class="img-responsive" alt="Slice of cake">
                     </a>
                 </div>
-				{% endif %}
-				{% if site.portfolioimg3 %}
-                <div class="col-sm-6 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="{{ site.portfolioimg3 }}" class="img-responsive" alt="Circus tent">
-                    </a>
-                </div>
-				{% endif %}
-				{% if site.portfolioimg4 %}
-                <div class="col-sm-6 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="{{ site.portfolioimg4 }}" class="img-responsive" alt="Game controller">
-                    </a>
-                </div>
-				{% endif %}
-				{% if site.portfolioimg5 %}
-                <div class="col-sm-6 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="{{ site.portfolioimg5 }}" class="img-responsive" alt="Safe">
-                    </a>
-                </div>
-				{% endif %}
-				{% if site.portfolioimg6 %}
-                <div class="col-sm-6 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="{{ site.portfolioimg6 }}" class="img-responsive" alt="Submarine">
-                    </a>
-                </div>
-				{% endif %}
+				
+				
+				
+				
+				
             </div>
         </div>
     </section>
@@ -184,17 +136,13 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>{{ site.aboutcolumn1 }}</p>
+                    <p>I have been working with VMware for 3 years and am looking to branch out into all things public cloud.</p>
                 </div>
                 <div class="col-lg-4">
-                    <p>{{ site.aboutcolumn2 }}</p>
+                    <p>At the same time I am also planning on converting an old american schoolbus into our dream tinyhouse/housebus</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-					{% if site.aboutbutton %}
-                    <a href="{{ site.aboutbuttonlink }}" class="btn btn-lg btn-outline">
-                        <i class="fa fa-download"></i> {{ site.aboutbutton }}
-                    </a>
-					{% endif %}
+					
                 </div>
             </div>
         </div>
@@ -213,7 +161,7 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
                     <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                    <form method="POST" action="http://formspree.io/{{ site.formspreeemail }}">
+                    <form method="POST" action="http://formspree.io/info@leet.cloud">
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label for="name">Name</label>
@@ -255,42 +203,42 @@
                 <div class="row">
                     <div class="footer-col col-md-4">
                         <h3>Location</h3>
-                        <p>{{ site.address1 }}
-                            <br>{{ site.address2 }}</p>
+                        <p>Brisbane
+                            <br>Australia</p>
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>Around the Web</h3>
                         <ul class="list-inline">
-							{% if site.facebook %}
+							
                             <li>
-                                <a href="{{ site.facebook }}" class="btn-social btn-outline"><span class="sr-only">Facebook</span><i class="fa fa-fw fa-facebook"></i></a>
+                                <a href="https://www.facebook.com/ajsimpson69" class="btn-social btn-outline"><span class="sr-only">Facebook</span><i class="fa fa-fw fa-facebook"></i></a>
                             </li>
-							{% endif %}
-							{% if site.stackoverflow %}
+							
+							
                             <li>
-                                <a href="{{ site.stackoverflow }}" class="btn-social btn-outline"><span class="sr-only">Google Plus</span><i class="fa fa-fw fa-stack-overflow"></i></a>
+                                <a href="http://stackoverflow.com/users/7040399/vendablefall" class="btn-social btn-outline"><span class="sr-only">Google Plus</span><i class="fa fa-fw fa-stack-overflow"></i></a>
                             </li>
-							{% endif %}
-							{% if site.twitter %}
+							
+							
                             <li>
-                                <a href="{{ site.twitter }}" class="btn-social btn-outline"><span class="sr-only">Twitter</span><i class="fa fa-fw fa-twitter"></i></a>
+                                <a href="https://twitter.com/VendableFall" class="btn-social btn-outline"><span class="sr-only">Twitter</span><i class="fa fa-fw fa-twitter"></i></a>
                             </li>
-							{% endif %}
-							{% if site.linkedin %}
+							
+							
                             <li>
-                                <a href="{{ site.linkedin }}" class="btn-social btn-outline"><span class="sr-only">Linked In</span><i class="fa fa-fw fa-linkedin"></i></a>
+                                <a href="https://www.linkedin.com/in/alexander-simpson-35716189/" class="btn-social btn-outline"><span class="sr-only">Linked In</span><i class="fa fa-fw fa-linkedin"></i></a>
                             </li>
-							{% endif %}
-							{% if site.github %}
+							
+							
                             <li>
-                                <a href="{{ site.github }}" class="btn-social btn-outline"><span class="sr-only">Dribble</span><i class="fa fa-fw fa-github"></i></a>
+                                <a href="https://github.com/vendablefall" class="btn-social btn-outline"><span class="sr-only">Dribble</span><i class="fa fa-fw fa-github"></i></a>
                             </li>
-							{% endif %}
+							
                         </ul>
                     </div>
                     <div class="footer-col col-md-4">
-                        <h3>{{ site.aboutfooter }}</h3>
-                        <p>{{ site.aboutfooterbody }}</a>.</p>
+                        <h3></h3>
+                        <p></a>.</p>
                     </div>
                 </div>
             </div>
@@ -328,7 +276,7 @@
                         <div class="modal-body">
                             <h2>pebkac my personal I.T blog</h2>
                             <hr class="star-primary">
-                            <img src="{{ site.portfolioimg1 }}" class="img-responsive img-centered" alt="">
+                            <img src="/img/portfolio/cloud-portfolio2.png" class="img-responsive img-centered" alt="">
                             <p>Here is my personal I.T blog <a href="http://blog.leet.cloud">pebkac</a>. have a look and see what I have been up to.</p>
                             <ul class="list-inline item-details">
 								<!--
@@ -369,7 +317,7 @@
                         <div class="modal-body">
                             <h2>LittleKiwiBus</h2>
                             <hr class="star-primary">
-                            <img src="{{ site.portfolioimg2 }}" class="img-responsive img-centered" alt="">
+                            <img src="/img/portfolio/bus-portfolio.png" class="img-responsive img-centered" alt="">
                             <p>This is my tinyhouse/housebus blog <a href="http://littlekiwibus.com">LittleKiwiBus</a>. Come see how we have been progressing. </p>
                             <ul class="list-inline item-details">
 								<!--
