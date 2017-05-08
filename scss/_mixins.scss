@@ -2,31 +2,31 @@
 // Bootstrap Button Variant
 @mixin button-variant($color, $background, $border) {
     color: $color;
-    background-color: $background;
     border-color: $border;
+    background-color: $background;
     &:focus,
     &.focus {
         color: $color;
-        background-color: darken($background, 10%);
         border-color: darken($border, 25%);
+        background-color: darken($background, 10%);
     }
     &:hover {
         color: $color;
-        background-color: darken($background, 10%);
         border-color: darken($border, 12%);
+        background-color: darken($background, 10%);
     }
     &:active,
     &.active,
     .open > &.dropdown-toggle {
         color: $color;
-        background-color: darken($background, 10%);
         border-color: darken($border, 12%);
+        background-color: darken($background, 10%);
         &:hover,
         &:focus,
         &.focus {
             color: $color;
-            background-color: darken($background, 17%);
             border-color: darken($border, 25%);
+            background-color: darken($background, 17%);
         }
     }
     &:active,
@@ -40,8 +40,8 @@
         &:hover,
         &:focus,
         &.focus {
-            background-color: $background;
             border-color: $border;
+            background-color: $background;
         }
     }
     .badge {

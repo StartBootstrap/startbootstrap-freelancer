@@ -2,36 +2,36 @@
 .floating-label-form-group {
     position: relative;
     margin-bottom: 0;
-    padding-bottom: 0.5em;
+    padding-bottom: .5em;
     border-bottom: 1px solid $gray-lighter;
     input,
     textarea {
-        z-index: 1;
+        font-size: 1.5em;
         position: relative;
+        z-index: 1;
         padding-right: 0;
         padding-left: 0;
+        resize: none;
         border: none;
         border-radius: 0;
-        font-size: 1.5em;
         background: none;
         box-shadow: none !important;
-        resize: none;
     }
     label {
-        display: block;
-        z-index: 0;
-        position: relative;
-        top: 2em;
-        margin: 0;
-        font-size: 0.85em;
+        font-size: .85em;
         line-height: 1.764705882em;
+        position: relative;
+        z-index: 0;
+        top: 2em;
+        display: block;
+        margin: 0;
+        -webkit-transition: top .3s ease, opacity .3s ease;
+        -moz-transition: top .3s ease, opacity .3s ease;
+        -ms-transition: top .3s ease, opacity .3s ease;
+        transition: top .3s ease, opacity .3s ease;
         vertical-align: middle;
         vertical-align: baseline;
         opacity: 0;
-        -webkit-transition: top 0.3s ease, opacity 0.3s ease;
-        -moz-transition: top 0.3s ease, opacity 0.3s ease;
-        -ms-transition: top 0.3s ease, opacity 0.3s ease;
-        transition: top 0.3s ease, opacity 0.3s ease;
     }
     &:not(:first-child) {
         padding-left: 14px;
@@ -70,6 +70,6 @@ footer {
     }
     .footer-below {
         padding: 25px 0;
-        background-color: darken($theme-primary, 0.05);
+        background-color: darken($theme-primary, .05);
     }
 }

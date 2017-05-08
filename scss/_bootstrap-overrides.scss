@@ -1,40 +1,40 @@
 // Bootstrap overrides for this template
 .btn-outline {
-    color: white;
     font-size: 20px;
+    margin-top: 15px;
+    transition: all .3s ease-in-out;
+    color: white;
     border: solid 2px white;
     background: transparent;
-    transition: all 0.3s ease-in-out;
-    margin-top: 15px;
     &:hover,
     &:focus,
     &:active,
     &.active {
         color: $theme-success;
-        background: white;
         border: solid 2px white;
+        background: white;
     }
 }
 
 .btn-primary {
-    @include button-variant(white, $theme-primary, $theme-primary);
     font-weight: 700;
+    @include button-variant(white, $theme-primary, $theme-primary);
 }
 
 .btn-success {
-    @include button-variant(white, $theme-success, $theme-success);
     font-weight: 700;
+    @include button-variant(white, $theme-success, $theme-success);
 }
 
 .btn-social {
-    display: inline-block;
-    height: 50px;
-    width: 50px;
-    border: 2px solid white;
-    border-radius: 100%;
-    text-align: center;
     font-size: 20px;
     line-height: 45px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 100%;
 }
 
 .btn:focus,

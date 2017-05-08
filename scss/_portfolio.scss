@@ -1,34 +1,34 @@
 // Styling for the portfolio section
 #portfolio {
     .portfolio-item {
-        margin: 0 0 15px;
         right: 0;
+        margin: 0 0 15px;
         .portfolio-link {
-            cursor: pointer;
-            display: block;
             position: relative;
+            display: block;
             max-width: 400px;
             margin: 0 auto;
+            cursor: pointer;
             .caption {
-                background: fade-out($theme-success, 0.1);
                 position: absolute;
                 width: 100%;
                 height: 100%;
+                -webkit-transition: all ease .5s;
+                -moz-transition: all ease .5s;
+                transition: all ease .5s;
                 opacity: 0;
-                transition: all ease 0.5s;
-                -webkit-transition: all ease 0.5s;
-                -moz-transition: all ease 0.5s;
+                background: fade-out($theme-success, .1);
                 &:hover {
                     opacity: 1;
                 }
                 .caption-content {
+                    font-size: 20px;
                     position: absolute;
+                    top: 50%;
                     width: 100%;
                     height: 20px;
-                    font-size: 20px;
-                    text-align: center;
-                    top: 50%;
                     margin-top: -12px;
+                    text-align: center;
                     color: white;
                     i {
                         margin-top: -12px;
@@ -56,23 +56,23 @@
 
 .portfolio-modal {
     .modal-dialog {
+        max-width: 100%;
+        min-height: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        border: none;
         border-radius: 0;
         background-clip: border-box;
         -webkit-box-shadow: none;
         box-shadow: none;
-        border: none;
-        min-height: 100%;
-        text-align: center;
-        max-width: 100%;
-        margin: 0;
-        padding: 0;
         .modal-content {
             padding: 100px 0;
-            border-radius: 0;
             border: 0;
+            border-radius: 0;
             h2 {
-                margin: 0;
                 font-size: 3em;
+                margin: 0;
             }
             img {
                 margin-bottom: 30px;
@@ -84,41 +84,41 @@
     }
     .close-modal {
         position: absolute;
-        width: 75px;
-        height: 75px;
-        background-color: transparent;
         top: 25px;
         right: 25px;
+        width: 75px;
+        height: 75px;
         cursor: pointer;
+        background-color: transparent;
         &:hover {
-            opacity: 0.3;
+            opacity: .3;
         }
         .lr {
-            height: 75px;
-            width: 1px;
-            margin-left: 35px;
-            background-color: $theme-primary;
-            transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            /* IE 9 */
-            -webkit-transform: rotate(45deg);
             /* Safari and Chrome */
             z-index: 1051;
+            width: 1px;
+            height: 75px;
+            margin-left: 35px;
+            /* IE 9 */
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            background-color: $theme-primary;
             .rl {
-                height: 75px;
-                width: 1px;
-                background-color: $theme-primary;
-                transform: rotate(90deg);
-                -ms-transform: rotate(90deg);
-                /* IE 9 */
-                -webkit-transform: rotate(90deg);
                 /* Safari and Chrome */
                 z-index: 1052;
+                width: 1px;
+                height: 75px;
+                /* IE 9 */
+                -webkit-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                transform: rotate(90deg);
+                background-color: $theme-primary;
             }
         }
     }
     .modal-backdrop {
-        opacity: 0;
         display: none;
+        opacity: 0;
     }
 }

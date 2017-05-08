@@ -1,10 +1,10 @@
 // Styling for the navbar
 #mainNav {
-    background: $theme-primary;
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
+    text-transform: uppercase;
     border: none;
+    background: $theme-primary;
     a:focus {
         outline: none;
     }
@@ -34,16 +34,16 @@
         }
     }
     .navbar-toggler {
-        color: white;
-        text-transform: uppercase;
         font-size: 14px;
-        border-color: white;
         padding: 11px;
+        text-transform: uppercase;
+        color: white;
+        border-color: white;
         &:hover,
         &:focus {
-            background-color: $theme-success;
             color: white;
             border-color: $theme-success;
+            background-color: $theme-success;
         }
     }
 }
@@ -51,19 +51,19 @@
 @media(min-width:992px) {
     #mainNav {
         padding: 25px 0;
-        -webkit-transition: padding 0.3s;
-        -moz-transition: padding 0.3s;
-        transition: padding 0.3s;
+        -webkit-transition: padding .3s;
+        -moz-transition: padding .3s;
+        transition: padding .3s;
         .navbar-brand {
             font-size: 2em;
-            -webkit-transition: all 0.3s;
-            -moz-transition: all 0.3s;
-            transition: all 0.3s;
+            -webkit-transition: all .3s;
+            -moz-transition: all .3s;
+            transition: all .3s;
         }
         .navbar-nav > li.nav-item > a.nav-link.active {
             color: white;
-            background: $theme-success;
             border-radius: 3px;
+            background: $theme-success;
             &:hover,
             &:focus,
             &:active {

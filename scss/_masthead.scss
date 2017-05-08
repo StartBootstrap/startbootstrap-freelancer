@@ -1,8 +1,8 @@
 // Styling for the masthead
 header.masthead {
     text-align: center;
-    background: $theme-success;
     color: white;
+    background: $theme-success;
     .container {
         padding-top: 100px;
         padding-bottom: 50px;
@@ -13,11 +13,11 @@ header.masthead {
     }
     .intro-text {
         .name {
-            display: block;
-            font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-            text-transform: uppercase;
-            font-weight: 700;
+            font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
             font-size: 2em;
+            font-weight: 700;
+            display: block;
+            text-transform: uppercase;
         }
         .skills {
             font-size: 1.25em;
