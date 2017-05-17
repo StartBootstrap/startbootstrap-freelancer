@@ -1,7 +1,0 @@
-User-Agent: *
-Allow: /$
-Allow: /articles
-Allow: /sitemap.xml
-Disallow: /
-
-Sitemap: https://aaronhorler.com/sitemap.xml
