@@ -189,12 +189,15 @@
                 <div class="col-lg-4">
                     <p>{{ site.aboutcolumn2 }}</p>
                 </div>
+
+                <div class="col-lg-12 text-center" style="padding-top: 60px">
+                    <h2>Certifications</h2>
+                    <hr class="star-light">
+                </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-					{% if site.aboutbutton %}
-                    <a href="{{ site.aboutbuttonlink }}" class="btn btn-lg btn-outline">
-                        <i class="fa fa-download"></i> {{ site.aboutbutton }}
-                    </a>
-					{% endif %}
+					{% for cert in site.certs %}
+                    <img src="{{ cert.imagepath }}" style="max-width: 280px;padding: 30px">
+					{% endfor %}
                 </div>
             </div>
         </div>

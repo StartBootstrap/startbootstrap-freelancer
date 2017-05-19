@@ -16,15 +16,15 @@ portfoliofadecolor: "#189cd7"
 #these images should be 900x650px
 portfolioimg1: "/img/portfolio/cloud-portfolio2.png"
 portfolioimg2: "/img/portfolio/LittleKiwiBus_Logo_scaled.png"
-portfolioimg3: #"/img/portfolio/circus.png"
-portfolioimg4: #"/img/portfolio/game.png"
-portfolioimg5: #"/img/portfolio/safe.png"
-portfolioimg6: #"/img/portfolio/submarine.png"
+portfolioimg3: 
 
-aboutcolumn1: "I have been working with VMware for 3 years and am looking to branch out into all things public cloud."
+aboutcolumn1: "I have been working in I.T for years 3 and am currently branching out into all things public cloud."
 aboutcolumn2: "At the same time I am also planning on converting an old american schoolbus into our dream tinyhouse/housebus"
-aboutbutton:  
-aboutbuttonlink: 
+certs:
+  - name: "VCP6-DCV"
+    imagepath: "/img/cert-badges/Telerik.Web.UI.WebResource.png"
+  - name: "AWS-SA-A"
+    imagepath: "/img/cert-badges/VMW-LGO-CERT-PRO-6-DATA-CTR-VIRT.png"
 
 address1: Brisbane
 address2: Australia
