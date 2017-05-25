@@ -74,16 +74,23 @@
     <!-- Header -->
     <header>
         <div class="container" id="maincontent" tabindex="-1">
-            <div class="row">
-                <div class="col-lg-12">
+
+                <div class="">
                     <img class="img-responsive" src="{{ site.logo }}" alt="">
                     <div class="intro-text">
                         <h1 class="name">{{ site.title }}</h1>
                         <hr class="star-light">
                         <span class="skills">{{ site.blurb }}</span>
                     </div>
+                    <br>
+                    <h2>Certifications</h2>
                 </div>
-            </div>
+                <div>
+                    {% for cert in site.certs %}
+                    <img src="{{ cert.imagepath }}" style="max-width: 280px; padding: 30px">
+                    {% endfor %}
+                </div>
+            
         </div>
     </header>
 
@@ -183,23 +190,44 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
+                <div class="text-center">
                     <p>{{ site.aboutcolumn1 }}</p>
                 </div>
-                <div class="col-lg-4">
+                <div class="text-center">
                     <p>{{ site.aboutcolumn2 }}</p>
                 </div>
-
-                <div class="col-lg-12 text-center" style="padding-top: 60px">
-                    <h2>Certifications</h2>
-                    <hr class="star-light">
-                </div>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-					{% for cert in site.certs %}
-                    <img src="{{ cert.imagepath }}" style="max-width: 280px;padding: 30px">
-					{% endfor %}
-                </div>
+                <br>
             </div>
+            <div class="text-center">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            {% if site.facebook %}
+                            <li>
+                                <a href="{{ site.facebook }}" class="btn-social btn-outline"><span class="sr-only">Facebook</span><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            {% endif %}
+                            {% if site.stackoverflow %}
+                            <li>
+                                <a href="{{ site.stackoverflow }}" class="btn-social btn-outline"><span class="sr-only">Google Plus</span><i class="fa fa-fw fa-stack-overflow"></i></a>
+                            </li>
+                            {% endif %}
+                            {% if site.twitter %}
+                            <li>
+                                <a href="{{ site.twitter }}" class="btn-social btn-outline"><span class="sr-only">Twitter</span><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            {% endif %}
+                            {% if site.linkedin %}
+                            <li>
+                                <a href="{{ site.linkedin }}" class="btn-social btn-outline"><span class="sr-only">Linked In</span><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            {% endif %}
+                            {% if site.github %}
+                            <li>
+                                <a href="{{ site.github }}" class="btn-social btn-outline"><span class="sr-only">Dribble</span><i class="fa fa-fw fa-github"></i></a>
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </div>
         </div>
     </section>
 
@@ -251,63 +279,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="text-center">
-        <div class="footer-above">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col col-md-4">
-                        <h3>Location</h3>
-                        <p>{{ site.address1 }}
-                            <br>{{ site.address2 }}</p>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>Around the Web</h3>
-                        <ul class="list-inline">
-							{% if site.facebook %}
-                            <li>
-                                <a href="{{ site.facebook }}" class="btn-social btn-outline"><span class="sr-only">Facebook</span><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-							{% endif %}
-							{% if site.stackoverflow %}
-                            <li>
-                                <a href="{{ site.stackoverflow }}" class="btn-social btn-outline"><span class="sr-only">Google Plus</span><i class="fa fa-fw fa-stack-overflow"></i></a>
-                            </li>
-							{% endif %}
-							{% if site.twitter %}
-                            <li>
-                                <a href="{{ site.twitter }}" class="btn-social btn-outline"><span class="sr-only">Twitter</span><i class="fa fa-fw fa-twitter"></i></a>
-                            </li>
-							{% endif %}
-							{% if site.linkedin %}
-                            <li>
-                                <a href="{{ site.linkedin }}" class="btn-social btn-outline"><span class="sr-only">Linked In</span><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-							{% endif %}
-							{% if site.github %}
-                            <li>
-                                <a href="{{ site.github }}" class="btn-social btn-outline"><span class="sr-only">Dribble</span><i class="fa fa-fw fa-github"></i></a>
-                            </li>
-							{% endif %}
-                        </ul>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>{{ site.aboutfooter }}</h3>
-                        <p>{{ site.aboutfooterbody }}</a>.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        Copyright &copy; leet.cloud 2017
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
