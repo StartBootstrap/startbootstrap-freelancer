@@ -1,7 +1,7 @@
 url: "http://leet.cloud"
 #logo: "/img/alex.png"
 formspreeemail: "info@leet.cloud"
-
+mainbackgroundimage: "img/cloud-cartoon.jpg"
 maincolor: "#189cd7"
 secondarydarkcolor: "#233140"
 secondarylightcolor: "white"
@@ -26,14 +26,8 @@ certs:
   - name: "AWS-SA-A"
     imagepath: "/img/cert-badges/VMW-LGO-CERT-PRO-6-DATA-CTR-VIRT.png"
 
-address1: Brisbane
-address2: Australia
-
 facebook: "https://www.facebook.com/ajsimpson69"
 stackoverflow: "http://stackoverflow.com/users/7040399/vendablefall"
 twitter: "https://twitter.com/VendableFall"
 linkedin: "https://www.linkedin.com/in/alexander-simpson-35716189/"
 github: "https://github.com/vendablefall"
-
-aboutfooter:
-aboutfooterbody:
