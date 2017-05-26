@@ -13,14 +13,14 @@ title: Alex Simpson
 blurb: "Virtualisation Engineer turned aspiring cloud all rounder"
 CV: "Alex-simpson-CV.odt"
 portfolioheading: "My Blogs"
-portfoliofadecolor: "#189cd7" 
+portfoliofadecolor: "#1f62a8" 
 #these images should be 900x650px
 portfolioimg1: "/img/portfolio/cloud-portfolio2.png"
 portfolioimg2: "/img/portfolio/LittleKiwiBus_Logo_scaled.png"
 portfolioimg3: 
 
-aboutcolumn1: "I have been working in I.T for years 6 and am currently branching out into all things public cloud."
-aboutcolumn2: "At the same time I am also planning on converting an old american schoolbus into our dream tinyhouse/housebus"
+aboutcolumn1: "Has been working in I.T for years 6 and is currently branching out into all things public cloud."
+aboutcolumn2: "At the same time his partner and him are planning to convert an old american schoolbus into their dream tinyhouse/housebus."
 certs:
   - name: "VCP6-DCV"
     imagepath: "/img/cert-badges/Telerik.Web.UI.WebResource.png"
