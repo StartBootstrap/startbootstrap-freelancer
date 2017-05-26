@@ -1,0 +1,34 @@
+url: "http://leet.cloud"
+#logo: "/img/alex.png"
+formspreeemail: "info@leet.cloud"
+mainbackgroundimage: "img/Clouds-mac-hd3.jpg"
+mainbackgroundimage2: "img/Clouds-mac-hd3.jpg"
+maincolor: "#189cd7"
+secondarydarkcolor: "#233140"
+secondarylightcolor: "white"
+dropdowncolor: "#11866f"
+
+headertitle: "Alex Simpson"
+title: Alex Simpson
+blurb: "Virtualisation Engineer turned aspiring cloud all rounder"
+CV: "Alex-simpson-CV.odt"
+portfolioheading: "My Blogs"
+portfoliofadecolor: "#1f62a8" 
+#these images should be 900x650px
+portfolioimg1: "/img/portfolio/cloud-portfolio2.png"
+portfolioimg2: "/img/portfolio/LittleKiwiBus_Logo_scaled.png"
+portfolioimg3: 
+
+aboutcolumn1: "Has been working in I.T for years 6 and is currently branching out into all things public cloud."
+aboutcolumn2: "At the same time his partner and him are planning to convert an old american schoolbus into their dream tinyhouse/housebus."
+certs:
+  - name: "VCP6-DCV"
+    imagepath: "/img/cert-badges/Telerik.Web.UI.WebResource.png"
+  - name: "AWS-SA-A"
+    imagepath: "/img/cert-badges/VMW-LGO-CERT-PRO-6-DATA-CTR-VIRT.png"
+
+facebook: "https://www.facebook.com/ajsimpson69"
+stackoverflow: "http://stackoverflow.com/users/7040399/vendablefall"
+twitter: "https://twitter.com/VendableFall"
+linkedin: "https://www.linkedin.com/in/alexander-simpson-35716189/"
+github: "https://github.com/vendablefall"
