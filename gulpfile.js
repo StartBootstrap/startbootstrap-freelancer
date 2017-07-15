@@ -19,7 +19,7 @@ var banner = ['/*!\n',
 
 // Compile LESS files from /less into /css
 gulp.task('less', function() {
-    var f = filter(['*', '!mixins.less', '!variables.less']);
+    var f = filter(['less/*.less', '!less/mixins.less', '!less/variables.less']);
     return gulp.src('less/*.less')
         .pipe(f)
         .pipe(less())
