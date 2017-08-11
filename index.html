@@ -21,43 +21,28 @@
     <!-- Custom styles for this template -->
     <link href="css/freelancer.min.css" rel="stylesheet">
 
-    <!-- Temporary navbar container fix -->
-    <style>
-    .navbar-toggler {
-        z-index: 1;
-    }
-    
-    @media (max-width: 576px) {
-        nav > .container {
-            width: 100%;
-        }
-    }
-    </style>
-
 </head>
 
 <body class="index" id="page-top">
 
     <!-- Navigation -->
-    <nav class="navbar fixed-top navbar-toggleable-md navbar-light" id="mainNav">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu <i class="fa fa-bars"></i>
         </button>
-        <div class="container">
-            <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
-            <div class="collapse navbar-collapse" id="navbarExample">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
@@ -149,13 +134,13 @@
             <h2 class="text-center">About</h2>
             <hr class="star-light">
             <div class="row">
-                <div class="col-lg-4 offset-lg-2">
+                <div class="col-lg-4 ml-auto">
                     <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 mr-auto">
                     <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
                 </div>
-                <div class="col-lg-8 offset-lg-2 text-center">
+                <div class="col-lg-8 mx-auto text-center">
                     <a href="#" class="btn btn-lg btn-outline">
                         <i class="fa fa-download"></i> Download Theme
                     </a>
@@ -170,7 +155,7 @@
             <h2 class="text-center">Contact Me</h2>
             <hr class="star-primary">
             <div class="row">
-                <div class="col-lg-8 offset-lg-2">
+                <div class="col-lg-8 mx-auto">
                     <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
                     <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
                     <form name="sentMessage" id="contactForm" novalidate>
@@ -262,7 +247,7 @@
     </footer>
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top hidden-lg-up">
+    <div class="scroll-top d-lg-none">
         <a class="btn btn-primary page-scroll" href="#page-top">
             <i class="fa fa-chevron-up"></i>
         </a>
@@ -280,7 +265,7 @@
                 </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-8 offset-lg-2">
+                        <div class="col-lg-8 mx-auto">
                             <div class="modal-body">
                                 <h2>Project Title</h2>
                                 <hr class="star-primary">
@@ -319,7 +304,7 @@
                 </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-8 offset-lg-2">
+                        <div class="col-lg-8 mx-auto">
                             <div class="modal-body">
                                 <h2>Project Title</h2>
                                 <hr class="star-primary">
@@ -358,7 +343,7 @@
                 </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-8 offset-lg-2">
+                        <div class="col-lg-8 mx-auto">
                             <div class="modal-body">
                                 <h2>Project Title</h2>
                                 <hr class="star-primary">
@@ -397,7 +382,7 @@
                 </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-8 offset-lg-2">
+                        <div class="col-lg-8 mx-auto">
                             <div class="modal-body">
                                 <h2>Project Title</h2>
                                 <hr class="star-primary">
@@ -436,7 +421,7 @@
                 </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-8 offset-lg-2">
+                        <div class="col-lg-8 mx-auto">
                             <div class="modal-body">
                                 <h2>Project Title</h2>
                                 <hr class="star-primary">
@@ -475,7 +460,7 @@
                 </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-8 offset-lg-2">
+                        <div class="col-lg-8 mx-auto">
                             <div class="modal-body">
                                 <h2>Project Title</h2>
                                 <hr class="star-primary">
@@ -506,7 +491,7 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/tether/tether.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
