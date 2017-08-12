@@ -1,0 +1,123 @@
+// Styling for the portfolio section
+#portfolio {
+  .portfolio-item {
+    right: 0;
+    margin: 0 0 15px;
+    .portfolio-link {
+      position: relative;
+      display: block;
+      max-width: 400px;
+      margin: 0 auto;
+      cursor: pointer;
+      .caption {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all ease 0.5s;
+        -moz-transition: all ease 0.5s;
+        transition: all ease 0.5s;
+        opacity: 0;
+        background: fade-out($theme-success, .1);
+        &:hover {
+          opacity: 1;
+        }
+        .caption-content {
+          font-size: 20px;
+          position: absolute;
+          top: 50%;
+          width: 100%;
+          height: 20px;
+          margin-top: -12px;
+          text-align: center;
+          color: white;
+          i {
+            margin-top: -12px;
+          }
+          h3,
+          h4 {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+  * {
+    z-index: 2;
+  }
+}
+@media(min-width:767px) {
+  #portfolio {
+    .portfolio-item {
+      margin: 0 0 30px;
+    }
+  }
+}
+
+.portfolio-modal {
+  .modal-dialog {
+    max-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: none;
+    border-radius: 0;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    .modal-content {
+      padding: 100px 0;
+      border: 0;
+      border-radius: 0;
+      h2 {
+        font-size: 3em;
+        margin: 0;
+      }
+      img {
+        margin-bottom: 30px;
+      }
+      .item-details {
+        margin: 30px 0;
+      }
+    }
+  }
+  .close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+    background-color: transparent;
+    &:hover {
+      opacity: 0.3;
+    }
+    .lr {
+      /* Safari and Chrome */
+      z-index: 1051;
+      width: 1px;
+      height: 75px;
+      margin-left: 35px;
+      /* IE 9 */
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      background-color: $theme-primary;
+      .rl {
+        /* Safari and Chrome */
+        z-index: 1052;
+        width: 1px;
+        height: 75px;
+        /* IE 9 */
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        background-color: $theme-primary;
+      }
+    }
+  }
+  .modal-backdrop {
+    display: none;
+    opacity: 0;
+  }
+}
