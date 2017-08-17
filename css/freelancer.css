@@ -448,3 +448,8 @@ footer {
 .btn:active,
 .btn:focus {
   outline: none; }
+
+
+header.masthead {
+    background: red!important;
+}
