@@ -23,27 +23,29 @@
 
   </head>
 
-  <body class="index" id="page-top">
+  <body id="page-top">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fa fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#portfolio">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -66,64 +68,64 @@
         <hr class="star-primary">
         <div class="row">
           <div class="col-sm-4 portfolio-item">
-            <div class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
+            <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
               <div class="caption">
                 <div class="caption-content">
                   <i class="fa fa-search-plus fa-3x"></i>
                 </div>
               </div>
               <img class="img-fluid" src="img/portfolio/cabin.png" alt="">
-            </div>
+            </a>
           </div>
           <div class="col-sm-4 portfolio-item">
-            <div class="portfolio-link" href="#portfolioModal2" data-toggle="modal">
+            <a class="portfolio-link" href="#portfolioModal2" data-toggle="modal">
               <div class="caption">
                 <div class="caption-content">
                   <i class="fa fa-search-plus fa-3x"></i>
                 </div>
               </div>
               <img class="img-fluid" src="img/portfolio/cake.png" alt="">
-            </div>
+            </a>
           </div>
           <div class="col-sm-4 portfolio-item">
-            <div class="portfolio-link" href="#portfolioModal3" data-toggle="modal">
+            <a class="portfolio-link" href="#portfolioModal3" data-toggle="modal">
               <div class="caption">
                 <div class="caption-content">
                   <i class="fa fa-search-plus fa-3x"></i>
                 </div>
               </div>
               <img class="img-fluid" src="img/portfolio/circus.png" alt="">
-            </div>
+            </a>
           </div>
           <div class="col-sm-4 portfolio-item">
-            <div class="portfolio-link" href="#portfolioModal4" data-toggle="modal">
+            <a class="portfolio-link" href="#portfolioModal4" data-toggle="modal">
               <div class="caption">
                 <div class="caption-content">
                   <i class="fa fa-search-plus fa-3x"></i>
                 </div>
               </div>
               <img class="img-fluid" src="img/portfolio/game.png" alt="">
-            </div>
+            </a>
           </div>
           <div class="col-sm-4 portfolio-item">
-            <div class="portfolio-link" href="#portfolioModal5" data-toggle="modal">
+            <a class="portfolio-link" href="#portfolioModal5" data-toggle="modal">
               <div class="caption">
                 <div class="caption-content">
                   <i class="fa fa-search-plus fa-3x"></i>
                 </div>
               </div>
               <img class="img-fluid" src="img/portfolio/safe.png" alt="">
-            </div>
+            </a>
           </div>
           <div class="col-sm-4 portfolio-item">
-            <div class="portfolio-link" href="#portfolioModal6" data-toggle="modal">
+            <a class="portfolio-link" href="#portfolioModal6" data-toggle="modal">
               <div class="caption">
                 <div class="caption-content">
                   <i class="fa fa-search-plus fa-3x"></i>
                 </div>
               </div>
               <img class="img-fluid" src="img/portfolio/submarine.png" alt="">
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -192,7 +194,7 @@
               <br>
               <div id="success"></div>
               <div class="form-group">
-                <button type="submit" class="btn btn-success btn-lg">Send</button>
+                <button type="submit" class="btn btn-success btn-lg" id="sendMessageButton">Send</button>
               </div>
             </form>
           </div>
@@ -261,7 +263,7 @@
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-top d-lg-none">
-      <a class="btn btn-primary page-scroll" href="#page-top">
+      <a class="btn btn-primary js-scroll-trigger" href="#page-top">
         <i class="fa fa-chevron-up"></i>
       </a>
     </div>
