@@ -350,6 +350,12 @@ footer {
     padding: 25px 0;
     background-color: #2c3e50; }
 
+.dropdown-toggle {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  background-color: #cd5c5c;
+}
+
 .btn-outline {
   font-size: 20px;
   margin-top: 15px;
