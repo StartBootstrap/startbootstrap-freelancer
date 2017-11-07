@@ -75,7 +75,11 @@ section {
 
 section.success {
   color: white;
-  background: #18BC9C; }
+  background: #ffbf00; }
+
+  section.success1 {
+    color: white;
+    background: #008000; }
 
 @media (max-width: 767px) {
   section {
@@ -105,7 +109,7 @@ section.success {
   font-weight: 700;
   text-transform: uppercase;
   border: none;
-  background: #2C3E50; }
+  background: #FFC0CB; }
   #mainNav a:focus {
     outline: none; }
   #mainNav .navbar-brand {
@@ -130,8 +134,8 @@ section.success {
     border-color: white; }
     #mainNav .navbar-toggler:focus, #mainNav .navbar-toggler:hover {
       color: white;
-      border-color: #18BC9C;
-      background-color: #18BC9C; }
+      border-color: #ffc0cb;
+      background-color: #ffc0cb; }
 
 @media (min-width: 992px) {
   #mainNav {
@@ -148,10 +152,10 @@ section.success {
     #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
       color: white;
       border-radius: 3px;
-      background: #18BC9C; }
+      background: #ffc0cb; }
       #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
         color: white;
-        background: #18BC9C; }
+        background: #ffc0cb; }
   #mainNav.navbar-shrink {
     padding-top: 10px;
     padding-bottom: 10px; }
@@ -186,16 +190,16 @@ header.masthead {
     header.masthead .intro-text .skills {
       font-size: 1.75em; } }
 
-#portfolio .portfolio-item {
+#contato .portfolio-item {
   right: 0;
   margin: 0 0 15px; }
-  #portfolio .portfolio-item .portfolio-link {
+  #contato .portfolio-item .portfolio-link {
     position: relative;
     display: block;
     max-width: 400px;
     margin: 0 auto;
     cursor: pointer; }
-    #portfolio .portfolio-item .portfolio-link .caption {
+    #contato .portfolio-item .portfolio-link .caption {
       position: absolute;
       width: 100%;
       height: 100%;
@@ -204,9 +208,9 @@ header.masthead {
       transition: all ease 0.5s;
       opacity: 0;
       background: rgba(24, 188, 156, 0.9); }
-      #portfolio .portfolio-item .portfolio-link .caption:hover {
+      #contato .portfolio-item .portfolio-link .caption:hover {
         opacity: 1; }
-      #portfolio .portfolio-item .portfolio-link .caption .caption-content {
+      #contato .portfolio-item .portfolio-link .caption .caption-content {
         font-size: 20px;
         position: absolute;
         top: 50%;
@@ -215,17 +219,17 @@ header.masthead {
         margin-top: -12px;
         text-align: center;
         color: white; }
-        #portfolio .portfolio-item .portfolio-link .caption .caption-content i {
+        #contato .portfolio-item .portfolio-link .caption .caption-content i {
           margin-top: -12px; }
-        #portfolio .portfolio-item .portfolio-link .caption .caption-content h3,
-        #portfolio .portfolio-item .portfolio-link .caption .caption-content h4 {
+        #contato .portfolio-item .portfolio-link .caption .caption-content h3,
+        #contato .portfolio-item .portfolio-link .caption .caption-content h4 {
           margin: 0; }
 
-#portfolio * {
+#contato * {
   z-index: 2; }
 
 @media (min-width: 767px) {
-  #portfolio .portfolio-item {
+  #contato .portfolio-item {
     margin: 0 0 30px; } }
 
 .portfolio-modal .modal-dialog {
