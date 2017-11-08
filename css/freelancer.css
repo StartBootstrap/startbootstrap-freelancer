@@ -77,9 +77,17 @@ section.success {
   color: white;
   background: #ffbf00; }
 
-  section.success1 {
+  section.stripe-1 {
     color: white;
-    background: #008000; }
+    background: #860101; }
+
+    section.stripe-2 {
+      color: white;
+      background: #313131; }
+
+      section.stripe-3 {
+        color: white;
+        background: #001438; }
 
 @media (max-width: 767px) {
   section {
@@ -109,33 +117,33 @@ section.success {
   font-weight: 700;
   text-transform: uppercase;
   border: none;
-  background: #FFC0CB; }
+  background: #ffffff; }
   #mainNav a:focus {
     outline: none; }
   #mainNav .navbar-brand {
     font-size: 1.1rem;
-    color: white; }
+    color: #001438; }
     #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-      color: white; }
+      color: #001438; }
   #mainNav .navbar-nav {
     letter-spacing: 1px; }
     #mainNav .navbar-nav li.nav-item a.nav-link {
-      color: white; }
+      color: #001438; }
       #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-        color: #18BC9C;
+        color: #860101;
         outline: none; }
       #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
-        color: white; }
+        color: 001438; }
   #mainNav .navbar-toggler {
     font-size: 14px;
     padding: 11px;
     text-transform: uppercase;
-    color: white;
-    border-color: white; }
+    color: 001438;
+    border-color: 001438; }
     #mainNav .navbar-toggler:focus, #mainNav .navbar-toggler:hover {
-      color: white;
-      border-color: #ffc0cb;
-      background-color: #ffc0cb; }
+      color: 001438;
+      border-color: #001438;
+      background-color: #8a2be2; }
 
 @media (min-width: 992px) {
   #mainNav {
@@ -152,10 +160,10 @@ section.success {
     #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
       color: white;
       border-radius: 3px;
-      background: #ffc0cb; }
+      background: #860101; }
       #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
-        color: white;
-        background: #ffc0cb; }
+        color: 001438;
+        background: #860101; }
   #mainNav.navbar-shrink {
     padding-top: 10px;
     padding-bottom: 10px; }
@@ -166,8 +174,8 @@ header.masthead {
   padding-top: 100px;
   padding-bottom: 50px;
   text-align: center;
-  color: white;
-  background: #18BC9C; }
+  color: #001438;
+  background: white; }
   header.masthead img {
     display: block;
     margin: 0 auto 20px; }
@@ -186,7 +194,7 @@ header.masthead {
     padding-top: 200px;
     padding-bottom: 100px; }
     header.masthead .intro-text .name {
-      font-size: 4.75em; }
+      font-size: 3.75em; }
     header.masthead .intro-text .skills {
       font-size: 1.75em; } }
 
