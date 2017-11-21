@@ -8,7 +8,9 @@
       display: block;
       max-width: 400px;
       margin: 0 auto;
-      cursor: pointer;
+      cursor: not-allowed;
+      opacity: 0.2;
+      filter: alpha(opacity=20); /* For IE8 and earlier */
       .caption {
         position: absolute;
         width: 100%;

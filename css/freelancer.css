@@ -164,9 +164,15 @@ header.masthead {
   text-align: center;
   color: white;
   background: #18BC9C; }
-  header.masthead img {
-    display: block;
-    margin: 0 auto 20px; }
+  header.masthead .profile-img {
+    display: inline-block;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url("/img/profile.jpg"); }
   header.masthead .intro-text .name {
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 2em;
@@ -194,7 +200,10 @@ header.masthead {
     display: block;
     max-width: 400px;
     margin: 0 auto;
-    cursor: pointer; }
+    cursor: not-allowed;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+    /* For IE8 and earlier */ }
     #portfolio .portfolio-item .portfolio-link .caption {
       position: absolute;
       width: 100%;
