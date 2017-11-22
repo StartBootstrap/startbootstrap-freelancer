@@ -1,123 +1,63 @@
 // Styling for the portfolio section
-#portfolio {
+.portfolio {
+  margin-bottom: -15px;
   .portfolio-item {
-    right: 0;
-    margin: 0 0 15px;
-    .portfolio-link {
-      position: relative;
-      display: block;
-      max-width: 400px;
-      margin: 0 auto;
-      cursor: pointer;
-      .caption {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        -webkit-transition: all ease 0.5s;
-        -moz-transition: all ease 0.5s;
-        transition: all ease 0.5s;
-        opacity: 0;
-        background: fade-out($theme-success, .1);
-        &:hover {
-          opacity: 1;
-        }
-        .caption-content {
-          font-size: 20px;
-          position: absolute;
-          top: 50%;
-          width: 100%;
-          height: 20px;
-          margin-top: -12px;
-          text-align: center;
-          color: white;
-          i {
-            margin-top: -12px;
-          }
-          h3,
-          h4 {
-            margin: 0;
-          }
-        }
+    position: relative;
+    display: block;
+    max-width: 25rem;
+    margin-bottom: 15px;
+    .portfolio-item-caption {
+      -webkit-transition: all ease 0.5s;
+      -moz-transition: all ease 0.5s;
+      transition: all ease 0.5s;
+      opacity: 0;
+      background-color: fade-out($primary, .1);
+      &:hover {
+        opacity: 1;
+      }
+      .portfolio-item-caption-content {
+        font-size: 1.5rem;
       }
     }
   }
-  * {
-    z-index: 2;
-  }
-}
-@media(min-width:767px) {
-  #portfolio {
+  @media (min-width: 576px) {
+    margin-bottom: -30px;
     .portfolio-item {
-      margin: 0 0 30px;
+      margin-bottom: 30px;
     }
   }
 }
 
 .portfolio-modal {
-  .modal-dialog {
-    max-width: 100%;
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    border: none;
-    border-radius: 0;
-    background-clip: border-box;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    .modal-content {
-      padding: 100px 0;
-      border: 0;
-      border-radius: 0;
+  .portfolio-modal-dialog {
+    padding: 3rem 1rem;
+    min-height: calc(100vh - 2rem);
+    margin: 1rem calc(1rem - 8px);
+    position: relative;
+    z-index: 2;
+    -moz-box-shadow: 0 0 3rem 1rem fade-out(black, .5);
+    -webkit-box-shadow: 0 0 3rem 1rem fade-out(black, .5);
+    box-shadow: 0 0 3rem 1rem fade-out(black, .5);
+    .close-button {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      i {
+        line-height: 38px;
+      }
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
+  @media(min-width: 768px) {
+    .portfolio-modal-dialog {
+      min-height: 100vh;
+      padding: 5rem;
+      margin: 3rem calc(3rem - 8px);
       h2 {
-        font-size: 3em;
-        margin: 0;
-      }
-      img {
-        margin-bottom: 30px;
-      }
-      .item-details {
-        margin: 30px 0;
+        font-size: 3rem;
       }
     }
-  }
-  .close-modal {
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    width: 75px;
-    height: 75px;
-    cursor: pointer;
-    background-color: transparent;
-    &:hover {
-      opacity: 0.3;
-    }
-    .lr {
-      /* Safari and Chrome */
-      z-index: 1051;
-      width: 1px;
-      height: 75px;
-      margin-left: 35px;
-      /* IE 9 */
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
-      background-color: $theme-primary;
-      .rl {
-        /* Safari and Chrome */
-        z-index: 1052;
-        width: 1px;
-        height: 75px;
-        /* IE 9 */
-        -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        transform: rotate(90deg);
-        background-color: $theme-primary;
-      }
-    }
-  }
-  .modal-backdrop {
-    display: none;
-    opacity: 0;
   }
 }
