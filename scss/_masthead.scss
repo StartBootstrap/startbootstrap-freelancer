@@ -1,44 +1,26 @@
-// Styling for the masthead
 header.masthead {
-  padding-top: 100px;
-  padding-bottom: 50px;
-
-  text-align: center;
-
-  color: white;
-  background: $theme-success;
-  img {
-    display: block;
-
-    margin: 0 auto 20px;
+  padding-top: calc(6rem + 72px);
+  padding-bottom: 6rem;
+  h1 {
+    font-size: 3rem;
+    line-height: 3rem;
   }
-  .intro-text {
-    .name {
-      font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 2em;
-      font-weight: 700;
-
-      display: block;
-
-      text-transform: uppercase;
-    }
-    .skills {
-      font-size: 1.25em;
-      font-weight: 300;
-    }
+  h2 {
+    font-size: 1.3rem;
+    @include body-font;
   }
 }
-@media(min-width:768px) {
+@media (min-width: 992px) {
   header.masthead {
-    padding-top: 200px;
-    padding-bottom: 100px;
-    .intro-text {
-      .name {
-        font-size: 4.75em;
-      }
-      .skills {
-        font-size: 1.75em;
-      }
+    padding-top: calc(6rem + 106px);
+    padding-bottom: 6rem;
+    h1 {
+      font-size: 4.75em;
+      line-height: 4rem;
     }
+    h2 {
+      font-size: 1.75em;
+    }
+
   }
 }

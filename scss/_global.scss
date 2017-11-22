@@ -1,23 +1,6 @@
-// Global styling for this template
+// Typography
 body {
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  overflow-x: hidden;
-}
-
-p {
-  font-size: 20px;
-}
-
-p.small {
-  font-size: 16px;
-}
-a,
-a.active,
-a:active,
-a:focus,
-a:hover {
-  color: $theme-success;
-  outline: none;
+  @include body-font;
 }
 
 h1,
@@ -26,88 +9,87 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
+  @include heading-font;
 }
 
+// Custom Horizontal Rule with Star Icon
 hr.star-light,
-hr.star-primary {
-  max-width: 250px;
-  margin: 25px auto 30px;
+hr.star-dark {
+  max-width: 15rem;
   padding: 0;
   text-align: center;
   border: none;
-  border-top: solid 5px;
+  border-top: solid 0.25rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
+
 hr.star-light:after,
-hr.star-primary:after {
-  font-family: FontAwesome;
-  font-size: 2em;
+hr.star-dark:after {
   position: relative;
   top: -.8em;
   display: inline-block;
   padding: 0 0.25em;
   content: '\f005';
+  font-family: FontAwesome;
+  font-size: 2em;
 }
 
 hr.star-light {
-  border-color: white;
+  border-color: $white;
 }
 hr.star-light:after {
-  color: white;
-  background-color: $theme-success;
+  color: $white;
+  background-color: $primary;
 }
 
-hr.star-primary {
-  border-color: $theme-primary;
+hr.star-dark {
+  border-color: $secondary;
 }
-hr.star-primary:after {
-  color: $theme-primary;
+hr.star-dark:after {
+  color: $secondary;
   background-color: white;
 }
 
-.img-centered {
-  margin: 0 auto;
-}
-
+// Section Padding Settings
 section {
-  padding: 100px 0;
+  padding: 6rem 0;
   h2 {
-    font-size: 3em;
-    margin: 0;
+    font-size: 2.25rem;
+    line-height: 2rem;
   }
-}
-
-section.success {
-  color: white;
-  background: $theme-success;
-}
-@media(max-width:767px) {
-  section {
-    padding: 75px 0;
-  }
-  section.first {
-    padding-top: 75px;
-  }
-}
-
-.scroll-top {
-  position: fixed;
-  z-index: 1049;
-  right: 2%;
-  bottom: 2%;
-  width: 50px;
-  height: 50px;
-  .btn {
-    font-size: 16px;
-    line-height: 28px;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    border-radius: 100%;
-    &:focus {
-      outline: none;
+  @media (min-width: 992px) {
+    h2 {
+      font-size: 3rem;
+      line-height: 2.5rem;
     }
+  }
+}
+
+// Custom Button Size
+.btn-xl {
+  padding: 1rem 1.75rem;
+  font-size: 1.25rem;
+}
+
+// Custom Rounded Social Button
+.btn-social {
+  width: 3.25rem;
+  height: 3.25rem;
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+
+// Scroll to Top Button
+.scroll-to-top {
+  z-index: 1042;
+  right: 1rem;
+  bottom: 1rem;
+  display: none;
+  a {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: fade-out($gray-900, 0.5);
+    line-height: 3.1rem;
   }
 }
