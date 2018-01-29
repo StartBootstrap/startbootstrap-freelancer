@@ -28,12 +28,12 @@
     "dependencies": {
         "bootstrap": "4.0.0",
         "font-awesome": "4.7.0",
-        "jquery": "3.3.0",
+        "jquery": "3.3.1",
         "jquery.easing": "^1.4.1",
         "magnific-popup": "^1.1.0"
     },
     "devDependencies": {
-        "browser-sync": "2.23.5",
+        "browser-sync": "2.23.6",
         "gulp": "^3.9.1",
         "gulp-clean-css": "3.9.2",
         "gulp-filter": "5.1.0",
