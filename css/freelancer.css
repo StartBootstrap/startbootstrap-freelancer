@@ -40,15 +40,15 @@ hr.star-light {
 
 hr.star-light:after {
   color: #fff;
-  background-color: #18BC9C;
+  background-color: #3dd472;
 }
 
 hr.star-dark {
-  border-color: #2C3E50;
+  border-color: #383838;
 }
 
 hr.star-dark:after {
-  color: #2C3E50;
+  color: #383838;
   background-color: white;
 }
 
