@@ -344,11 +344,11 @@ a:focus, a:hover, a:active {
 }
 
 .bg-primary {
-  background-color: #ff6d10 !important;
+  background-color: #3dd472 !important;
 }
 
 .bg-secondary {
-  background-color: #383838 !important;
+  background-color: #FF6D10!important;
 }
 
 .text-primary {
@@ -360,21 +360,21 @@ a:focus, a:hover, a:active {
 }
 
 .btn-primary {
-  background-color: #18BC9C;
-  border-color: #18BC9C;
+  background-color: #FF6D10;
+  border-color: #FF6D10;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background-color: #128f76;
-  border-color: #128f76;
+  background-color: #3dd472;
+  border-color: #3dd472;
 }
 
 .btn-secondary {
-  background-color: #2C3E50;
-  border-color: #2C3E50;
+  background-color: #3dd472;
+  border-color: #3dd472;
 }
 
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
-  background-color: #1a252f;
-  border-color: #1a252f;
+  background-color: #383838;
+  border-color: #383838;
 }
