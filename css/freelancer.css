@@ -323,20 +323,20 @@ form .row:first-child .floating-label-form-group {
 .footer {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: #2C3E50;
+  background-color: #787878;
   color: #fff;
 }
 
 .copyright {
-  background-color: #1a252f;
+  background-color: #989898;
 }
 
 a {
-  color: #18BC9C;
+  color: #3dd472;
 }
 
 a:focus, a:hover, a:active {
-  color: #128f76;
+  color: #383838;
 }
 
 .btn {
