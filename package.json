@@ -1,7 +1,7 @@
 {
     "title": "Freelancer",
     "name": "startbootstrap-freelancer",
-    "version": "4.0.0",
+    "version": "4.1.1",
     "description": "A freelancer portfolio HTML theme for Bootstrap.",
     "keywords": [
         "css",
@@ -26,20 +26,20 @@
         "url": "https://github.com/BlackrockDigital/startbootstrap-freelancer.git"
     },
     "dependencies": {
-        "bootstrap": "4.0.0",
+        "bootstrap": "4.1.1",
         "font-awesome": "4.7.0",
         "jquery": "3.3.1",
         "jquery.easing": "^1.4.1",
         "magnific-popup": "^1.1.0"
     },
     "devDependencies": {
-        "browser-sync": "2.23.6",
+        "browser-sync": "2.24.3",
         "gulp": "^3.9.1",
-        "gulp-clean-css": "3.9.2",
+        "gulp-clean-css": "3.9.4",
         "gulp-filter": "5.1.0",
-        "gulp-header": "2.0.1",
+        "gulp-header": "2.0.5",
         "gulp-rename": "^1.2.2",
-        "gulp-sass": "^3.1.0",
+        "gulp-sass": "4.0.1",
         "gulp-uglify": "3.0.0"
     }
 }
