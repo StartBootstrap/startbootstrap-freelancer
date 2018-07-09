@@ -33,12 +33,12 @@
         "magnific-popup": "^1.1.0"
     },
     "devDependencies": {
-        "browser-sync": "2.24.3",
+        "browser-sync": "2.24.5",
         "gulp": "^3.9.1",
         "gulp-clean-css": "3.9.4",
         "gulp-filter": "5.1.0",
         "gulp-header": "2.0.5",
-        "gulp-rename": "^1.2.2",
+        "gulp-rename": "1.3.0",
         "gulp-sass": "4.0.1",
         "gulp-uglify": "3.0.0"
     }
