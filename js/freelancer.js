@@ -60,6 +60,11 @@
     e.preventDefault();
     $.magnificPopup.close();
   });
+  $(document).click(function(e) {
+    if(!$(event.target).closest(".portfolio-modal-dialog, .portfolio-item").length){
+      $.magnificPopup.close();
+    }
+  })
 
   // Floating label headings for the contact form
   $(function() {
