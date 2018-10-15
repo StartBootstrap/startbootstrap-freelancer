@@ -12,6 +12,7 @@ $(function() {
       var email = $("input#email").val();
       var phone = $("input#phone").val();
       var message = $("textarea#message").val();
+      var gpdrAcceptance = $("#acceptanceCheckbox").is(":checked");
       var firstName = name; // For Success/Failure Message
       // Check for white space in name for Success/Fail message
       if (firstName.indexOf(' ') >= 0) {
@@ -19,6 +20,7 @@ $(function() {
       }
       $this = $("#sendMessageButton");
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
+      if(gpdrAcceptance){
       $.ajax({
         url: "././mail/contact_me.php",
         type: "POST",
@@ -26,7 +28,7 @@ $(function() {
           name: name,
           phone: phone,
           email: email,
-          message: message
+          message: message,
         },
         cache: false,
         success: function() {
@@ -57,6 +59,7 @@ $(function() {
           }, 1000);
         }
       });
+    }
     },
     filter: function() {
       return $(this).is(":visible");
@@ -66,6 +69,11 @@ $(function() {
   $("a[data-toggle=\"tab\"]").click(function(e) {
     e.preventDefault();
     $(this).tab("show");
+  });
+
+  $("#acceptanceCheckbox").change(function(e) {
+    var isChecked = $(e.currentTarget).is(":checked");
+    $("#sendMessageButton").prop("disabled", !isChecked);
   });
 });
 
