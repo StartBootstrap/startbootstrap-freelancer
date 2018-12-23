@@ -31,7 +31,7 @@ $ yarn add @fortawesome/fontawesome-free
 
 Get started [here](https://fontawesome.com/get-started). Continue your journey [here](https://fontawesome.com/how-to-use).
 
-Or go straight to the [API documentation](https://fontawesome.com/how-to-use/font-awesome-api).
+Or go straight to the [API documentation](https://fontawesome.com/how-to-use/with-the-api).
 
 ## Issues and support
 
