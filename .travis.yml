@@ -3,12 +3,15 @@ git:
   depth:       3
 node_js:
   - "node"
-install:       npm install
+before_install:
+  - yarn -v
+install: yarn --frozen-lockfile --non-interactive
 script:
-  - npm test
-  - gulp
+  - yarn test
+  - yarn prod
 cache:
   directories:
     - node_modules
+  yarn: true
 notifications:
-  email:       false
+  email: false

@@ -5,3 +5,4 @@ js
 dist/css
 dist/js
 docker-compose.yml
+yarn-error.log
