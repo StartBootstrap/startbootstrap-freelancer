@@ -1,7 +1,4 @@
 node_modules
-vendor
-css
-js
 dist/css
 dist/js
 docker-compose.yml
