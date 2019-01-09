@@ -1,7 +1,7 @@
 node_modules
-webfonts
 dist/js
 dist/css
 dist/mix-manifest.json
+dist/webfonts
 docker-compose.yml
 yarn-error.log
