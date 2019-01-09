@@ -34,14 +34,12 @@
     },
     "devDependencies": {
         "browser-sync": "2.26.3",
-        "gulp": "4.0.0",
-        "gulp-autoprefixer": "6.0.0",
-        "gulp-clean-css": "4.0.0",
-        "gulp-filter": "5.1.0",
-        "gulp-header": "2.0.7",
-        "gulp-plumber": "^1.2.1",
-        "gulp-rename": "1.4.0",
-        "gulp-sass": "4.0.2",
-        "gulp-uglify": "3.0.1"
+        "cross-env": "^5.2.0",
+        "laravel-mix": "^4.0.13",
+        "resolve-url-loader": "2.3.1",
+        "sass": "^1.15.3",
+        "sass-loader": "7.*",
+        "vue-template-compiler": "^2.5.21",
+        "webpack": "^4.0.0"
     }
 }
