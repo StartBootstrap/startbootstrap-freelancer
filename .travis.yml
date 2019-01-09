@@ -3,11 +3,8 @@ git:
   depth: 3
 node_js:
   - "node"
-before_install:
-  - yarn -v
 install: yarn --frozen-lockfile --non-interactive
 script:
-  - yarn test
   - yarn prod
 cache:
   directories:
