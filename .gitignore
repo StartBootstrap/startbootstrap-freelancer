@@ -1,5 +1,4 @@
 node_modules
-dist/css
-dist/js
+webfonts
 docker-compose.yml
 yarn-error.log
