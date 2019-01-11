@@ -38,8 +38,15 @@ After installation, run `npm install` and then run `npm run watch` which will op
 
 - `yarn dev` the default task that builds everything in development environment
 - `yarn prod` the default task that builds everything in production environment
+- `yarn watch` the default task that builds everything and watch for changes
 
 You must have npm and Yarn installed globally on your machine in order to use these features.
+
+#### Google reCAPTCHA Usage
+
+- Get your API Key first from [Google reCAPTCHA](https://www.google.com/recaptcha)
+- Add your sitekey to `index.html` file. Search for: SITE_KEY_FROM_GOOGLE_RECAPTCHA
+- Add your secretkey to `mail/contact_me.php` file. Search for: SECRET_KEY_FROM_GOOGLE_RECAPTCHA
 
 ## Troubleshooting and Help
 

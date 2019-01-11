@@ -1,8 +1,18 @@
 <?php
 // Check for empty fields
-if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phone']) || empty($_POST['message']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phone']) || empty($_POST['message']) || empty($_POST['recaptcha']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
   http_response_code(500);
   exit();
+}
+
+$secretKey = "SECRET_KEY_FROM_GOOGLE_RECAPTCHA";
+$captcha = $_POST['recaptcha'];
+$ip = $_SERVER['REMOTE_ADDR'];
+$response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$ip);
+$responseKeys = json_decode($response,true);
+if(intval($responseKeys["success"]) !== 1) {
+	http_response_code(403);
+	exit();
 }
 
 $name = strip_tags(htmlspecialchars($_POST['name']));
@@ -19,4 +29,5 @@ $header .= "Reply-To: $email";
 
 if(!mail($to, $subject, $body, $header))
   http_response_code(500);
+
 ?>
