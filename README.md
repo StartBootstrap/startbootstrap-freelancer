@@ -1,68 +1,47 @@
-# [Start Bootstrap - Freelancer](https://startbootstrap.com/template-overviews/freelancer/)
+# HCA User Experience Center Of Excellence | Front End Design Exercise
 
-[Freelancer](http://startbootstrap.com/template-overviews/freelancer/) is a one page freelancer portfolio theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid with hover effects, full page portfolio item modals, and a working PHP contact form.
+## Objective
+The purpose of this exercise is to get a basic understanding of your skill level, how you organize your code, and how you make coding decisions.
 
-## Preview
 
-[![Freelancer Preview](https://startbootstrap.com/assets/img/screenshots/themes/freelancer.png)](https://blackrockdigital.github.io/startbootstrap-freelancer/)
+## Instructions
+Please build the design comp provided (design.png) into a functioning, responsive web page using our requirements from the Build Page Checklist section below. Feel free to take your own liberties as far as interactions/animations, and making the site responsive.
 
-**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-freelancer/)**
+Colors, Typographic styles, and some component styles have been taken from the HCA Design System. Please use this resource for direction: http://hcadesignsystem.com/
 
-## Status
+Please do not use any external links (including CDN's).
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-freelancer/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-freelancer.svg)](https://www.npmjs.com/package/startbootstrap-freelancer)
-[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-freelancer.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-freelancer)
-[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-freelancer/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-freelancer)
-[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-freelancer/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-freelancer?type=dev)
+We understand that in development, there are many schools of thought when it comes to coding best practices and that those ideas are constantly evolving. No need to overthink if you are coding “the right way.” We are looking for standard web best practices and the ability to explain coding decisions made.
 
-## Download and Installation
+Feel free to use placeholder text (such as your favorite version of Lorem Ipsum) and images (such as http://placehold.it/).
 
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/freelancer/)
-* Install via npm: `npm i startbootstrap-freelancer`
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-freelancer.git`
-* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-freelancer)
+Feel free to add comments within the code or attach a text document to explain any decisions made that may be of interest.
 
-## Usage
 
-### Basic Usage
+## Build Page Checklist
+Please include the following items in your code:
+- Latest Bootstrap library
+    - Use of grid
+- Multiple headings to show use of the HTML header hierarchy
+- At least one button
+- At least one glyphicon (the icons available in Bootstrap) and add a hover effect
+- Some content in an aside or sidebar element
+- An address and phone number (doesn’t have to be real contact information)
+- Use the following features of the LESS or SASS languages:
+    - Variable
+    - Mixin
+    - Import
+- Trigger a bootstrap modal using javascript
+- Inject content to DOM Elements using javascript i.e Lorem Ipsum
 
-After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
 
-### Advanced Usage
+## Exercise Submission
+Completed projects should be submitted in one of two ways:
+- Online repository (such as GitHub or BitBucket): create a repository under your account named "hca-uxcoe-prototype"
+- Zip files (where files are all connected and can be viewed in browser from an index page); so if libraries are used, include them in the submitted zip file.
 
-After installation, run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
+*Submit the repository link or zip file to the same email address that sent you the test.*
 
-#### Gulp Tasks
 
-- `gulp` the default task that builds everything
-- `gulp watch` browserSync opens the project in your default browser and live reloads when changes are made
-- `gulp css` compiles SCSS files into CSS and minifies the compiled CSS
-- `gulp js` minifies the themes JS file
-- `gulp vendor` copies dependencies from node_modules to the vendor directory
-
-You must have npm and Gulp installed globally on your machine in order to use these features.
-
-## Bugs and Issues
-
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-freelancer/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/freelancer/).
-
-## About
-
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
-
-* https://startbootstrap.com
-* https://twitter.com/SBootstrap
-
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
-
-* http://davidmiller.io
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
-
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
-
-## Copyright and License
-
-Copyright 2013-2019 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/gh-pages/LICENSE) license.
+## Thank You
+Thanks for taking the time to complete this exercise!

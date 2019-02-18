@@ -1,4 +1,10 @@
 {
+  "_args": [
+    [
+      "@fortawesome/fontawesome-free@5.7.2",
+      "/Users/danielbabcock/workspace/personal/codeChallenges/HCA/hca-uxcoe-prototype"
+    ]
+  ],
   "_from": "@fortawesome/fontawesome-free@5.7.2",
   "_id": "@fortawesome/fontawesome-free@5.7.2",
   "_inBundle": false,
@@ -20,9 +26,8 @@
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/@fortawesome/fontawesome-free/-/fontawesome-free-5.7.2.tgz",
-  "_shasum": "1498c3eb78ee7c78c5488418707de90aaf58d5d7",
-  "_spec": "@fortawesome/fontawesome-free@5.7.2",
-  "_where": "/Users/DANGER_DAVID/Sites/startbootstrap-themes/startbootstrap-freelancer",
+  "_spec": "5.7.2",
+  "_where": "/Users/danielbabcock/workspace/personal/codeChallenges/HCA/hca-uxcoe-prototype",
   "author": {
     "name": "Dave Gandy",
     "email": "dave@fontawesome.com",
@@ -31,7 +36,6 @@
   "bugs": {
     "url": "http://github.com/FortAwesome/Font-Awesome/issues"
   },
-  "bundleDependencies": false,
   "contributors": [
     {
       "name": "Brian Talbot",
@@ -55,7 +59,6 @@
     }
   ],
   "dependencies": {},
-  "deprecated": false,
   "description": "The iconic font, CSS, and SVG framework",
   "engines": {
     "node": ">=6"

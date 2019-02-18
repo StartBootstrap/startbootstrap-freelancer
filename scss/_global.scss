@@ -17,7 +17,7 @@ hr.star-light,
 hr.star-dark {
   max-width: 15rem;
   padding: 0;
-  text-align: center;
+  text-align: left;
   border: none;
   border-top: solid 0.25rem;
   margin-top: 2.5rem;
@@ -47,10 +47,10 @@ hr.star-light:after {
 }
 
 hr.star-dark {
-  border-color: $secondary;
+  border-color: $primary;
 }
 hr.star-dark:after {
-  color: $secondary;
+  color: $primary;
   background-color: white;
 }
 
