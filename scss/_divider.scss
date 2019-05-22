@@ -1,0 +1,33 @@
+// Custom divider with icon
+
+.divider-custom {
+  margin: 1rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .divider-custom-line {
+    width: 100%;
+    max-width: 8rem;
+    border-bottom: 0.25rem solid $secondary;
+    border-color: $secondary !important;
+    &:first-child {
+      margin-right: 1rem;
+    }
+    &:last-child {
+      margin-left: 1rem;
+    }
+  }
+  .divider-custom-icon {
+    color: $secondary !important;
+    font-size: 2rem;
+  }
+  &.divider-light {
+    .divider-custom-line {
+      border-bottom: 0.25rem solid $white !important;
+    }
+    .divider-custom-icon {
+      color: $white !important;
+    }
+  }
+}

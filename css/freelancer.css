@@ -4,6 +4,54 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/master/LICENSE)
  */
 
+a {
+  color: #1abc9c;
+}
+
+a:focus, a:hover, a:active {
+  color: #148f77;
+}
+
+.btn {
+  border-width: 2px;
+}
+
+.bg-primary {
+  background-color: #1abc9c !important;
+}
+
+.bg-secondary {
+  background-color: #2c3e50 !important;
+}
+
+.text-primary {
+  color: #1abc9c !important;
+}
+
+.text-secondary {
+  color: #2c3e50 !important;
+}
+
+.btn-primary {
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background-color: #148f77;
+  border-color: #148f77;
+}
+
+.btn-secondary {
+  background-color: #2c3e50;
+  border-color: #2c3e50;
+}
+
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+  background-color: #1a252f;
+  border-color: #1a252f;
+}
+
 body {
   font-family: 'Lato';
 }
@@ -18,60 +66,17 @@ h6 {
   font-family: 'Montserrat';
 }
 
-hr.star-light,
-hr.star-dark {
-  max-width: 15rem;
-  padding: 0;
-  text-align: center;
-  border: none;
-  border-top: solid 0.25rem;
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-hr.star-light:after,
-hr.star-dark:after {
-  position: relative;
-  top: -.8em;
-  display: inline-block;
-  padding: 0 0.25em;
-  content: '\f005';
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 2em;
-}
-
-hr.star-light {
-  border-color: #fff;
-}
-
-hr.star-light:after {
-  color: #fff;
-  background-color: #18BC9C;
-}
-
-hr.star-dark {
-  border-color: #2C3E50;
-}
-
-hr.star-dark:after {
-  color: #2C3E50;
-  background-color: white;
-}
-
-section {
+.page-section {
   padding: 6rem 0;
 }
 
-section h2 {
+.page-section h2 {
   font-size: 2.25rem;
   line-height: 2rem;
 }
 
 @media (min-width: 992px) {
-  section h2 {
+  .page-section h2 {
     font-size: 3rem;
     line-height: 2.5rem;
   }
@@ -103,6 +108,48 @@ section h2 {
   line-height: 3.1rem;
 }
 
+.divider-custom {
+  margin: 1rem 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.divider-custom .divider-custom-line {
+  width: 100%;
+  max-width: 8rem;
+  border-bottom: 0.25rem solid #2c3e50;
+  border-color: #2c3e50 !important;
+}
+
+.divider-custom .divider-custom-line:first-child {
+  margin-right: 1rem;
+}
+
+.divider-custom .divider-custom-line:last-child {
+  margin-left: 1rem;
+}
+
+.divider-custom .divider-custom-icon {
+  color: #2c3e50 !important;
+  font-size: 2rem;
+}
+
+.divider-custom.divider-light .divider-custom-line {
+  border-bottom: 0.25rem solid #fff !important;
+}
+
+.divider-custom.divider-light .divider-custom-icon {
+  color: #fff !important;
+}
+
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -124,7 +171,7 @@ section h2 {
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #18BC9C;
+  color: #1abc9c;
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
@@ -132,7 +179,7 @@ section h2 {
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link.active {
-  color: #18BC9C;
+  color: #1abc9c;
 }
 
 #mainNav .navbar-toggler {
@@ -148,7 +195,7 @@ section h2 {
     transition: padding-top 0.3s, padding-bottom 0.3s;
   }
   #mainNav .navbar-brand {
-    font-size: 2em;
+    font-size: 1.75em;
     -webkit-transition: font-size 0.3s;
     transition: font-size 0.3s;
   }
@@ -157,11 +204,11 @@ section h2 {
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
     color: #fff;
-    background: #18BC9C;
+    background: #1abc9c;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
     color: #fff;
-    background: #18BC9C;
+    background: #1abc9c;
   }
   #mainNav.navbar-shrink {
     padding-top: 0.5rem;
@@ -172,32 +219,37 @@ section h2 {
   }
 }
 
-header.masthead {
+.masthead {
   padding-top: calc(6rem + 72px);
   padding-bottom: 6rem;
 }
 
-header.masthead h1 {
+.masthead .masthead-heading {
   font-size: 3rem;
   line-height: 3rem;
 }
 
-header.masthead h2 {
+.masthead .masthead-subheading {
   font-size: 1.3rem;
   font-family: 'Lato';
 }
 
+.masthead .masthead-avatar {
+  width: 15rem;
+}
+
 @media (min-width: 992px) {
-  header.masthead {
-    padding-top: calc(6rem + 106px);
+  .masthead {
+    padding-top: calc(6rem + 104px);
     padding-bottom: 6rem;
   }
-  header.masthead h1 {
-    font-size: 4.75em;
-    line-height: 4rem;
+  .masthead .masthead-heading {
+    font-size: 4rem;
+    line-height: 3.5rem;
+    letter-spacing: 0.025em;
   }
-  header.masthead h2 {
-    font-size: 1.75em;
+  .masthead .masthead-subheading {
+    font-size: 1.5rem;
   }
 }
 
@@ -216,7 +268,7 @@ header.masthead h2 {
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
   opacity: 0;
-  background-color: rgba(24, 188, 156, 0.9);
+  background-color: rgba(26, 188, 156, 0.9);
 }
 
 .portfolio .portfolio-item .portfolio-item-caption:hover {
@@ -317,7 +369,7 @@ header.masthead h2 {
 }
 
 .floating-label-form-group-with-focus label {
-  color: #18BC9C;
+  color: #1abc9c;
 }
 
 form .row:first-child .floating-label-form-group {
@@ -327,58 +379,10 @@ form .row:first-child .floating-label-form-group {
 .footer {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: #2C3E50;
+  background-color: #2c3e50;
   color: #fff;
 }
 
 .copyright {
   background-color: #1a252f;
-}
-
-a {
-  color: #18BC9C;
-}
-
-a:focus, a:hover, a:active {
-  color: #128f76;
-}
-
-.btn {
-  border-width: 2px;
-}
-
-.bg-primary {
-  background-color: #18BC9C !important;
-}
-
-.bg-secondary {
-  background-color: #2C3E50 !important;
-}
-
-.text-primary {
-  color: #18BC9C !important;
-}
-
-.text-secondary {
-  color: #2C3E50 !important;
-}
-
-.btn-primary {
-  background-color: #18BC9C;
-  border-color: #18BC9C;
-}
-
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background-color: #128f76;
-  border-color: #128f76;
-}
-
-.btn-secondary {
-  background-color: #2C3E50;
-  border-color: #2C3E50;
-}
-
-.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
-  background-color: #1a252f;
-  border-color: #1a252f;
 }
