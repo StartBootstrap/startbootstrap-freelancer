@@ -30,7 +30,7 @@
     padding: 0.8rem;
   }
 }
-@media(min-width:992px) {
+@include media-breakpoint-up(lg) {
   #mainNav {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;

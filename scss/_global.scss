@@ -5,7 +5,7 @@
     font-size: 2.25rem;
     line-height: 2rem;
   }
-  @media (min-width: 992px) {
+  @include media-breakpoint-up(lg) {
     .page-section-heading {
       font-size: 3rem;
       line-height: 2.5rem;

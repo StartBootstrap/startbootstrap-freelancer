@@ -1,4 +1,10 @@
 {
+  "_args": [
+    [
+      "@fortawesome/fontawesome-free@5.8.2",
+      "/Users/DANGER_DAVID/Sites/startbootstrap-themes/startbootstrap-freelancer"
+    ]
+  ],
   "_from": "@fortawesome/fontawesome-free@5.8.2",
   "_id": "@fortawesome/fontawesome-free@5.8.2",
   "_inBundle": false,
@@ -20,8 +26,7 @@
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/@fortawesome/fontawesome-free/-/fontawesome-free-5.8.2.tgz",
-  "_shasum": "fae4112c4fb47086f6ae167e32524b280000abd5",
-  "_spec": "@fortawesome/fontawesome-free@5.8.2",
+  "_spec": "5.8.2",
   "_where": "/Users/DANGER_DAVID/Sites/startbootstrap-themes/startbootstrap-freelancer",
   "author": {
     "name": "Dave Gandy",
@@ -31,7 +36,6 @@
   "bugs": {
     "url": "http://github.com/FortAwesome/Font-Awesome/issues"
   },
-  "bundleDependencies": false,
   "contributors": [
     {
       "name": "Brian Talbot",
@@ -55,7 +59,6 @@
     }
   ],
   "dependencies": {},
-  "deprecated": false,
   "description": "The iconic font, CSS, and SVG framework",
   "engines": {
     "node": ">=6"

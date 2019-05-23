@@ -2,18 +2,18 @@
   padding-top: calc(6rem + 72px);
   padding-bottom: 6rem;
   .masthead-heading {
-    font-size: 3rem;
-    line-height: 3rem;
+    font-size: 2.75rem;
+    line-height: 2.75rem;
   }
   .masthead-subheading {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
   .masthead-avatar {
     width: 15rem;
   }
 }
 
-@media (min-width: 992px) {
+@include media-breakpoint-up(lg) {
   .masthead {
     padding-top: calc(6rem + 104px);
     padding-bottom: 6rem;

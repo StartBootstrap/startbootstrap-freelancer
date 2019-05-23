@@ -1,14 +1,14 @@
 // Custom divider with icon
 
 .divider-custom {
-  margin: 1rem 0;
+  margin: 1.25rem 0 1.5rem;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   .divider-custom-line {
     width: 100%;
-    max-width: 8rem;
+    max-width: 7rem;
     height: 0.25rem;
     background-color: $secondary;
     border-radius: 1rem;
