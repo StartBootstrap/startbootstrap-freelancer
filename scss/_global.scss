@@ -1,26 +1,12 @@
-// Typography
-body {
-  @include body-font;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @include heading-font;
-}
-
 // Section Padding Settings
 .page-section {
   padding: 6rem 0;
-  h2 {
+  .page-section-heading {
     font-size: 2.25rem;
     line-height: 2rem;
   }
   @media (min-width: 992px) {
-    h2 {
+    .page-section-heading {
       font-size: 3rem;
       line-height: 2.5rem;
     }
@@ -35,10 +21,13 @@ h6 {
 
 // Custom Rounded Social Button
 .btn-social {
+  border-radius: 100%;
+  display: inline-flex;
   width: 3.25rem;
   height: 3.25rem;
   font-size: 1.25rem;
-  line-height: 2rem;
+  justify-content: center;
+  align-items: center;
 }
 
 // Scroll to Top Button

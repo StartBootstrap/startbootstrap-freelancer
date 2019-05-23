@@ -7,7 +7,6 @@
   }
   .masthead-subheading {
     font-size: 1.3rem;
-    @include body-font;
   }
   .masthead-avatar {
     width: 15rem;
@@ -21,7 +20,6 @@
     .masthead-heading {
       font-size: 4rem;
       line-height: 3.5rem;
-      letter-spacing: 0.025em;
     }
     .masthead-subheading {
       font-size: 1.5rem;

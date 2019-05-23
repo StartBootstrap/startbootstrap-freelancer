@@ -6,6 +6,8 @@
     display: block;
     max-width: 25rem;
     margin-bottom: 15px;
+    border-radius: $border-radius;
+    overflow: hidden;
     .portfolio-item-caption {
       -webkit-transition: all ease 0.5s;
       -moz-transition: all ease 0.5s;
