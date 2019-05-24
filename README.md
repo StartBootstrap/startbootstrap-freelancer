@@ -1,6 +1,6 @@
 # [Start Bootstrap - Freelancer](https://startbootstrap.com/template-overviews/freelancer/)
 
-[Freelancer](http://startbootstrap.com/template-overviews/freelancer/) is a one page freelancer portfolio theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid with hover effects, full page portfolio item modals, and a working PHP contact form.
+[Freelancer](http://startbootstrap.com/template-overviews/freelancer/) is a one page freelancer portfolio theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid, window modals for each portfolio item, and a working PHP contact form.
 
 ## Preview
 
@@ -28,7 +28,7 @@ To begin using this template, choose one of the following options to get started
 
 ### Basic Usage
 
-After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
+After downloading, simply edit the HTML and CSS files included with the template in a code editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
 
 ### Advanced Usage
 
@@ -42,7 +42,7 @@ After installation, run `npm install` and then run `npm start` which will open u
 - `gulp js` minifies the themes JS file
 - `gulp vendor` copies dependencies from node_modules to the vendor directory
 
-You must have npm and Gulp installed globally on your machine in order to use these features.
+You must have npm and Gulp installed globally in order to use these features.
 
 ## Bugs and Issues
 
