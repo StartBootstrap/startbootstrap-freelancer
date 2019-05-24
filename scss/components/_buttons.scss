@@ -1,25 +1,10 @@
-// Section Padding Settings
-.page-section {
-  padding: 6rem 0;
-  .page-section-heading {
-    font-size: 2.25rem;
-    line-height: 2rem;
-  }
-  @include media-breakpoint-up(lg) {
-    .page-section-heading {
-      font-size: 3rem;
-      line-height: 2.5rem;
-    }
-  }
-}
-
-// Custom Button Size
+// Custom extra larg button size
 .btn-xl {
   padding: 1rem 1.75rem;
   font-size: 1.25rem;
 }
 
-// Custom Rounded Social Button
+// Custom social buttons
 .btn-social {
   border-radius: 100%;
   display: inline-flex;
@@ -30,7 +15,7 @@
   align-items: center;
 }
 
-// Scroll to Top Button
+// Scroll to top button
 .scroll-to-top {
   z-index: 1042;
   right: 1rem;
