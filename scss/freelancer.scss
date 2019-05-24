@@ -1,9 +1,19 @@
-@import "variables.scss";
-@import "mixins.scss";
-@import "global.scss";
-@import "navbar.scss";
-@import "masthead.scss";
-@import "portfolio.scss";
-@import "contact.scss";
-@import "footer.scss";
-@import "bootstrap-overrides.scss";
+// Import variables (overrides Bootstrap defaults)
+@import "base/variables.scss";
+
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap.scss";
+
+// Import base styles
+@import "base/page.scss";
+
+// Import components styles
+@import "components/divider.scss";
+@import "components/buttons.scss";
+
+// Import layout styles
+@import "layout/navbar.scss";
+@import "layout/masthead.scss";
+@import "layout/portfolio.scss";
+@import "layout/contact.scss";
+@import "layout/footer.scss";
