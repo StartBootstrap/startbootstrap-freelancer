@@ -49,9 +49,9 @@ function clean() {
 
 // Bring third party dependencies from node_modules into vendor directory
 function modules() {
-  // Bootstrap
-  var bootstrap = gulp.src('./node_modules/bootstrap/dist/**/*')
-    .pipe(gulp.dest('./vendor/bootstrap'));
+  // Bootstrap JS
+  var bootstrapJS = gulp.src('./node_modules/bootstrap/dist/js/*')
+    .pipe(gulp.dest('./vendor/bootstrap/js'));
   // Font Awesome
   var fontAwesome = gulp.src('./node_modules/@fortawesome/**/*')
     .pipe(gulp.dest('./vendor'));
@@ -64,7 +64,7 @@ function modules() {
       '!./node_modules/jquery/dist/core.js'
     ])
     .pipe(gulp.dest('./vendor/jquery'));
-  return merge(bootstrap, fontAwesome, jquery, jqueryEasing);
+  return merge(bootstrapJS, fontAwesome, jquery, jqueryEasing);
 }
 
 // CSS task
