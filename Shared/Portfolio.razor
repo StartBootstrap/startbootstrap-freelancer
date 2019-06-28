@@ -1,3 +1,8 @@
+@using StartBootstrap.Freelancer.Blazor.Models
+@using KenticoCloud.Delivery
+
+@inject HttpClient Http
+
 <section class="page-section portfolio" id="portfolio">
     <div class="container">
 
@@ -15,79 +20,27 @@
 
         <!-- Portfolio Grid Items -->
         <div class="row">
-
-            <!-- Portfolio Item 1 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white">
-                            <i class="fas fa-plus fa-3x"></i>
+            @if (items == null)
+            {
+                <p><em>Loading ...</em></p>
+            }
+            else
+            {
+                @foreach (PortfolioItem item in items)
+                {
+                    <!-- Portfolio Item 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="@("#portfolioModal" + @item.System.Codename)">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white">
+                                    <i class="fas fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="@item.Image.FirstOrDefault().Url" alt="@item.Image.FirstOrDefault().Description">
                         </div>
                     </div>
-                    <img class="img-fluid" src="img/portfolio/cabin.png" alt="">
-                </div>
-            </div>
-
-            <!-- Portfolio Item 2 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white">
-                            <i class="fas fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img class="img-fluid" src="img/portfolio/cake.png" alt="">
-                </div>
-            </div>
-
-            <!-- Portfolio Item 3 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white">
-                            <i class="fas fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img class="img-fluid" src="img/portfolio/circus.png" alt="">
-                </div>
-            </div>
-
-            <!-- Portfolio Item 4 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white">
-                            <i class="fas fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img class="img-fluid" src="img/portfolio/game.png" alt="">
-                </div>
-            </div>
-
-            <!-- Portfolio Item 5 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white">
-                            <i class="fas fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img class="img-fluid" src="img/portfolio/safe.png" alt="">
-                </div>
-            </div>
-
-            <!-- Portfolio Item 6 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white">
-                            <i class="fas fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img class="img-fluid" src="img/portfolio/submarine.png" alt="">
-                </div>
-            </div>
-
+                }
+            }
         </div>
         <!-- /.row -->
 
@@ -95,5 +48,14 @@
 </section>
 
 @code {
+    IEnumerable<PortfolioItem> items;
 
+    private CustomTypeProvider TypeProvider { get; } = new CustomTypeProvider();
+
+    protected override async Task OnInitAsync()
+    {
+        var client = DeliveryClientBuilder.WithProjectId("a9b221f5-7375-01af-4d91-67a87cb4e991").WithTypeProvider(TypeProvider).WithHttpClient(Http).Build();
+
+        items = (await client.GetItemsAsync<PortfolioItem>()).Items;
+    }
 }
