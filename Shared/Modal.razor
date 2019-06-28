@@ -1,7 +1,9 @@
 @using StartBootstrap.Freelancer.Blazor.Models
 @using KenticoCloud.Delivery
+@using Microsoft.Extensions.Configuration
 
 @inject HttpClient Http
+@inject IConfiguration  Configuration
 
 @if (items == null)
 {
@@ -54,11 +56,10 @@ else
 @code {
     IEnumerable<PortfolioItem> items;
 
-    private CustomTypeProvider TypeProvider { get; } = new CustomTypeProvider();
-
     protected override async Task OnInitAsync()
     {
-        var client = DeliveryClientBuilder.WithProjectId("a9b221f5-7375-01af-4d91-67a87cb4e991").WithTypeProvider(TypeProvider).WithHttpClient(Http).Build();
+        var projectId = Configuration.GetValue<string>("DeliveryOptions:ProjectId");
+        var client = DeliveryClientBuilder.WithProjectId(projectId).WithHttpClient(Http).Build();
 
         items = (await client.GetItemsAsync<PortfolioItem>()).Items;
     }

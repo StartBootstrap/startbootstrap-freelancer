@@ -7,7 +7,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="appsettings.json" />
+  </ItemGroup>
+  
+  <PropertyGroup>
+    <BlazorLinkOnBuild>true</BlazorLinkOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <BlazorLinkerDescriptor Include="Linker.xml" />
+  </ItemGroup>
+  
+  <ItemGroup>
     <Content Include="gulpfile.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Configuration\appsettings.json" />
+    <EmbeddedResource Include="Configuration\appsettings.*.json" />
   </ItemGroup>
 
   <ItemGroup>

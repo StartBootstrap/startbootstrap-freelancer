@@ -1,7 +1,9 @@
 @using StartBootstrap.Freelancer.Blazor.Models
 @using KenticoCloud.Delivery
+@using Microsoft.Extensions.Configuration
 
 @inject HttpClient Http
+@inject IConfiguration  Configuration
 
 <section class="page-section portfolio" id="portfolio">
     <div class="container">
@@ -28,7 +30,7 @@
             {
                 @foreach (PortfolioItem item in items)
                 {
-                    <!-- Portfolio Item 1 -->
+                    <!-- Portfolio Item -->
                     <div class="col-md-6 col-lg-4">
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="@("#portfolioModal" + @item.System.Codename)">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
@@ -50,12 +52,10 @@
 @code {
     IEnumerable<PortfolioItem> items;
 
-    private CustomTypeProvider TypeProvider { get; } = new CustomTypeProvider();
-
     protected override async Task OnInitAsync()
-    {
-        var client = DeliveryClientBuilder.WithProjectId("a9b221f5-7375-01af-4d91-67a87cb4e991").WithTypeProvider(TypeProvider).WithHttpClient(Http).Build();
-
+    {    
+        var projectId = Configuration.GetValue<string>("DeliveryOptions:ProjectId");
+        var client = DeliveryClientBuilder.WithProjectId(projectId).WithHttpClient(Http).Build();
         items = (await client.GetItemsAsync<PortfolioItem>()).Items;
     }
 }
