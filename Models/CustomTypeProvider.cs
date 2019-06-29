@@ -9,6 +9,9 @@ namespace StartBootstrap.Freelancer.Blazor.Models
     {
         private static readonly Dictionary<Type, string> _codenames = new Dictionary<Type, string>
         {
+            {typeof(FontAwesomeLink), "font_awesome_link"},
+            {typeof(Home), "home"},
+            {typeof(NavigationItem), "navigation_item"},
             {typeof(PortfolioItem), "portfolio_item"}
         };
 

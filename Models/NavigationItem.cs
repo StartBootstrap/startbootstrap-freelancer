@@ -4,7 +4,7 @@ using KenticoCloud.Delivery;
 
 namespace StartBootstrap.Freelancer.Blazor.Models
 {
-    public partial class PortfolioItem
+    public partial class NavigationItem
     {
     }
 }
