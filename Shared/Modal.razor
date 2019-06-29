@@ -1,17 +1,16 @@
 @using StartBootstrap.Freelancer.Blazor.Models
-@using KenticoCloud.Delivery
 @using Microsoft.Extensions.Configuration
 
 @inject HttpClient Http
 @inject IConfiguration  Configuration
 
-@if (items == null)
+@if (PortfolioItems == null)
 {
     <p><em>Loading ...</em></p>
 }
 else
 {
-    @foreach (PortfolioItem item in items)
+    @foreach (PortfolioItem item in PortfolioItems)
     {
         <div class="portfolio-modal modal fade" id="@("portfolioModal" + @item.System.Codename)" tabindex="-1" role="dialog" aria-labelledby="@("portfolioModal" + @item.System.Codename + "label")" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
@@ -54,13 +53,5 @@ else
 }
 
 @code {
-    IEnumerable<PortfolioItem> items;
-
-    protected override async Task OnInitAsync()
-    {
-        var projectId = Configuration.GetValue<string>("DeliveryOptions:ProjectId");
-        var client = DeliveryClientBuilder.WithProjectId(projectId).WithHttpClient(Http).Build();
-
-        items = (await client.GetItemsAsync<PortfolioItem>()).Items;
-    }
+    [Parameter] IEnumerable<PortfolioItem> PortfolioItems { get; set; }
 }

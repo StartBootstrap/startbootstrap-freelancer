@@ -14,7 +14,7 @@
 <MasterHeader />
 
 <!-- Portfolio Section -->
-<Portfolio />
+<Portfolio PortfolioItems="@home?.PortfolioItemsTyped" />
 
 <!-- About Section -->
 <About />
@@ -32,7 +32,7 @@
 <ScrollToTop />
 
 <!-- Portfolio Modals -->
-<Modal />
+<Modal PortfolioItems="@home?.PortfolioItemsTyped" />
 
 
 @code {
@@ -44,7 +44,7 @@
 
         var projectId = Configuration.GetValue<string>("DeliveryOptions:ProjectId");
         var client = DeliveryClientBuilder.WithProjectId(projectId).WithHttpClient(Http).WithTypeProvider(TypeProvider).Build();
-        var result = (await client.GetItemAsync<Home>("home", new DepthParameter(5)));
+        var result = (await client.GetItemAsync<Home>("home"));
         home = result.Item;
     }
 }
