@@ -37,7 +37,7 @@ else
                                     <!-- Portfolio Modal - Image -->
                                     <img class="img-fluid rounded mb-5" src="@item.Image.FirstOrDefault()?.Url" alt="@item.Image.FirstOrDefault()?.Description">
                                     <!-- Portfolio Modal - Text -->
-                                    <p class="mb-5">@item.Text</p>
+                                    <p class="mb-5">@((MarkupString)item.Text)</p>
                                     <button class="btn btn-primary" href="#" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window

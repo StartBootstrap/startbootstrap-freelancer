@@ -10,5 +10,6 @@ namespace StartBootstrap.Freelancer.Blazor.Models
     {
         public IEnumerable<PortfolioItem> PortfolioItemsTyped => PortfolioItems?.Cast<PortfolioItem>();
         public IEnumerable<NavigationItem> NavigationItemsTyped => Navigation?.Cast<NavigationItem>();
+        public IEnumerable<FontAwesomeLink> FooterMiddleColumnLinksTyped => FooterMiddleColumnLinks?.Cast<FontAwesomeLink>();
     }
 }

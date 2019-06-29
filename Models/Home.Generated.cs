@@ -37,17 +37,17 @@ namespace StartBootstrap.Freelancer.Blazor.Models
         public string AboutLeftColumn { get; set; }
         public string FooterRightColumnTitle { get; set; }
         public string AboutButtonIcon { get; set; }
-        public IRichTextContent FooterRightColumnText { get; set; }
+        public string FooterRightColumnText { get; set; }
         public string AboutButtonText { get; set; }
         public string ContactButtonText { get; set; }
-        public IRichTextContent FooterMiddleColumnTitle { get; set; }
+        public string FooterMiddleColumnTitle { get; set; }
         public string SiteTitle { get; set; }
         public IEnumerable<object> Navigation { get; set; }
         public IEnumerable<object> PortfolioItems { get; set; }
         public string SiteCopyrightNote { get; set; }
         public string AboutTitle { get; set; }
         public string PortfolioTitle { get; set; }
-        public IRichTextContent FooterLeftColumnText { get; set; }
+        public string FooterLeftColumnText { get; set; }
         public IEnumerable<object> FooterMiddleColumnLinks { get; set; }
         public string FooterLeftColumnTitle { get; set; }
         public string AboutRightColumn { get; set; }
