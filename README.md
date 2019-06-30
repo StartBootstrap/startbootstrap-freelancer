@@ -1,4 +1,4 @@
-# [Start Bootstrap - Freelancer](https://startbootstrap.com/template-overviews/freelancer/)
+# Start Bootstrap - Freelancer | Blazor | Kentico Cloud
 
 ## Blazor port
 This web template is a Blazor port of the bootstrap [Freelancer](http://startbootstrap.com/template-overviews/freelancer/) template. It demonstrates the usage of the [Kentico Cloud Delivery SDK for .NET](https://github.com/Kentico/delivery-sdk-net) in a client-hosted Blazor app. It also shows how to use JS Interop, event bidning, one-way, two-way databinding, linker configuration and other features of Blazor.
