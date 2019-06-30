@@ -1,32 +1,30 @@
 @using StartBootstrap.Freelancer.Blazor.Models
-@using KenticoCloud.Delivery
 @using Microsoft.Extensions.Configuration
 
 @inject HttpClient Http
 @inject IConfiguration  Configuration
 
 @inherits LayoutComponentBase
-
 <!-- Navigation menu -->
-<NavMenu NavigationItems="@home?.NavigationItemsTyped" />
+<NavMenu NavigationItems="@home?.NavigationItemsTyped" SiteTitle="@home?.SiteTitle" />
 
 <!-- Masthead -->
-<MasterHeader />
+<MasterHeader SiteTitle="@home?.SiteTitle" HeaderSubtitle="@home?.HeaderSubtitle" Avatar="home?.Avatar.FirstOrDefault()" />
 
 <!-- Portfolio Section -->
 <Portfolio PortfolioItems="@home?.PortfolioItemsTyped" />
 
 <!-- About Section -->
-<About />
+<About LeftColumnText="@home?.AboutLeftColumn" RightColumnText="@home?.AboutRightColumn" Title="@home?.AboutTitle" Button="@home?.AboutButtonTyped.FirstOrDefault()" />
 
 <!-- Contact Section -->
-<Contact />
+<Contact Title="@home?.ContactTitle" ButtonText="@home?.ContactButtonText" />
 
 <!-- Footer -->
-<MasterFooter RightColumnText="@home?.FooterRightColumnText" />
+<MasterFooter LeftColumnTitle="@home?.FooterLeftColumnTitle" LeftColumnText="@home?.FooterLeftColumnText" MiddleColumnTitle="@home?.FooterMiddleColumnTitle" FontAwesomeLinks="@home?.FooterMiddleColumnLinksTyped" RightColumnText="@home?.FooterRightColumnText" RightColumnTitle="@home?.FooterRightColumnTitle" />
 
 <!-- Copyright Section -->
-<Copyright />
+<Copyright Copyright="@home?.SiteCopyrightNote" />
 
 <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
 <ScrollToTop />

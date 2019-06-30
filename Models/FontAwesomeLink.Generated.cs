@@ -15,9 +15,11 @@ namespace StartBootstrap.Freelancer.Blazor.Models
         public const string Codename = "font_awesome_link";
         public const string FaCodenameCodename = "fa_codename";
         public const string UrlCodename = "url";
+        public const string TextCodename = "text";
 
         public string FaCodename { get; set; }
         public string Url { get; set; }
+        public string Text { get; set; }
         public ContentItemSystemAttributes System { get; set; }
     }
 }
