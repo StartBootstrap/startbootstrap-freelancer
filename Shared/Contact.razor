@@ -1,3 +1,4 @@
+@inherits ContactBase
 <section class="page-section" id="contact">
     <div class="container">
 
@@ -21,40 +22,54 @@
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
                             <label>Name</label>
-                            <input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name.">
+                            <input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name." @bind="@ContactForm.Name" />
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
                             <label>Email Address</label>
-                            <input class="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address.">
+                            <input class="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address." @bind="@ContactForm.Email" />
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
                             <label>Phone Number</label>
-                            <input class="form-control" id="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number.">
+                            <input class="form-control" id="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number." @bind="@ContactForm.Phone" />
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
                             <label>Message</label>
-                            <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message." @bind="@ContactForm.Message"></textarea>
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <br>
-                    <div id="success"></div>
+                    <div id="success">
+                        @if (ContactForm?.Success != null)
+                        {
+                            <div class="alert alert-success">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                <strong>@ContactForm.Success</strong>
+                            </div>
+                        }
+                        else if (ContactForm?.Error != null)
+                        {
+                            <div class="alert alert-danger">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                <strong>@ContactForm.Error</strong>
+                            </div>
+                        }
+                    </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">@ButtonText</button>
+                        <button type="button" class="btn btn-primary btn-xl" id="sendMessageButton" onclick=@HandleValidSubmit>@ButtonText</button>
                     </div>
                 </form>
             </div>
         </div>
-
     </div>
 </section>
 
