@@ -206,6 +206,7 @@ figure {
 img {
   vertical-align: middle;
   border-style: none;
+  border-radius: 50%;
 }
 
 svg {
@@ -562,6 +563,7 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
+
 
 @media (min-width: 576px) {
   .container {
@@ -7498,6 +7500,8 @@ button.bg-dark:focus {
   -webkit-box-align: center !important;
   -ms-flex-align: center !important;
   align-items: center !important;
+  /* flex-direction: row !important */
+  flex-direction: row !important;
 }
 
 .align-items-baseline {
@@ -10740,6 +10744,9 @@ a.text-dark:hover, a.text-dark:focus {
 
 .masthead .masthead-avatar {
   width: 15rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
 }
 
 @media (min-width: 992px) {
@@ -10777,16 +10784,16 @@ a.text-dark:hover, a.text-dark:focus {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 0;
-  background-color: rgba(26, 188, 156, 0.9);
+  background-color: rgba(0, 21, 188, 0.8);
 }
 
 .portfolio .portfolio-item .portfolio-item-caption:hover {
   opacity: 1;
 }
-
 .portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
   font-size: 1.5rem;
 }
+
 
 .portfolio-modal .portfolio-modal-title {
   font-size: 2.25rem;
@@ -10809,6 +10816,60 @@ a.text-dark:hover, a.text-dark:focus {
   line-height: 3rem;
   color: #1abc9c;
   opacity: 1;
+}
+
+.portfolio .portfolio-item-democrat {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  max-width: 25rem;
+  margin-bottom: 30px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.portfolio .portfolio-item-democrat .portfolio-item-caption-democrat {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  background-color: rgba(0, 21, 100, 0.8);
+}
+
+.portfolio .portfolio-item-democrat .portfolio-item-caption-democrat:hover {
+  opacity: 1;
+}
+.portfolio .portfolio-item-democrat .portfolio-item-caption-democrat .portfolio-item-caption-content-democrat {
+  font-size: 1.5rem;
+}
+
+.portfolio .portfolio-item-republican {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  max-width: 25rem;
+  margin-bottom: 30px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.portfolio .portfolio-item-republican .portfolio-item-caption-republican {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  background-color: rgba(180, 1, 0, 0.8);
+}
+
+.portfolio .portfolio-item-republican .portfolio-item-caption-republican:hover {
+  opacity: 1;
+}
+.portfolio .portfolio-item-republican .portfolio-item-caption-republican .portfolio-item-caption-content-republican {
+  font-size: 1.5rem;
 }
 
 .floating-label-form-group {
