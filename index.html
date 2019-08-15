@@ -1,113 +1,273 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<!-- This website was modelled after tutorial
-	 https://websitesetup.org/bootstrap-tutorial-for-beginners
---> 
-
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Troop 706</title>
-  <link rel="icon" type="img" href="img/bsaicon.jpg">
-
-  <!-- Bootstrap core CSS - local copy of bootstrap-->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!--Customize Bootstrap for Troop 706 Website -->
-  <link href="css/troop706Custom.css" rel="stylesheet" type="text/css" >
+<html>
+	
+	<!-- Website is used by Boy Scouts of America - Troop 706 -->
+	<!-- Used to support Troop 706 -->
+	<!-- Technology:  --> 
+	<!-- 					requires Bootstrap and JQuery to function */
+	<!-- 					Bootstrap v3.3.7 -->
+	
+	<!-- This website is supported and maintained by the Scouts at Troop 706 -->
+	
+	
+	<!--                       -->
+	<!-- Configuration Details -->
+	<!--                       -->
+  <head>
+    <meta charset="utf-8">
+    <title>Troop706</title> <link rel="icon" href="./images/bsaicon.jpg">
     
-</head>
-
-<body id="page-top">
-
-<!-- Navigation -->
-<nav class="navbar navbar-expand-md">
-			
-			<a class="navbar-brand" href="#">BSA Troop 706
-				<img src="img/bsaicon.jpg" width="30" height="30" alt="logo" class="align-bottom">
-			</a>
-			
-			<button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			
-			<div class="collapse navbar-collapse" id="main-navigation">
-				<ul class="navbar-nav">
-					<li class="nav-item">
-						<a class="nav-link" href="#">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Sign Ups</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Events</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Camping Trips</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Inquiry</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Scout Links</a>
-					</li>
-								<li class="nav-item">
-						<a class="nav-link" href="#">More</a>
-					</li>
-				</ul>
-			</div>
-</nav>
+    <meta name="description" content="BoyScouts Glyndon MD, Troop 706 Website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Codeply">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/animate.min.css" />
+    <link rel="stylesheet" href="./css/ionicons.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     
-<!-- Header -->
-<header class="page-header header container-fluid">
-    	
-   	
-	<div class="description">
-		<h1>Welcome to Troop 706 Landing Page</h1>
-						<p>
-										Philmont Baldy Mountain
-						</p>
-					</div>
-					
-				<div class="overlay"></div>
-					    
+    <link rel="stylesheet" href="./css/troop706Custom.css" />
+    
+ </head>
+ 
+  <!--                              -->
+  <!-- start here to change website -->
+  <!--     
+  	
+  <!-- Navigation                   -->
+  <body>
+    <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#troop706-navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#homePage"  >                
+                		<i class="ion-ios-analytics-outline"></i> 
+						         BSA Troop706 
+                </a>
+            </div>
+            
+            <!-- Add additional sections/buttons to website here -->
+            <div class="navbar-collapse collapse" id="troop706-navbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="page-scroll" href="#formsPage">Forms</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#four">Sign Ups</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-</header>
 
+<!--           -->
+<!-- home page -->
+<!--           -->
+    <header id="homePage">
+        <div class="header-content">
+            <div class="inner">
+
+            		<div class="description" >
+                	<h1 class="cursive text-center">Welcome to BSA Troop 706 Glyndon MD</h1>
+                	<button class="btn btn-outline-secondary btn-lg">Tell Me More!</button>
+                </div>
+                
+            </div>
+             
+        </div>
+    </header>
+    
+    
+    
+    
+    <!--            -->
+    <!-- Forms Page -->
+    <!--            -->
+    <section id="formsPage" class="no-padding">
+        <div class="container features">
+            <div class="row no-gutter">
+
+<!-- Next up, we want to create three columns below for additional information -->
+<!-- Bootstrap grid, all columns in one row always add up to the number 12 -->
+<!-- So, giving them the classes e.g. "col-lg-4" means that they will take up one third of the screen (12 divided by 3 is 4) but the entire screen on small devices (12 out of 12 columns). -->
+
+<!-- three column display - col-lg-4, col-lg-4, col-lg-4 total of 12 columns for bootstrap grid -->
+					        <div class="col-lg-4 col-md-4 col-sm-12">
+					          <h3 class="feature-title">Medical Forms</h3>
+					         
+								         	<a target="_blank" href="./assets/Medical_ABC.pdf" download>
+			  										<img src="./assets/Medical_ABC.pdf" alt="MedicalForms">
+													</a>
+					         
+								          <p>Parts A and B are required for all Scouts and adults participating in any Scouting events. 
+								          	This is the one the adult or the Scout’s parents fill out. Parts A and B cover things like contact information, 
+								          	insurance coverage, health history, hold harmless release, photo release, and adult or parent signature.
+								          </p>
+					          			<br>
+								          <p> Part C is the physical form. You need a physician’s signature on the medical form. 
+								          	Part C is required for Scouts and adults  if any of the following apply:
+															<li>The event will last more than 72 hours </li>
+															<li>The event is a high adventure base event </li>
+															<li> The event is strenuous and demanding </li>
+								 					</p>
+								        </div>
+        
+					        <div class="col-lg-4 col-md-4 col-sm-12">
+					          	<h3 class="feature-title">Permission Slip</h3>
+							          <a target="_blank" href="./assets/PermissionSlip.pdf" download>
+					  										<img src="./assets/PermissionSlip.pdf" alt="Permission Slip">
+												</a>
+					          	<p>Activity Consent Form and Contact information. Complete this before Scout outing like a camping trip. </p>
+					        </div>
+					        
+					        
+					        <div class="col-lg-4 col-md-4 col-sm-12">   
+					        	 <h3 class="feature-title">Mulch Sales</h3>
+					        	 
+					        	 							          <a target="_blank" href="./assets/MulchOrderForm.pdf" download>
+					  										<img src="./assets/MulchOrderForm.pdf" alt="Mulch Sales">
+												</a>
+					        	 
+					        	<p>more forms.</p> 
+					        </div>
+
+
+
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    
+    <section class="container-fluid" id="four">
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+                <h2 class="text-center text-primary">Features</h2>
+                <hr>
+                <div class="media wow fadeInRight">
+                    <h3>The House</h3>
+                    <div class="media-body media-middle">
+                        <p>A beautiful piece of American history!  Circa 1785. 
+       										 The home, while keeping it's historic character, also contains modern 
+                        	conveniences.
+                        	</p> 
+                        	<br>
+                        		<p>
+                        			The home features two bedrooms plus bonus room, 2 and half baths, living room with fireplace, dining room, generous kitchen with wood stove, 
+                        			a detached post and beam two car garage. Hardwood flooring throughout, finished walkout basement. 
+                        			Brick walk out deck 20x20, a fully fenced backyard
+                        	</p>
+                        	  <br>
+                        		<p>
+                        			Includes appliances - Washer, Dryer, Refridgerator, Stove, Dishwasher, High Speed Cable Internet Available.  
+                        			High efficiency radiant heat and split air condition for multiple zones.
+                        	</p>
+                        	
+                        	<p>12 minutes from hwy 795 and 25 minutes from hwy 695 or hwy 83</p>
+                    </div>
+
+                </div>
+                <hr>
+                <div class="media wow fadeIn">
+                    <h3>The Barn</h3>
+
+                    <div class="media-body media-middle">
+                        <p>Beautiful Bank Barn includes three horse stalls, tack room, water, electric, large hay loft</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="media wow fadeInRight">
+                    <h3>Buildings</h3>
+                    <div class="media-body media-middle">
+                        <p>Post and Bean two car garage with tons of attic storage</p>
+                         <p>Solor heated outdoor shower with great views</p>
+                         <p>Garden Shed and garden</p>
+                         <p>Well stocked firewood shed</p>
+                    </div>
+                    <div class="media-right">
+                        <i class="icon-lg ion-ios-snowy"></i>
+                    </div>
+                </div>
+                <hr>
+                <div class="media wow fadeIn">
+                    <h3>The property</h3>
+   
+                    <div class="media-body media-middle">
+                    	<p>5200 Old Quarter Road, Upperco, MD 21155 </p>
+                        <p>60 acres surrounding the house and barn. Comfortably surrounded with trails, 
+                        	farms and other equastrian properties nearby </p>
+                        <p>Paddock and five acres of three board oak fence (new)</p>
+                        <p>12 acres under tillage<p>
+
+                    </div>
+                </div>
+                <hr>
+
+            </div>
+        </div>
+    </section>
+
+  
+ <!-- About Section of website -->
+ <section class="container-fluid" id="about">
 
     <footer class="page-footer">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-8 col-sm-12">
           <h6 class="text-uppercase font-weight-bold">Additional Information</h6>
-          <p>We would love for your sons to come join us for troop meetings. We are open to all Middle and High School aged boys.</p>
-          <p>Sacred Heart School Of Glyndon Thursdays 6:30 to 8 P.M.</p>
+          <p>Welcome to Troop 706, Glyndon, MD. We are sponsored by Sacred Heart Church. 
+          	We accept boys of all faiths. 
+          	Our goal is to help transition boys into young men and ultimately good adults. 
+          	We have monthly camping trips plus summer camp. Meetings are held every Thursday @ 6:30pm in the West Room. 
+          	Boy Scouts are open to boys between the ages of  10½ and 18. Prior Cub Scout membership is NOT REQUIRED. 
+          	Please note:  If Baltimore County Schools are closed or afternoon activities cancelled, Scout activities at Sacred Heart Glyndon are cancelled. The Troop may move the meeting to Christ The King.
         </div>
         <div class="col-lg-4 col-md-4 col-sm-12">
           <h6 class="text-uppercase font-weight-bold">Contact</h6>
-          <p>63 Sacred Heart Ln, Glyndon, Maryland 21136
-
+          <p>Sacred Heart School Of Glyndon, 
+          <p> 63 Sacred Heart Ln, Glyndon, Maryland 21136, United States
+          <br>
           <br/>+ 01 234 567 88
           <br/>+ 01 234 567 89</p>
         </div>
       </div>
-      <div class="footer-copyright text-center">© 2019 Copyright: https://bsatroop706glyndon.org/</div>
+      <div class="footer-copyright text-center">© 2019 Copyright: bsatroop706glyndon.org</div>
     </footer>
 
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    </section>
 
 
-  <!-- Custom scripts for this template -->
-  <script src="js/Troop706.js"></script>
-
-</body>
-
+<!--support image popout -->
+    <div id="galleryModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        	<div class="modal-body">
+        		<img src="" id="galleryImage" class="img-responsive" />
+        		<p>
+        		    <br/>
+        		    <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true">Close <i class="ion-android-close"></i></button>
+        		</p>
+        	</div>
+        </div>
+        </div>
+    </div>
+    <!--scripts loaded here -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.easing.min.js"></script>
+    <script src="./js/wow.js"></script>
+    <script src="./js/scripts.js"></script>
+  </body>
 </html>

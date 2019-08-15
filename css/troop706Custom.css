@@ -1,40 +1,93 @@
-body {
-  padding: 0;
-  margin: 0;
-  background: #f2f6e9;
-}
-
-/*--- navigation bar ---*/
+/*
+ * Troop 706 Style Sheet Customization
+ */
 
 .navbar {
   background:#003F87; /*--Scouting Blue */
 }
 
-.nav-link,
-.navbar-brand {
-  color: #fff;
-  cursor: pointer;
+.header-content {
+	  
+	  position: relative;
+
+    min-height: auto;
+
+    text-align: center;
+
+    color: #003F87; /* --Scouting Blue */
+
+    width: 100%;
+    
+    height: 100%;
+
+    background-color: #c9c9c9;
+
+    background-image: url('../images/PhilmontBaldy.jpg');
+
+    background-position: center;
+
+    -webkit-background-size: cover;
+
+    -moz-background-size: cover;
+
+    background-size: cover;
+
+    -o-background-size: cover;
 }
 
-.nav-link {
-  margin-right: 1em !important;
+/*customize the main landing page*/
+.description {
+	color: white;
+  left: 50%;
+  position: absolute;
+  top: 45%;
+  transform: translate(-50%, -55%);
+  text-align: center;
 }
 
-.nav-link:hover {
-  color: #000;
+
+/*customize button on the main landing page*/
+.description button {
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    }
+.description button:hover {
+      border:1px solid #fff;
+      background:#fff;
+      color:#000;
 }
 
-.navbar-collapse {
-  justify-content: flex-end;
+
+
+
+.page-footer {
+      background-color: #222;
+      color: #ccc;
+      padding: 60px 0 30px;
+}
+.footer-copyright {
+      color: #666;
+      padding: 40px 0;
 }
 
-.header {
-      background-image: url('../img/PhilmontBaldy.jpg');
-      background-size: cover;
-      background-position: center;
-      position: relative;
+/*used in medical forms section of website*/
+.features {
+  margin: 4em auto;
+  padding: 1em;
+  position: relative;
+}
+.feature-title {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
+
+/*move baldy mountain image - fade into background*/
+/* requires <div class="overlay"></div>  if used*/
 .overlay {
       position: absolute;
       min-height: 100%;
@@ -42,32 +95,4 @@ body {
       left: 0;
       top: 0;
       background: rgba(0, 0, 0, 0.6);
-}
-
-.description {
-      left: 50%;
-      position: absolute;
-      top: 45%;
-      transform: translate(-50%, -55%);
-      text-align: center;
-}
-    .description h1 {
-      color: #FFFFFF;
-}
-
-.description p {
-      color: #fff;
-      font-size: 1.3rem;
-      line-height: 1.5;
-}
-
-.page-footer {
-      background-color: #003F87; /*--Scouting Blue */
-      color: #ccc;
-      padding: 60px 0 30px;
-}
-
-.footer-copyright {
-      color: #666;
-      padding: 40px 0;
-}
+    }
