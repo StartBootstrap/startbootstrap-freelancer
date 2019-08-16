@@ -6,6 +6,8 @@
   background:#003F87; /*--Scouting Blue */
 }
 
+
+
 .header-content {
 	  
 	  position: relative;
@@ -22,7 +24,8 @@
 
     background-color: #c9c9c9;
 
-    background-image: url('../images/PhilmontBaldy.jpg');
+		/*up two directory levels and down to images directory*/
+    background-image: url('../../images/PhilmontBaldy.jpg');
 
     background-position: center;
 
