@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="./css/ionicons.min.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     
-    <link rel="stylesheet" href="./css/troop706Custom.css" />
+    <link rel="stylesheet" href="./css/customize/troop706Custom.css" />
     
  </head>
  
@@ -57,7 +57,7 @@
                         <a class="page-scroll" href="#formsPage">Forms</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#four">Sign Ups</a>
+                        <a class="page-scroll" href="#signUps">Sign Ups</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#about">About</a>
@@ -93,14 +93,16 @@
     <!--            -->
     <section id="formsPage" class="no-padding">
         <div class="container features">
-            <div class="row no-gutter">
+            <div class="row "> <!-- "row" acts as container for the bootstrap grid -->
 
 <!-- Next up, we want to create three columns below for additional information -->
 <!-- Bootstrap grid, all columns in one row always add up to the number 12 -->
 <!-- So, giving them the classes e.g. "col-lg-4" means that they will take up one third of the screen (12 divided by 3 is 4) but the entire screen on small devices (12 out of 12 columns). -->
 
 <!-- three column display - col-lg-4, col-lg-4, col-lg-4 total of 12 columns for bootstrap grid -->
-					        <div class="col-lg-4 col-md-4 col-sm-12">
+
+									<!-- medicals forms -->
+					        <div class="col-lg-4 col-md-4 col-sm-12 " >
 					          <h3 class="feature-title">Medical Forms</h3>
 					         
 								         	<a target="_blank" href="./assets/Medical_ABC.pdf" download>
@@ -118,8 +120,9 @@
 															<li>The event is a high adventure base event </li>
 															<li> The event is strenuous and demanding </li>
 								 					</p>
-								        </div>
+								  </div>
         
+        					<!-- permissions form -->
 					        <div class="col-lg-4 col-md-4 col-sm-12">
 					          	<h3 class="feature-title">Permission Slip</h3>
 							          <a target="_blank" href="./assets/PermissionSlip.pdf" download>
@@ -129,6 +132,7 @@
 					        </div>
 					        
 					        
+					        <!-- mulch form -->
 					        <div class="col-lg-4 col-md-4 col-sm-12">   
 					        	 <h3 class="feature-title">Mulch Sales</h3>
 					        	 
@@ -136,10 +140,8 @@
 					  										<img src="./assets/MulchOrderForm.pdf" alt="Mulch Sales">
 												</a>
 					        	 
-					        	<p>more forms.</p> 
+					        	<p>Mulch Fundraiser Form.  </p> 
 					        </div>
-
-
 
             </div>
         </div>
@@ -149,71 +151,22 @@
     
     
     
-    <section class="container-fluid" id="four">
+    <section class="container-fluid" id="signUps">
         <div class="row">
             <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
                 <h2 class="text-center text-primary">Features</h2>
                 <hr>
                 <div class="media wow fadeInRight">
-                    <h3>The House</h3>
+                    <h3>email section for events/signups</h3>
                     <div class="media-body media-middle">
-                        <p>A beautiful piece of American history!  Circa 1785. 
-       										 The home, while keeping it's historic character, also contains modern 
-                        	conveniences.
+                        <p>Add email signups here
                         	</p> 
-                        	<br>
-                        		<p>
-                        			The home features two bedrooms plus bonus room, 2 and half baths, living room with fireplace, dining room, generous kitchen with wood stove, 
-                        			a detached post and beam two car garage. Hardwood flooring throughout, finished walkout basement. 
-                        			Brick walk out deck 20x20, a fully fenced backyard
-                        	</p>
-                        	  <br>
-                        		<p>
-                        			Includes appliances - Washer, Dryer, Refridgerator, Stove, Dishwasher, High Speed Cable Internet Available.  
-                        			High efficiency radiant heat and split air condition for multiple zones.
-                        	</p>
                         	
-                        	<p>12 minutes from hwy 795 and 25 minutes from hwy 695 or hwy 83</p>
                     </div>
 
                 </div>
                 <hr>
-                <div class="media wow fadeIn">
-                    <h3>The Barn</h3>
-
-                    <div class="media-body media-middle">
-                        <p>Beautiful Bank Barn includes three horse stalls, tack room, water, electric, large hay loft</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="media wow fadeInRight">
-                    <h3>Buildings</h3>
-                    <div class="media-body media-middle">
-                        <p>Post and Bean two car garage with tons of attic storage</p>
-                         <p>Solor heated outdoor shower with great views</p>
-                         <p>Garden Shed and garden</p>
-                         <p>Well stocked firewood shed</p>
-                    </div>
-                    <div class="media-right">
-                        <i class="icon-lg ion-ios-snowy"></i>
-                    </div>
-                </div>
-                <hr>
-                <div class="media wow fadeIn">
-                    <h3>The property</h3>
-   
-                    <div class="media-body media-middle">
-                    	<p>5200 Old Quarter Road, Upperco, MD 21155 </p>
-                        <p>60 acres surrounding the house and barn. Comfortably surrounded with trails, 
-                        	farms and other equastrian properties nearby </p>
-                        <p>Paddock and five acres of three board oak fence (new)</p>
-                        <p>12 acres under tillage<p>
-
-                    </div>
-                </div>
-                <hr>
-
-            </div>
+  
         </div>
     </section>
 
@@ -263,7 +216,11 @@
         </div>
         </div>
     </div>
-    <!--scripts loaded here -->
+    
+    
+    
+    <!--JQuery scripts loaded here -->
+    <script src="./js/customize/troop706.js"></script>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/jquery.easing.min.js"></script>
