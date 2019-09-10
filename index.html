@@ -95,6 +95,10 @@
         <div class="container features">
             <div class="row "> <!-- "row" acts as container for the bootstrap grid -->
 
+					<div class="col-lg-2 col-sm-3 col-xs-6 col-centered feature-title"> 
+						<h2>Forms </h2>  
+					</div>
+
 <!-- Next up, we want to create three columns below for additional information -->
 <!-- Bootstrap grid, all columns in one row always add up to the number 12 -->
 <!-- So, giving them the classes e.g. "col-lg-4" means that they will take up one third of the screen (12 divided by 3 is 4) but the entire screen on small devices (12 out of 12 columns). -->
@@ -148,31 +152,87 @@
     </section>
     
     
-    
-    
-    
-    <section class="container-fluid" id="signUps">
-        <div class="row">
-            <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
-                <h2 class="text-center text-primary">Features</h2>
-                <hr>
-                <div class="media wow fadeInRight">
-                    <h3>email section for events/signups</h3>
-                    <div class="media-body media-middle">
-                        <p>Add email signups here
-                        	</p> 
-                        	
-                    </div>
-
-                </div>
-                <hr>
+   <!-- email section of website -->
+   <!-- modelled after example posted from https://bootstrapious.com/p/how-to-build-a-working-bootstrap-contact-form -->
+   
+   <section class="container-fluid" id="signUps"> 
   
+				<div class="col-lg-2 col-sm-3 col-xs-6 col-centered feature-title"> 
+						<h2>Sign Ups </h2>  
+					</div>
+        	
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_name">Firstname *</label>
+                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_lastname">Lastname *</label>
+                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
         </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_email">Email *</label>
+                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_need">Please specify your need *</label>
+                    <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+                        <option value=""></option>
+                        <option value="Other">Other</option>
+                        <option value="Board of Review">Board of Review</option>
+                        <option value="Campout">Camping Trip</option>
+                    </select>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="form_message">Message *</label>
+                    <textarea id="form_message" name="message" class="form-control" placeholder="Message to Troop706 stakeholders *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <input type="submit" class="btn btn-success btn-send button-color" value="Send message">
+            </div>
+        </div>
+        
+        <!-- not sure if this can be ommitted, specifically the target=
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-muted">
+                    <strong>*</strong> These fields are required. Contact form template by
+                    <a href="https://bootstrapious.com/p/how-to-build-a-working-bootstrap-contact-form" target="_blank">Bootstrapious</a>.</p>
+            </div>
+        </div>
+    </div>
+-->
+			</form>
+        
+        
+        
     </section>
 
   
  <!-- About Section of website -->
  <section class="container-fluid" id="about">
+
+					<div class="col-lg-2 col-sm-3 col-xs-6 col-centered feature-title"> 
+						<h2>About </h2>  
+					</div>
 
     <footer class="page-footer">
       <div class="container">
