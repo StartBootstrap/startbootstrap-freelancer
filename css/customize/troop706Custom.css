@@ -7,7 +7,6 @@
 }
 
 
-
 .header-content {
 	  
 	  position: relative;
@@ -61,7 +60,9 @@
       color:#000;
 }
 
-
+.button-color {
+	background-color:#8c8c8c;
+}
 
 
 .page-footer {
@@ -86,6 +87,12 @@
   font-weight: 700;
   margin-bottom: 20px;
   text-transform: uppercase;
+}
+
+/*make a div tag center*/
+.col-centered{
+    float: none;
+    margin: 0 auto;
 }
 
 
