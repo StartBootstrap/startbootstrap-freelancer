@@ -2651,7 +2651,7 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
   color: #fff;
-  background-color: #2c3e50;
+  background-color: #000000;
   border-color: #2c3e50;
 }
 
@@ -2668,7 +2668,7 @@ fieldset:disabled a.btn {
 
 .btn-secondary.disabled, .btn-secondary:disabled {
   color: #fff;
-  background-color: #2c3e50;
+  background-color: #000000;
   border-color: #2c3e50;
 }
 
@@ -6916,7 +6916,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #1abc9c !important;
+  background-color: #000000 !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -6926,7 +6926,7 @@ button.bg-primary:focus {
 }
 
 .bg-secondary {
-  background-color: #2c3e50 !important;
+  background-color: #000000 !important;
 }
 
 a.bg-secondary:hover, a.bg-secondary:focus,
@@ -10676,7 +10676,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #1abc9c;
+  color: #ed0000;
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
