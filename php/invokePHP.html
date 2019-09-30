@@ -1,0 +1,64 @@
+<!-- simple html form that can invoke contact form email script troop706contact.php -->
+<!-- helpful for testing -->
+
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+ </head>
+<body>
+
+<h1>My First Heading</h1>
+
+<p>My first paragraph.</p>
+
+		<form action="./troop706contact.php" method="post"> <!--send contact values via POST to PHP script called contact.php-->
+	
+
+           					<br></br>
+                    <label for="form_name">Firstname *</label>
+                    <input id="form_name" type="text" name="name" class="form-control is-invalid" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                    <div class="help-block with-errors"></div>
+             
+
+              			<br></br>
+                    <label for="form_lastname">Lastname *</label>
+                    <input id="form_lastname" type="text" name="surname" class="form-control is-invalid" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                    <div class="help-block with-errors"></div>
+               
+            
+         
+         						<br></br>
+                    <label for="form_email">Email *</label>
+                    <input id="form_email" type="email" name="email" class="form-control is-invalid" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                    <div class="help-block with-errors"></div>
+               
+
+       
+                		<br></br>
+                    <label for="form_need">Please specify your need *</label>
+                    <select id="form_need" name="need" class="form-control is-invalid" required="required" data-error="Please specify your need.">
+                        <option value=""></option>
+                        <option value="Other">Other</option>
+                        <option value="Board of Review">Board of Review</option>
+                        <option value="Campout">Camping Trip</option>
+                    </select>
+                    <div class="help-block with-errors"></div>
+               
+
+   
+          
+										<br></br>
+                    <label for="form_message">Message *</label>
+                    <textarea id="form_message" name="message" class="form-control is-invalid" placeholder="Message to Troop706 stakeholders *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                    <div class="help-block with-errors"></div>
+
+              		<br></br>
+                  <p>
+                  	<input id="emailButton" type="submit" value="Send message" class="btn btn-success btn-send button-color"> 
+                  	<span id="status"></span>
+                  	</p>
+              
+		</form>
+
+</body>
+</html>

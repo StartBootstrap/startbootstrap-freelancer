@@ -35,6 +35,7 @@
   	
   <!-- Navigation                   -->
   <body>
+   
     <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -77,7 +78,9 @@
 
             		<div class="description" >
                 	<h1 class="cursive text-center">Welcome to BSA Troop 706 Glyndon MD</h1>
+                	<!-- leave out button for now, redundant 
                 	<button class="btn btn-outline-secondary btn-lg">Tell Me More!</button>
+                	-->
                 </div>
                 
             </div>
@@ -152,42 +155,53 @@
     </section>
     
     
-   <!-- email section of website -->
-   <!-- modelled after example posted from https://bootstrapious.com/p/how-to-build-a-working-bootstrap-contact-form -->
+   <!-- email/contact section of website -->
+   <!-- modeled after example posted from https://bootstrapious.com/p/how-to-build-a-working-bootstrap-contact-form and 
+   	                                     http://www.developphp.com/video/JavaScript/Contact-Form-Web-Application-Tutorial-Ajax-HTML5-PHP-->
+   <!-- a local webserver is needed to test contact form/email functionality as php scripts only run on a server - I used xampp on windows10-->
    
    <section class="container-fluid" id="signUps"> 
   
-				<div class="col-lg-2 col-sm-3 col-xs-6 col-centered feature-title"> 
+  <form id="contact-form" onsubmit="submitEmailForm(); return false;"> <!-- send contact values via POST to PHP script called contact.php-->
+  <!--<form id="contact-form" onsubmit="submitContactForm(); return false;"> <!-- send contact values via POST to PHP script called contact.php-->	
+  	
+  <!--		<form id="contact-form" method="post" action="./php/troop706contact.php" role="form"\> send contact values via POST to PHP script called contact.php-->
+
+    	    <div class="messages"> </div> <!-- used by AJAX/troop706submitEmailForm.js to display success or error messages when submitting emails -->
+    	    <div id="status"></div> <!-- test to see if this is used by AJAX/troop706submitEmailForm.js to display success or error messages when submitting emails -->
+  		    <div class="controls"> <!-- not sure what this div does -->
+  			
+					<div class="col-lg-2 col-sm-3 col-xs-6 col-centered feature-title"> 
 						<h2>Sign Ups </h2>  
 					</div>
         	
-            <div class="col-md-6">
+          <div class="col-md-6">
                 <div class="form-group">
                     <label for="form_name">Firstname *</label>
-                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                    <input id="form_name" type="text" name="name" class="form-control is-invalid" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
                     <div class="help-block with-errors"></div>
                 </div>
             </div>
-            <div class="col-md-6">
+          <div class="col-md-6">
                 <div class="form-group">
                     <label for="form_lastname">Lastname *</label>
-                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                    <input id="form_lastname" type="text" name="surname" class="form-control is-invalid" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
                     <div class="help-block with-errors"></div>
                 </div>
             </div>
-        </div>
-        <div class="row">
+
+          <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="form_email">Email *</label>
-                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                    <input id="form_email" type="email" name="email" class="form-control is-invalid" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
                     <div class="help-block with-errors"></div>
                 </div>
-            </div>
-            <div class="col-md-6">
+          </div>
+          <div class="col-md-6">
                 <div class="form-group">
                     <label for="form_need">Please specify your need *</label>
-                    <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+                    <select id="form_need" name="need" class="form-control is-invalid" required="required" data-error="Please specify your need.">
                         <option value=""></option>
                         <option value="Other">Other</option>
                         <option value="Board of Review">Board of Review</option>
@@ -196,30 +210,30 @@
                     <div class="help-block with-errors"></div>
                 </div>
             </div>
-        </div>
-        <div class="row">
+          </div>
+          <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="form_message">Message *</label>
-                    <textarea id="form_message" name="message" class="form-control" placeholder="Message to Troop706 stakeholders *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                    <textarea id="form_message" name="message" class="form-control is-invalid" placeholder="Message to Troop706 stakeholders *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
                     <div class="help-block with-errors"></div>
                 </div>
-            </div>
-            <div class="col-md-12">
-                <input type="submit" class="btn btn-success btn-send button-color" value="Send message">
-            </div>
-        </div>
+             </div>
+               <div class="col-md-12">
+                  <p><input id="emailButton" type="submit" value="Send message" class="btn btn-success btn-send button-color"> <span id="status"></span></p>
+               </div>
+          </div>
         
-        <!-- not sure if this can be ommitted, specifically the target=
+       <!-- not sure if this can be ommitted, specifically the target=-->
+
         <div class="row">
             <div class="col-md-12">
                 <p class="text-muted">
-                    <strong>*</strong> These fields are required. Contact form template by
-                    <a href="https://bootstrapious.com/p/how-to-build-a-working-bootstrap-contact-form" target="_blank">Bootstrapious</a>.</p>
+                    <strong>*</strong> These fields are required. </p> 
             </div>
         </div>
-    </div>
--->
+
+				</div> <!-- end controls -->
 			</form>
         
         
@@ -270,7 +284,7 @@
         		<img src="" id="galleryImage" class="img-responsive" />
         		<p>
         		    <br/>
-        		    <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true">Close <i class="ion-android-close"></i></button>
+        		    <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true">Close <i> class="ion-android-close"></i></button>
         		</p>
         	</div>
         </div>
@@ -280,11 +294,23 @@
     
     
     <!--JQuery scripts loaded here -->
-    <script src="./js/customize/troop706.js"></script>
+    <!--<script src="./js/customize/troop706.js"></script>-->
     <script src="./js/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/jquery.easing.min.js"></script>
     <script src="./js/wow.js"></script>
     <script src="./js/scripts.js"></script>
-  </body>
+    
+    <!-- scripts used in email sign ups/contact form - taken from contact form example, see url in signUps section of website-->
+    <!-- using CDN (content delivery network, look at downloading them into project so internet connection is not needed when doing development) -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>        
+    <!-- bootstrap use validator java script to validate forms -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js" integrity="sha256-dHf/YjH1A4tewEsKUSmNnV05DDbfGN3g7NMq86xgGh8=" crossorigin="anonymous"></script>
+    <script src="./js/customize/troop706submitEmailForm.js"></script>
+    
+    
+    <script src="./js/customize/troop706contact.js"></script>
+    
+
 </html>
