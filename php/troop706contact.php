@@ -90,20 +90,28 @@ try //wrap this in a try block to catch any Exceptions
 	if ($success) 
 	{
 		$responseArray = array(	"type" => "success", "message" => $okMessage ); //array variable returned to AJAX caller
+		$rc = "success";
 	}
 	else {
   	    $responseArray = array(	"type" => "danger", "message" => $errorMessage ); //array variable returned to AJAX caller
+  	    $rc = "danger";
 	}
 }
 catch (Exception $e)
 {    
     $responseArray = array(	"type" => "error","message" => $e ); //array variable indicating error, returned to AJAX caller   
+    $rc = "error";
 }
 
+//PROBLEMS parsing json response, lets return success and error for now
 //return json structure to caller (java script/jquery)
-$encoded = json_encode($responseArray);
-header('Content-Type: application/json');
-echo $encoded; //this returns results to caller, make sure you dont have other echo commands enabled in this script or it will fail    
+//$encoded = json_encode($responseArray);
+//header('Content-Type: application/json');
+//echo $encoded; //this returns results to caller, make sure you dont have other echo commands enabled in this script or it will fail    
+
+
+
+echo $rc;
 
 //============================================
 //this function wasnt helpful for me but leaving it here in case its use becomes apparent later

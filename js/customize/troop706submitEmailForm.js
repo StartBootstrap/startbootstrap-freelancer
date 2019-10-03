@@ -1,9 +1,13 @@
 /*
  * Java Script code to call server side php script passing in contact form variables
  */
+
+/********************** NOT USED COMMENTED OUT *******************************************
 function submitEmailForm()
 {
+	
 	console.log( "submitEmailForm invoked" ); //send to browser console log
+	// e.preventDefault(); //stop default behaviour of html post request opening up new window with php file name
 	
 	("emailButton").disabled = true; //disable button after user selects
 	("status").innerHTML = 'please wait ...';
@@ -19,37 +23,41 @@ function submitEmailForm()
 	email_formdata.set( "need", 				document.getElementById("form_need").value );
 	
 	var ajax = new XMLHttpRequest();
+	
 	//initialize request with POST, php script
 	ajax.open( "POST", "././php/troop706contact.php", true ); //php email script asynchronous
 	
-	console.log( "email_formdata:" + email_formdata ); //send to browser console log
-	
-	ajax.onreadystatechange = function() //event that fires when state changes
-	{
-		if(ajax.readyState == 4 && ajax.status == 200) //4=loaded, response=OK
-		{			
-			console.log('jsonEmailResponseObj:' + ajax.responseText);
-			try{
-					var jsonEmailResponseObj = JSON.parse(ajax.responseText);
-					  //var jsonEmailResponseObj = ajax.responseText;
-						var type = jsonEmailResponseObj.type; //success, error or danger
-						var msg = jsonEmailResponseObj.message; //response message
-			} catch (ex)
-			{
-				console.log("error processing json response:" + ajax.responseText + " ex:"+ ex);
-        //return;
-			}
 
-console.log("type:" + type);
-			if(type == "success")
+	
+	ajax.onload = function() //event that fires php script executes on server and returns results
+	{
+				
+			//var jsonEmailResponseObj = this.responseText;
+			var rc = this.responseText;
+			console.log( "rc:" + rc ); //send to browser console log
+			if(rc == "danger")
 			{
-				("contact-form").innerHTML = '<h2>Thanks '+_("n").value+', your message has been sent.</h2>';
+								//("status").innerHTML = "danger - come back later.";
+								document.getElementById('status').innerHTML = "danger - come back later";
+								//("status").disabled = false;
 			} else {
-				("status").innerHTML = msg;
-				("status").disabled = false;
+				//("status").innerHTML = "There was a problem - come back later.";
+				//("status").disabled = false;
+				document.getElementById('status').innerHTML = "error - come back later";
 			}
-		}
+			
+			
+	
 	}
+	
+	ajax.onerror = function() //event that excutes when php script has critical failure
+	{
+		//add logic for error
+		console.log("fatal php error");
+	}
+	
 	ajax.send( email_formdata ); //send the request to PHP now
 	document.getElementById("status").innerHTML = "processing...";
 }
+
+ */
