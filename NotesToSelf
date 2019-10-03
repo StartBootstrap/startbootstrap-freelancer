@@ -1,29 +1,15 @@
-4/22/2019
-Move 5200FarmRental project to github repository
- 
- Setup remote repository 
- git remote add origin ssh://git@bitbucket.org/mjkrueger/5200farmrental.git
- git fetch origin
+git remote show origin
+* remote origin
+  Fetch URL: https://github.com/mike1krueger/Troop706.git
+  Push  URL: https://github.com/mike1krueger/Troop706.git
  
  Setup ssh keys to enable sharing of files from command line
- Initialize 5200FarmRental local repository
- 
- Make changes to files locally and merge into remote master respository
- Terminal> make sure you have latest changes from master repostory in github (git pull origin master?)
- #create a new branch
- Terminal> git checkout -b updateNotes
- ..make changes to files using Aptana and then add new/changed files to repository
- Terminal> git add -all
- 
- #commit changes in branch
- 
- # Pushes the changes in your local repository up to the remote repository you specified as the origin
- 
- Terminal> 
- git checkout master
- git pull origin master
- git merge updateNotes
- git push origin master
+
+ git add . (adds all modified files)
+ git commit -m "describe conents of your commit"
+ git branch -r (list remote branches)
+ git push -u origin <branch> e.g. git push -u origin email_form
+
  
   
  
