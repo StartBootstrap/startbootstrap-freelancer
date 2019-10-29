@@ -37,10 +37,10 @@
 </footer>
 
 @code {
-    [Parameter] string LeftColumnText { get; set; }
-    [Parameter] string LeftColumnTitle { get; set; }
-    [Parameter] string MiddleColumnTitle { get; set; }
-    [Parameter] IEnumerable<FontAwesomeLink> FontAwesomeLinks { get; set; }
-    [Parameter] string RightColumnTitle { get; set; }
-    [Parameter] string RightColumnText { get; set; }
+    [Parameter] public string LeftColumnText { get; set; }
+    [Parameter] public string LeftColumnTitle { get; set; }
+    [Parameter] public string MiddleColumnTitle { get; set; }
+    [Parameter] public IEnumerable<FontAwesomeLink> FontAwesomeLinks { get; set; }
+    [Parameter] public string RightColumnTitle { get; set; }
+    [Parameter] public string RightColumnText { get; set; }
 }

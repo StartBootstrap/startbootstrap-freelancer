@@ -31,7 +31,7 @@
 </nav>
 @code {
 
-[Parameter] IEnumerable<NavigationItem> NavigationItems { get; set; }
-[Parameter] string SiteTitle { get; set; }
+[Parameter] public IEnumerable<NavigationItem> NavigationItems { get; set; }
+[Parameter] public string SiteTitle { get; set; }
 
 }

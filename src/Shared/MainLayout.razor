@@ -37,9 +37,8 @@
     Home home;
     private CustomTypeProvider TypeProvider { get; } = new CustomTypeProvider();
 
-    protected override async Task OnInitAsync()
+    protected override async Task OnInitializedAsync()
     {
-
         var projectId = Configuration.GetValue<string>("DeliveryOptions:ProjectId");
         var client = DeliveryClientBuilder.WithProjectId(projectId).WithHttpClient(Http).WithTypeProvider(TypeProvider).Build();
         var result = (await client.GetItemAsync<Home>("home"));

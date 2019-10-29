@@ -65,7 +65,7 @@
                         }
                     </div>
                     <div class="form-group">
-                        <button type="button" class="btn btn-primary btn-xl" id="sendMessageButton" onclick=@HandleValidSubmit>@ButtonText</button>
+                        <button type="button" class="btn btn-primary btn-xl" id="sendMessageButton"  @onclick="@HandleValidSubmit">@ButtonText</button>
                     </div>
                 </form>
             </div>
@@ -74,6 +74,6 @@
 </section>
 
 @code {
-    [Parameter] string Title { get; set; }
-    [Parameter] string ButtonText { get; set; }
+    [Parameter] public string Title { get; set; }
+    [Parameter] public string ButtonText { get; set; }
 }

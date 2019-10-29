@@ -9,10 +9,10 @@ namespace StartBootstrap.Freelancer.Blazor.Shared
         [Inject]
         private IJSRuntime JSRuntime { get; set; }
 
-        protected override Task OnAfterRenderAsync()
+        protected override Task OnAfterRenderAsync(bool firstRender)
         {
             JSRuntime.InvokeAsync<object>("initNavMenu");
-            return base.OnAfterRenderAsync();
+            return base.OnAfterRenderAsync(firstRender);
         }
     }
 }
