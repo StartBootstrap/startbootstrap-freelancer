@@ -3,7 +3,6 @@ using StartBootstrap.Freelancer.Blazor.Models;
 using System;
 using System.Net;
 using System.Net.Mail;
-using System.Threading.Tasks;
 
 namespace StartBootstrap.Freelancer.Blazor.Shared
 {

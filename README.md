@@ -1,7 +1,7 @@
-# Start Bootstrap - Freelancer | Blazor | Kentico Cloud
+# Start Bootstrap - Freelancer | Blazor | Kentico Kontent
 
 ## Blazor port
-This web template is a [Blazor](https://dotnet.microsoft.com/apps/aspnet/web-apps/client) port of the bootstrap [Freelancer](http://startbootstrap.com/template-overviews/freelancer/) template. It demonstrates the usage of the [Kentico Cloud Delivery SDK for .NET](https://github.com/Kentico/delivery-sdk-net) in a client-hosted Blazor app. In fact, all data is stored in Kentico Cloud. It also shows how to use JS Interop, event bidning, one-way, two-way databinding, linker configuration and other features of [ASP.NET Core Blazor](https://dotnet.microsoft.com/apps/aspnet/web-apps/client).
+This web template is a [Blazor](https://dotnet.microsoft.com/apps/aspnet/web-apps/client) port of the bootstrap [Freelancer](http://startbootstrap.com/template-overviews/freelancer/) template. It demonstrates the usage of the [Kentico Kontent Delivery SDK for .NET](https://github.com/Kentico/delivery-sdk-net) in a client-hosted Blazor app. In fact, all data is stored in Kentico Kontent. It also shows how to use JS Interop, event bidning, one-way, two-way databinding, linker configuration and other features of [ASP.NET Core Blazor](https://dotnet.microsoft.com/apps/aspnet/web-apps/client).
 
 ### Freelancer web template - Original work
 [Freelancer](http://startbootstrap.com/template-overviews/freelancer/) is a one page freelancer portfolio theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid, window modals for each portfolio item, and a contact form.

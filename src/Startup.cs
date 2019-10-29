@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Components.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using KenticoCloud.Delivery;
+using Kentico.Kontent.Delivery;
 using StartBootstrap.Freelancer.Blazor.Models;
 using Microsoft.Extensions.Configuration;
 using System;

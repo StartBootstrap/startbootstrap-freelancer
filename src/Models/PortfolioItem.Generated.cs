@@ -6,7 +6,7 @@
 
 using System;
 using System.Collections.Generic;
-using KenticoCloud.Delivery;
+using Kentico.Kontent.Delivery;
 
 namespace StartBootstrap.Freelancer.Blazor.Models
 {
