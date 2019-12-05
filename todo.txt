@@ -1,0 +1,5 @@
+To Do:
+-figure how to center align the ohhi main image
+-when exiting out of a modal, has green still
+-send button still has green
+-php file and how to connect it to an actual server??

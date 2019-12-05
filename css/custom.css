@@ -486,6 +486,7 @@ mark,
 .img-fluid {
   max-width: 100%;
   height: auto;
+  align-items: center;
 }
 
 .img-thumbnail {
@@ -597,6 +598,7 @@ pre code {
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+  align-items: center
 }
 
 .no-gutters {
@@ -9829,7 +9831,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .floating-label-form-group-with-focus label {
-  color: #1abc9c;
+  color: #bae3ff;
 }
 
 form .row:first-child .floating-label-form-group {
