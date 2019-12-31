@@ -484,9 +484,11 @@ mark,
 }
 
 .img-fluid {
+	display: block;
   max-width: 100%;
   height: auto;
   align-items: center;
+  margin: 0 auto;
 }
 
 .img-thumbnail {
@@ -2267,20 +2269,20 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary:focus, .btn-primary.focus {
-  box-shadow: 0 0 0 0.2rem rgba(60, 198, 171, 0.5);
+  /*box-shadow: 0 0 0 0.2rem rgba(60, 198, 171, 0.5);*/
 }
 
 .btn-primary.disabled, .btn-primary:disabled {
-  color: #fff;
-  background-color: #1abc9c;
-  border-color: #1abc9c;
+  color: #ff69b4;
+  background-color: #ff69b4;
+  border-color: #ff69b4;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
-  color: #fff;
-  background-color: #148f77;
-  border-color: #12846e;
+  color: #000000;
+  background-color: #bae1ff;
+  border-color: #e1f3ff;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
@@ -9745,6 +9747,7 @@ a.text-dark:hover, a.text-dark:focus {
   margin-bottom: 30px;
   border-radius: 0.5rem;
   overflow: hidden;
+
 }
 
 .portfolio .portfolio-item .portfolio-item-caption { /*changes when hover over a project*/
