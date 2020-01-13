@@ -1,4 +1,6 @@
-# A Single Page Developer Portfolio custom edited for Daniel Burns
+# A Single Page Developer Portfolio
+
+Used to highlight some of my recent projects
 
 
 -------------------------------------
