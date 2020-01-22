@@ -58,7 +58,7 @@ $(function() {
             $('<strong>').text(
               'Sorry ' +
                 firstName +
-                ', it seems that my mail server is not responding. To use your default mail client click the envelope in the navbar at to top of the page.'
+                ', it seems that my mail server is not responding. To try using your default mail client, click the envelope icon at the top of the page.'
             )
           );
           $('#success > .alert-danger').append('</div>');
