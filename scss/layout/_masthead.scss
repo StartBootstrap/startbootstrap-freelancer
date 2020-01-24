@@ -9,8 +9,19 @@
     font-size: 1.25rem;
   }
   .masthead-avatar {
+    position: relative;
     border-radius: 25px;
     width: 15rem;
+    height: 15rem;
+    transition: 1s;
+  }
+
+  .masthead-avatar .bottom {
+    position: absolute;
+    left: 0;
+  }
+  .masthead-avatar .bottom:hover {
+    opacity: 0;
   }
 }
 
@@ -25,6 +36,5 @@
     .masthead-subheading {
       font-size: 1.5rem;
     }
-
   }
 }
