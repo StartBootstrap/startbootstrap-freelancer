@@ -9715,8 +9715,20 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .masthead .masthead-avatar {
+  position: relative;
   border-radius: 25px;
   width: 15rem;
+  height: 15rem;
+  transition: 1s;
+}
+
+.masthead .masthead-avatar .bottom {
+  position: absolute;
+  left: 0;
+}
+
+.masthead .masthead-avatar .bottom:hover {
+  opacity: 0;
 }
 
 @media (min-width: 992px) {
