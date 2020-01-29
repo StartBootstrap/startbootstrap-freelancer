@@ -9724,6 +9724,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .masthead .masthead-avatar .bottom {
   position: absolute;
+  opacity: 1;
   left: 0;
 }
 
