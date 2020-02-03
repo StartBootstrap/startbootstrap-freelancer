@@ -80,10 +80,13 @@
     console.log('trigger :', trigger);
     trigger.click(function() {
       var theModal = $(this).data('target'),
-        videoSRC = $(this).attr('data-theVideo')/* ,
-        videoSRCauto = videoSRC + '?autoplay=1' */;
-      $(theModal + ' iframe').attr('src', videoSRC/* auto */);
+        videoSRC = $(this).attr('data-theVideo'),
+        videoSRCauto = videoSRC + '?autoplay=1';
+        console.dir(this);
+      $(theModal + ' iframe').attr('src', videoSRCauto);
       $(theModal).on('hidden.bs.modal', function() {
+        console.log('theModal :', theModal);
+        console.log('videoSRCauto :', videoSRCauto);
         $(theModal + ' iframe').attr('src', '');
         console.log('closed :', theModal);
       });
