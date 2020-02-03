@@ -105,11 +105,10 @@
 
         <!-- Portfolio Item 1 -->
         <div class="col-md-6 col-lg-4">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1" data-theVideo="https://www.youtube.com/embed/5jvcpOGBpg4?autoplay=1&loop=1&playlist=5jvcpOGBpg4">
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1" data-theVideo="https://www.youtube.com/embed/5jvcpOGBpg4">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
                 <p>Movieoke/<br>Fandangit</p>
-                <!-- <i class="fas fa-plus fa-3x"></i> -->
               </div>
             </div>
             <img class="img-fluid rounded" src="img/portfolio/fandangit-target.png" alt="project 1">
@@ -118,10 +117,10 @@
 
         <!-- Portfolio Item 2 -->
         <div class="col-md-6 col-lg-4">
-          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2" data-theVideo="https://www.youtube.com/embed/ik2d4oQJC04?autoplay=1&loop=1&playlist=ik2d4oQJC04">
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2" data-theVideo="https://www.youtube.com/embed/ik2d4oQJC04?loop=1&playlist=ik2d4oQJC04">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
-               <p>Fibonacci Calculator</p><!--  <i class="fas fa-plus fa-3x"></i> -->
+               <p>Fibonacci Calculator</p>
               </div>
             </div>
             <img class="img-fluid rounded" src="img/portfolio/fibCalc-target.png" alt="project 2">
@@ -133,7 +132,7 @@
           <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
-                <p>Bookshelf</p><!-- <i class="fas fa-plus fa-3x"></i> -->
+                <p>Bookshelf</p>
               </div>
             </div>
             <img class="img-fluid" src="img/portfolio/bookshelf-target.png" alt="">
@@ -146,6 +145,7 @@
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
                 <p>To Be List</p>
+                <p>(Under Construction)</p>
               </div>
             </div>
             <img class="img-fluid" src="img/portfolio/tobe-target.png" alt="">
@@ -157,7 +157,7 @@
           <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5" data-theVideo="https://www.youtube.com/embed/l3VUrdeEZ7c?autoplay=1&playlist=ik2d4oQJC04">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
-                Candy Tin Electronics<!-- <i class="fas fa-plus fa-3x"></i> -->
+                Candy Tin Electronics
               </div>
             </div>
             <img class="img-fluid" src="img/portfolio/simon-target.png" alt="">
@@ -169,7 +169,7 @@
           <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
-               <p>IC Layout</p> <!-- <i class="fas fa-plus fa-3x"></i> -->
+               <p>IC Layout</p> 
               </div>
             </div>
             <img class="img-fluid" src="img\portfolio\ICLayout-target.png" alt="">
@@ -429,14 +429,15 @@
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
-                <img class="img-fluid rounded mb-5" src="img/portfolio/bookshelf_reviews.png" alt="">
+                <img class="img-fluid rounded mb-5" src="img/portfolio/bookshelf-reviews.png" alt="">
                 <!-- Portfolio Modal - Text -->
-                <p class="mb-5">Fandangit | Software Engineer | React, Node, Express, MongoDB, s3, Elastic Beanstalk
-                  Searchable movie app providing trailers, theatres, showtimes, synopsis, and cast info 
-                  Collaborated with team members using Agile methodology and Git feature branch workflow
-                  Used React with styled-components to create a photo carousel with wrap-around content that displayed actor’s bio and filmography in a popup modal
-                  Utilized AWS Elastic Beanstalk to streamline deployment process to a T2.micro instance
+                <div class="mb-5">
+                  <p>BookShelf | React, Node, Express, PostgreSQL, AWS</p>
+                  <p>Searchable book finding app providing description, synopsis, reviews, ratings, and author details.
+                    I scaled the reviews feature of this legacy code application to handle 10M primary records.
+                    I generated 100M fake reviews as secondary records and tested PostgreSQL and MongoDB with identical queries to determine which DBMS would respond the fastest selecting PostgreSQL due to 24% faster query times and then indexed to reduce to 20ms. I then deployed the system to multiple T2 micro instances on EC2.                 
                   </p>
+                </div class="mb-5">
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
                   Close Window
@@ -463,7 +464,7 @@
             <div class="row justify-content-center">
               <div class="col-lg-8">
                 <!-- Portfolio Modal - Title -->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">To Be List</h2>
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Because we are more than what we do</h2>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
@@ -473,9 +474,11 @@
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
-                <img class="img-fluid rounded mb-5" src="img/portfolio/tobe-target.png" alt="">
+                <img class="img-fluid rounded mb-5" src="img/portfolio/underconstruction.png" alt="">
                 <!-- Portfolio Modal - Text -->
-                <p class="mb-5">Because we are more than what we do</p>
+                <h2 class="mb-5">Pardon our dust. We are under construction.</h2>
+                <p>Your ToDo List embraces the idea that we write things down to free our minds so that we can be more present an focussed in our work and in our daily lives. Your ToBe List wants to know who you are and how you're doing as well as what you need to get done. Providing you prompts to help you ground yourself as you sit down to plan and periodic check-ins throughout the day to keep you connected.</p>
+                <p>Your ToBe List is a React, Node.js/Express, MongoDB application containerized with Docker, orchestrated with Kubernetes, updated through TravisCI, and deployed to AWS</p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
                   Close Window
@@ -514,8 +517,10 @@
                 <!-- Portfolio Modal - video -->
                 <iframe width="100%" height="350" src=""></iframe>
                 <!-- Portfolio Modal - Text -->
-                <p class="mb-5">Home-made candy tin electronics</p>
-                <p class="mb-5">These are some projects I built while learning about electronics. The first project, Sim&oacute;n, is a one-of-a-kind device I designed from scratch. It's a hand-held version of the classic 1970's game, Simon. The next two are companion pieces, a mint tin synthesizer and a portable amplifier and speaker. They represent my level of understanding about PCB hardware design and my creativity, ingenuity, and design style as well as my ability to carry projects from inception to completion. I'm speaking rather slowly in the video. Feel free to increase the playback speed by clicking the settings icon in the video window.</p>
+                <div  class="mb-5">
+                  <h4>Home-made candy tin electronics</h4>
+                  <p>These are some projects I built while learning about electronics. The first project, Sim&oacute;n, is a one-of-a-kind device I designed from scratch. It's a hand-held version of the classic 1970's game, Simon. The next two are companion pieces, a mint tin synthesizer and a portable amplifier and speaker. They represent my level of understanding about PCB hardware design and my creativity, ingenuity, and design style as well as my ability to carry projects from inception to completion. I'm speaking rather slowly in the video. Feel free to increase the playback speed by clicking the settings icon in the video window.</p>
+                </div>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
                   Close Window
@@ -617,7 +622,10 @@
                   </a>
                 </div>
                 <!-- Portfolio Modal - Text -->
-                <p class="mb-5 text-justify">Integrated circuit layout, also known IC layout, is the representation of an integrated circuit in terms of planar geometric shapes which correspond to the patterns of metal, oxide, or semiconductor layers that make up the components of the integrated circuit.<br><br>These are some of the IC components that I created using a program called Cadence Virtuoso as part of my Computer-Aided Design curriculum at ACC. Learning about these components come together to generate the logic that defines our technological world was an essential stepping stone on my way to discovering my passion for software engineering. This is where the rubber meets the road.</p>
+                <div class="mb-5">
+                  <p>Integrated circuit layout, also known IC layout, is the representation of an integrated circuit in terms of planar geometric shapes which correspond to the patterns of metal, oxide, or semiconductor layers that make up the components of the integrated circuit.</p>
+                  <p>These are some of the IC components that I created using a program called Cadence Virtuoso as part of my Electronic Graphics Computer-Aided Design curriculum at ACC. Learning about how these components come together to generate the logic that defines our technological world has been an essential stepping stone on my way to discovering my passion for software engineering as well as sparking my interest in IoT technology.</p>
+                </div>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
                   Close Window
