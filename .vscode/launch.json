@@ -1,0 +1,11 @@
+{
+  "configurations": [
+    {
+      "name": "Docker Node.js Launch and Attach",
+      "type": "docker",
+      "request": "launch",
+      "preLaunchTask": "docker-run: debug",
+      "platform": "node"
+    }
+  ]
+}

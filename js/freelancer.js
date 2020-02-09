@@ -77,22 +77,50 @@
   //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
   function autoPlayYouTubeModal() {
     var trigger = $('body').find('[data-toggle="modal"]');
-    console.log('trigger :', trigger);
+    /* console.log('trigger :', trigger); */
     trigger.click(function() {
       var theModal = $(this).data('target'),
-        videoSRC = $(this).attr('data-theVideo'),
-        videoSRCauto = videoSRC + '?autoplay=1';
-        console.dir(this);
-      $(theModal + ' iframe').attr('src', videoSRCauto);
-      $(theModal).on('hidden.bs.modal', function() {
-        console.log('theModal :', theModal);
-        console.log('videoSRCauto :', videoSRCauto);
-        $(theModal + ' iframe').attr('src', '');
-        console.log('closed :', theModal);
-      });
+      videoSRC = $(this).attr('data-theVideo'),
+      videoSRCauto = videoSRC + '?autoplay=1';
+      $(theModal + ' iframe').attr('src', videoSRC/* auto */);
+      if (theModal === '#portfolioModal5') {
+        $(theModal).on('show.bs.modal', function(e) {
+          speedUpVideoPlayback();
+        })
+        $(theModal).on('hidden.bs.modal', function() {
+          player.stopVideo();
+        })
+      } else {
+        $(theModal).on('hidden.bs.modal', function() {
+          $(theModal + ' iframe').attr('src', '');
+        });
+      }
     });
   }
+  
   $(document).ready(function() {
     autoPlayYouTubeModal();
   });
+
+function speedUpVideoPlayback() {
+  var tag = document.createElement('script');
+  tag.id = 'iframeAPI';
+  tag.src = 'https://www.youtube.com/iframe_api';
+  var iframeAPIScriptTag = document.getElementsByTagName('script')[0];
+  iframeAPIScriptTag.parentNode.insertBefore(tag, iframeAPIScriptTag);
+}
+var player;
+window.onYouTubeIframeAPIReady = function() {
+  player = new YT.Player('player', {
+    events: {
+      'onReady': onPlayerReady
+    }
+  });
+}
+function onPlayerReady(event) {
+  player.setPlaybackRate(1.5);
+  event.target.playVideo()
+}
+
+  
 })(jQuery); // End of use strict
