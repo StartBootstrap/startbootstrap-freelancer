@@ -26,7 +26,7 @@
   <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
       <div>
-        <a class="btn btn-outline-light btn-social mx-1 js-scroll-trigger" href="mailto:danielburnstech@gmail.com?subject=I saw your portfolio and wanted to reach out." target="_blank" rel="noreferrer">
+        <a class="btn btn-outline-light btn-social mx-1 js-scroll-trigger" href="mailto:danielburnstech@gmail.com?subject=I saw your portfolio and wanted to reach out." target="_blank" aria-label="Scroll to top" rel="noreferrer">
           <i class="far fa-envelope"></i>
         </a>
         <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/Danielxburns" target="_blank" rel="noreferrer">
@@ -79,7 +79,7 @@
       </div>
 
       <!-- Masthead Subheading -->
-      <p class="masthead-subheading font-weight-light mb-0">Software Engineer | Artist | Entrepreneur</p>
+      <p class="masthead-subheading font-weight-light mb-0">Software Engineer | <a class="text-reset text-decoration-none" href="https://www.burnsart.com" target="_blank">Artist</a> | Entrepreneur</p>
 
     </div>
   </header>
@@ -108,7 +108,7 @@
           <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1" data-theVideo="https://www.youtube.com/embed/5jvcpOGBpg4?autoplay=1&loop=1&playlist=5jvcpOGBpg4">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
-                <p>Movieoke/<br>Fandangit</p>
+                <p>Movieoke<br><i>aka</i> Fandangit</p>
               </div>
             </div>
             <img class="img-fluid rounded" src="img/portfolio/fandangit-target.png" alt="project 1">
@@ -169,7 +169,7 @@
           <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
-                <p>IC Layout</p> 
+                <p>Integrated Circuit Layout</p> 
               </div>
             </div>
             <img class="img-fluid" src="img\portfolio\ICLayout-target.png" alt="">
@@ -206,12 +206,13 @@
         <div class="col-lg-4 mr-auto">
           <p class="lead">
             I am a creator, a fixer, and a technologist. I live my life pulling inspiration from the people and places that surround me and channeling my appreciation of this world into things of beauty, durability, and functionality. From having an art career to running a home renovation business to being a software engineer, the main thread that drives me is a thirst for new problems to solve and discovering new ways to solve them.</p>
+          <p>I take pride in creating custom logic to produce desired functionality and confidently approach problems with creativity and innovation. I systematically navigate complexities by breaking problems into their component parts. I take the time to understand what's going on under the hood, which allows me to write better code, optimize my solutions, and create elegant and refined products.</p>
         </div>
       </div>
 
       <!-- About Section Button -->
       <div class="text-center mt-4">
-        <a class="btn btn-xl btn-outline-light" href="http://burnsart.com">
+        <a class="btn btn-xl btn-outline-light" href="https://burnsart.com">
           artist webite:<br>
           www.burnsart.com
         </a>
@@ -296,8 +297,9 @@
         <!-- Footer About Text -->
         <div class="col-lg-6">
           <h4 class="text-uppercase mb-4">About the template</h4>
-          <p class="lead mb-0">Freelance is a free to use, MIT licensed Bootstrap theme created by
-            <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+          <p class="lead mb-2">In the interest of compiling and presenting my projects quickly, I started with this template:</p>
+          <p class="lead mb-0">Freelance - a free to use, MIT licensed Bootstrap theme created by
+            <a href="https://startbootstrap.com">Start Bootstrap</a>.</p>
         </div>
 
       </div>
@@ -313,7 +315,7 @@
 
   <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
   <div class="scroll-to-top d-lg-none position-fixed ">
-    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top" aria-label="Scroll to top">
       <i class="fa fa-chevron-up"></i>
     </a>
   </div>
@@ -334,7 +336,7 @@
             <div class="row justify-content-center">
               <div class="col-lg-8">
                 <!-- Portfolio Modal - Title -->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Cast and Crew Carousel</h2>
+                <p class="portfolio-modal-title h2 text-secondary text-uppercase mb-0">Cast and Crew Carousel</p>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
@@ -344,14 +346,16 @@
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Video -->                
-                <iframe width="100%" height="350" src=""></iframe>
+                <iframe class="mb-2" width="100%" height="350" src=""></iframe>
                 <!-- Portfolio Modal - Text -->
-                <p>Fandangit - A searchable movie app providing trailers, theatres, showtimes, synopsis, and cast info</p>
-                  <ul class="mb-5 text-left">
-                  <li>React, Node, Express, MongoDB, s3, Elastic Beanstalk</li>
-                  <li> Collaborated with team members using Agile methodology and Git feature branch workflow</li>
-                  <li>Used React with styled-components to create a photo carousel with wrap-around content that displayed actor’s bio and filmography in a popup modal</li>
-                  <li>Utilized AWS Elastic Beanstalk to streamline deployment process to a T2.micro instance</li>
+                <p class="h5 mb-2">Movieoke (<i>aka</i> Fandangit) - A searchable movie app providing trailers, theatres, showtimes, synopsis, and cast info</p>
+                <ul class="mb-5 text-left">
+                  <li>Built using React, Node, Express and MongoDB</li>
+                  <li>Responsible for the Cast and Crew feature</li>
+                  <li>Worked closely with other engineers using Agile methodologies, performing daily stand-ups and regular code reviews through Git version control</li>
+                  <li>Used React with styled-components to create a photo carousel from scratch with wrap-around content that displayed actor’s bio and filmography in a popup modal</li>
+                  <li>Integrated other team member's features into a Node based proxy server</li>
+                  <li>Deployed onto AWS using Elastic Beanstalk to streamline the deployment process and stored the photo assets in an s3 bucket in order to keep the files available, secure and easy to manage</li>
                 </ul>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
@@ -391,8 +395,17 @@
                 <!-- Portfolio Modal - Video -->                
                 <iframe width="100%" height="350" src=""></iframe>
                 <!-- Portfolio Modal - Text -->
-                <p class="mb-5">A dive into gaining experience with, and a comprehensive understanding of, creating a complete CI/CD automated workflow by building a complex multi-container app with React, Node, Express, Redis, and Postgres using Docker, Github, TravisCI, and Kubernetes set up with HTTPS and deployed to Google Cloud.</p>
-                <p></p>
+                <p class="h5 mb-2">Fibonacci Calculator - a Kubernetes-based application that calculates Fibonacci values</p>
+                <ul class="text-left">
+                  <li>Built out a React front end that uses Axios to make requests to an Express server</li>
+                  <li>Created a Redis client to calculate the values and cache the results</li>
+                  <li>Connected a Postgres database to store input values long term</li>
+                  <li>Configured Dockerfiles to generate containers for each service using Docker-compose</li>
+                  <li>Set up CI/CD through Github with TravisCI to automate testing and deployment</li>
+                  <li>Kubernetes</li>
+                  <li>Google Cloud</li>
+                  <li>HTTPS certs using Let'sEncrypt! </li>
+                </ul>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
                   Close Window
@@ -432,11 +445,15 @@
                 <img class="img-fluid rounded mb-5" src="img/portfolio/bookshelf-reviews.png" alt="">
                 <!-- Portfolio Modal - Text -->
                 <div class="mb-5">
-                  <p>BookShelf | React, Node, Express, PostgreSQL, AWS</p>
-                  <p>Searchable book finding app providing description, synopsis, reviews, ratings, and author details.
-                    I scaled the reviews feature of this legacy code application to handle 10M primary records.
-                    I generated 100M fake reviews as secondary records and tested PostgreSQL and MongoDB with identical queries to determine which DBMS would respond the fastest selecting PostgreSQL due to 24% faster query times and then indexed to reduce to 20ms. I then deployed the system to multiple T2 micro instances on EC2.                 
-                  </p>
+                  <p class="h5 mb-2">BookShelf - A searchable book finding app providing description, synopsis, reviews, ratings, and author details</p>
+                  <ul class="mb-5 text-left">
+                    <li>Re-designed the back end of a legacy code application built using React, Node, Express and MySQL to be able to handle 10M primary users</li>
+                    <li>Authored NodeJS scripts for generating 100M fake records of book reviews for testing (&#8776;10 reviews/user)</li>
+                    <li>Designed schemas for both MongoDB and PosrtgreSQL</li>
+                    <li>Performed benchmark testing using identical queries to verify permformance on large data sets and chose PostgreSQL due to a 24% faster response time</li>
+                    <li>Deployed application to AWS on multiple EC2 instances and migrated the database</li>
+                    <li>Conducted real-time performance testing using New Relic and reduced latency by vertically scaling database instances</li>
+                  </ul>  
                 </div class="mb-5">
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
@@ -521,6 +538,7 @@
                 <div  class="mb-5">
                   <h4>Home-made candy tin electronics</h4>
                   <p>These are some projects I built while learning about electronics. The first project, Sim&oacute;n, is a one-of-a-kind device I designed from scratch. It's a hand-held version of the classic 1970's game, Simon. The next two are companion pieces, a mint tin synthesizer and a portable amplifier and speaker. They represent my level of understanding about PCB hardware design and my creativity, ingenuity, and design style as well as my ability to carry projects from inception to completion. I'm speaking rather slowly in the video. Feel free to increase the playback speed by clicking the settings icon in the video window.</p>
+                  <p>Talk about hooking up the youTube iFrame API to speed up the video by default</p>
                 </div>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
@@ -558,7 +576,7 @@
                   <div class="divider-custom-line"></div>
                 </div>
                 <!-- Portfolio Modal - Image -->
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div id="carouselExampleIndicators" class="carousel slide mb-5" data-ride="carousel">
                   <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -623,7 +641,8 @@
                 </div>
                 <!-- Portfolio Modal - Text -->
                 <div class="mb-5">
-                  <p>Integrated circuit layout, also known IC layout, is the representation of an integrated circuit in terms of planar geometric shapes which correspond to the patterns of metal, oxide, or semiconductor layers that make up the components of the integrated circuit.</p>
+                  <p class="h5 mb-2">Integrated circuit layout</p>
+                  <p>IC layout is the representation of an integrated circuit in terms of planar geometric shapes which correspond to the patterns of metal, oxide, or semiconductor layers that make up the components of the integrated circuit.</p>
                   <p>These are some of the IC components that I created using a program called Cadence Virtuoso as part of my Electronic Graphics Computer-Aided Design curriculum at ACC. Learning about how these components come together to generate the logic that defines our technological world has been an essential stepping stone on my way to discovering my passion for software engineering as well as sparking my interest in IoT technology.</p>
                 </div>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
