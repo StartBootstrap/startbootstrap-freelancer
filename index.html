@@ -26,13 +26,13 @@
   <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
       <div>
-        <a class="btn btn-outline-light btn-social mx-1 js-scroll-trigger" href="mailto:danielburnstech@gmail.com?subject=I saw your portfolio and wanted to reach out." target="_blank" aria-label="Scroll to top" rel="noreferrer">
+        <a class="btn btn-outline-light btn-social mx-1 js-scroll-trigger" href="mailto:danielburnstech@gmail.com?subject=I saw your portfolio and wanted to reach out." target="_blank" aria-label="email me" rel="noreferrer">
           <i class="far fa-envelope"></i>
         </a>
-        <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/Danielxburns" target="_blank" rel="noreferrer">
+        <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/Danielxburns" target="_blank" aria-label="my github" rel="noreferrer">
           <i class="fab fa-fw fa-github"></i>
         </a>
-        <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/d-burns-tech/" target="_blank" rel="noreferrer">
+        <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/d-burns-tech/" target="_blank" aria-label= "my linkedin" rel="noreferrer">
           <i class="fab fa-fw fa-linkedin-in"></i>
         </a>
       </div>
@@ -79,7 +79,7 @@
       </div>
 
       <!-- Masthead Subheading -->
-      <p class="masthead-subheading font-weight-light mb-0">Software Engineer | <a class="text-reset text-decoration-none" href="https://www.burnsart.com" target="_blank">Artist</a> | Entrepreneur</p>
+      <p class="masthead-subheading font-weight-light mb-0">Software Engineer | <a class="text-reset text-decoration-none" href="https://www.burnsart.com" rel="noopener noreferrer" target="_blank">Artist</a> | Entrepreneur</p>
 
     </div>
   </header>
@@ -206,7 +206,9 @@
         <div class="col-lg-4 mr-auto">
           <p class="lead">
             I am a creator, a fixer, and a technologist. I live my life pulling inspiration from the people and places that surround me and channeling my appreciation of this world into things of beauty, durability, and functionality. From having an art career to running a home renovation business to being a software engineer, the main thread that drives me is a thirst for new problems to solve and discovering new ways to solve them.</p>
-          <p>I take pride in creating custom logic to produce desired functionality and confidently approach problems with creativity and innovation. I systematically navigate complexities by breaking problems into their component parts. I take the time to understand what's going on under the hood, which allows me to write better code, optimize my solutions, and create elegant and refined products.</p>
+        </div>
+        <div class="col-lg-4 mr-auto">
+          <p class="lead">I take pride in creating custom logic to produce desired functionality and confidently approach problems with creativity and innovation. I systematically navigate complexities by breaking problems into their component parts. I take the time to understand what's going on under the hood, which allows me to write better code, optimize my solutions, and to create elegant and refined products.</p>
         </div>
       </div>
 
@@ -352,7 +354,7 @@
                 <ul class="mb-5 text-left">
                   <li>Built using React, Node, Express and MongoDB</li>
                   <li>Responsible for the Cast and Crew feature</li>
-                  <li>Worked closely with other engineers using Agile methodologies, performing daily stand-ups and regular code reviews through Git version control</li>
+                  <li>Worked closely with a team engineers using Agile methodologies, performing daily stand-ups and regular code reviews through Git version control</li>
                   <li>Used React with styled-components to create a photo carousel from scratch with wrap-around content that displayed actor’s bio and filmography in a popup modal</li>
                   <li>Integrated other team member's features into a Node based proxy server</li>
                   <li>Deployed onto AWS using Elastic Beanstalk to streamline the deployment process and stored the photo assets in an s3 bucket in order to keep the files available, secure and easy to manage</li>
@@ -447,11 +449,12 @@
                 <div class="mb-5">
                   <p class="h5 mb-2">BookShelf - A searchable book finding app providing description, synopsis, reviews, ratings, and author details</p>
                   <ul class="mb-5 text-left">
-                    <li>Re-designed the back end of a legacy code application built using React, Node, Express and MySQL to be able to handle 10M primary users</li>
-                    <li>Authored NodeJS scripts for generating 100M fake records of book reviews for testing (&#8776;10 reviews/user)</li>
-                    <li>Designed schemas for both MongoDB and PosrtgreSQL</li>
-                    <li>Performed benchmark testing using identical queries to verify permformance on large data sets and chose PostgreSQL due to a 24% faster response time</li>
-                    <li>Deployed application to AWS on multiple EC2 instances and migrated the database</li>
+                    <li>Re-designed the back end of the reviews feature in a legacy code application built using React, Node, Express and MySQL in order to handle 10M users</li>
+                    <li>Worked closely with a team of engineers using Agile methodologies, performing daily stand-ups and regular code reviews through Git version control</li>
+                    <li>Authored NodeJS scripts for generating 100M fake records of book reviews for testing purposes (&#8776;10 reviews/user)</li>
+                    <li>Designed database schemas for both MongoDB and PostgreSQL</li>
+                    <li>Performed benchmark testing of identical queries to each database to verify the performance on large data sets and chose PostgreSQL due to a 24% faster response time</li>
+                    <li>Deployed application to AWS on multiple EC2 instances and migrated the reviews data from a local CSV file onto the remote database</li>
                     <li>Conducted real-time performance testing using New Relic and reduced latency by vertically scaling database instances</li>
                   </ul>  
                 </div class="mb-5">
