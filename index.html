@@ -173,7 +173,8 @@
     <div class="container">
 
       <!-- About Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+      <h2 class="page-section-heading text-center text-uppercase text-white">Dont Want to Wait?</h2>
+       <p class="masthead-subheading font-weight-light mb-0"><center>Order on the Go!</center></p>
 
       <!-- Icon Divider -->
       <div class="divider-custom divider-light">
@@ -185,23 +186,59 @@
       </div>
 
       <!-- About Section Content -->
-      <div class="row">
-        <div class="col-lg-4 ml-auto">
-          <p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p>
-        </div>
-        <div class="col-lg-4 mr-auto">
-          <p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p>
-        </div>
-      </div>
+    
 
       <!-- About Section Button -->
-      <div class="text-center mt-4">
-        <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/themes/freelancer/">
-          <i class="fas fa-download mr-2"></i>
-          Free Download!
+      <div style = "display:flex; justify-content: space-around;"> 
+       <div class="text-left mt-1">
+        <a class="btn btn-xl btn-outline-light" href="https://www.rootsnaturalkitchen.com/"> Roots
+         
+
+       
+        </a>
+
+      </div>
+  
+
+       <div class="text-center mt-1">
+        <a class="btn btn-xl btn-outline-light" href="https://www.chick-fil-a.com/?example=1&gclid=EAIaIQobChMI3ry9gJLh5wIVlJOzCh1e0wkcEAAYASAAEgJU0PD_BwE"> Chick Fil-A
+       
+       
+        </a>
+       </div>
+
+   
+      <div class="text-right mt-2">
+
+        <a class="btn btn-xl btn-outline-light" href="https://www.chipotle.com/order/#menu"> Chipotle
+         
+       
         </a>
       </div>
+         </div>
+         <div style = "display:flex; justify-content: space-around;"> 
+      <div class="text-left mt-2">
+        <a class="btn btn-xl btn-outline-light" href="https://www.snapfinger.com/o/c/HelloBistro/restaurant/25903"> Hello Bistro
+         
+       
+        </a>
 
+      </div>
+      <div class="text-center mt-2">
+        <a class="btn btn-xl btn-outline-light" href="https://mypiada.com/order/"> Piada
+         
+       
+        </a>
+
+      </div>
+      <div class="text-right mt-2">
+        <a class="btn btn-xl btn-outline-light" href="https://www.mcdonalds.com/us/en-us.html"> McDonald's
+         
+       
+        </a>
+
+      </div>
+</div>
     </div>
   </section>
 
@@ -210,7 +247,7 @@
     <div class="container">
 
       <!-- Contact Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Submit Review</h2>
 
       <!-- Icon Divider -->
       <div class="divider-custom">
@@ -228,29 +265,42 @@
           <form name="sentMessage" id="contactForm" novalidate="novalidate">
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Name</label>
-                <input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name.">
+                <label>Restaraunt Name</label>
+                <input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter the name of the restaraunt you are reviewing">
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Email Address</label>
-                <input class="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address.">
+                <label>How long did you wait?(in minutes)</label>
+                <input class="form-control" id="time" type="text" placeholder="Wait Time" required="required" data-validation-required-message="Please enter the approximate wait time experienced">
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Phone Number</label>
-                <input class="form-control" id="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number.">
+                <label>Rate Your Experience</label>
+                <input class="form-control" id="rating" type="tel" placeholder="Rating" required="required" data-validation-required-message="Please rate your experience at the Restaraunt.">
+                <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  .checked{
+    color: orange;
+  }
+</style>
+
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
                 <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                <label>Message</label>
-                <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea>
+                <label>Comments</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Message" data-validation-required-message="Please enter any comments or concerns"></textarea>
                 <p class="help-block text-danger"></p>
               </div>
             </div>
