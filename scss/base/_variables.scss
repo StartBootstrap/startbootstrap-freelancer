@@ -25,3 +25,8 @@ $input-btn-border-width: $border-width !default;
 // Override Bootstrap modal variables
 $modal-inner-padding: 4rem 1rem !default;
 $modal-content-border-width: 0 !default;
+
+// override carousel indicator color
+$carousel-control-color: #fd0;
+$carousel-caption-color: #fd0;
+$carousel-indicator-active-bg: #fd0;

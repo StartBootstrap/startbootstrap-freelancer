@@ -299,11 +299,10 @@
         <!-- Footer About Text -->
         <div class="col-lg-6">
           <h4 class="text-uppercase mb-4">About the template</h4>
-          <p class="lead mb-2">In the interest of compiling and presenting my projects quickly, I started with this template:</p>
-          <p class="lead mb-0">Freelance - a free to use, MIT licensed Bootstrap theme created by
+          <p class="lead mb-4">Freelance - a free to use, MIT licensed Bootstrap theme created by
             <a href="https://startbootstrap.com">Start Bootstrap</a>.</p>
+          <p class="lead">I chose to use a template in the interest of compiling and presenting my projects quickly as well as gaining experience working with a legacy code base.</p>
         </div>
-
       </div>
     </div>
   </footer>
@@ -400,13 +399,14 @@
                 <p class="h5 mb-2">Fibonacci Calculator - a Kubernetes-based application that calculates Fibonacci values</p>
                 <ul class="text-left">
                   <li>Built out a React front end that uses Axios to make requests to an Express server</li>
-                  <li>Created a Redis client to calculate the values and cache the results</li>
-                  <li>Connected a Postgres database to store input values long term</li>
+                  <li>Created a Redis client to calculate fibonacci values and cache the results</li>
+                  <li>Connected a Postgres database for long term storage of input values</li>
                   <li>Configured Dockerfiles to generate containers for each service using Docker-compose</li>
-                  <li>Set up CI/CD through Github with TravisCI to automate testing and deployment</li>
-                  <li>Kubernetes</li>
-                  <li>Google Cloud</li>
-                  <li>HTTPS certs using Let'sEncrypt! </li>
+                  <li>Configured a Kubernetes Cluster using an Ingress Service for exposure to outside traffic and ClusterIP Services for internal access to the client, server, Redis and Postgres deployment pods</li>
+                  <li>Created a Persistent Volume Claim for the Postgres instance</li>
+                  <li>Set up CI/CD through Github using TravisCI to automate testing and deployment</li>
+                  <li>Set up project on Google Cloud and created cluster using Kubernetes Engine</li>
+                  <li>Installed Cert Manager into cluster and configured issuer to set up HTTPS certificates using Let'sEncrypt</li>
                 </ul>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
@@ -540,8 +540,8 @@
                 <!-- Portfolio Modal - Text -->
                 <div  class="mb-5">
                   <h4>Home-made candy tin electronics</h4>
-                  <p>These are some projects I built while learning about electronics. The first project, Sim&oacute;n, is a one-of-a-kind device I designed from scratch. It's a hand-held version of the classic 1970's game, Simon. The next two are companion pieces, a mint tin synthesizer and a portable amplifier and speaker. They represent my level of understanding about PCB hardware design and my creativity, ingenuity, and design style as well as my ability to carry projects from inception to completion. I'm speaking rather slowly in the video. Feel free to increase the playback speed by clicking the settings icon in the video window.</p>
-                  <p>Talk about hooking up the youTube iFrame API to speed up the video by default</p>
+                  <p>These are some projects I built while learning about electronics. The first project, Sim&oacute;n, is a one-of-a-kind device I designed from scratch. It's a hand-held version of the classic 1970's game, Simon, housed in a sugar skull candy tin. The next two are companion pieces, a mint tin synthesizer and a portable amplifier and speaker. They represent my level of understanding about PCB hardware design and my creativity, ingenuity, and design style as well as my ability to carry projects from inception to completion.</p>
+                  <p>The video playback in this pop-up modal is sped up by default by integrating the YouTube iFrame API.</p>
                 </div>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
@@ -580,7 +580,7 @@
                 </div>
                 <!-- Portfolio Modal - Carousel -->
                 <div id="carouselExampleIndicators" class="carousel slide mb-5" data-ride="carousel">
-                  <ol class="carousel-indicators">
+                  <ol class="carousel-indicators red">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
@@ -602,8 +602,8 @@
                         <h5>Complex Gate</h5>
                       </div>
                     </div>
-                    <div class="carousel-item mh-100 mw-100">
-                      <img class="d-block" src="img\portfolio\carousel-images\Input_Buffer.JPG" alt="Third slide: Input Buffer" style="margin:auto">
+                    <div class="carousel-item">
+                      <img class="d-block mh-100 mw-100" src="img\portfolio\carousel-images\Input_Buffer.JPG" alt="Third slide: Input Buffer" style="margin:auto">
                       <div class="carousel-caption d-none d-md-block">
                         <h5>Input Buffer</h5>
                       </div>
