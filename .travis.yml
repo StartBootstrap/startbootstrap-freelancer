@@ -1,9 +1,8 @@
-language:      node_js
-git:
-  depth:       3
+language: node_js
 node_js:
   - "node"
-install:       npm install
+install: 
+  - npm install
 script:
   - npm test
   - gulp
@@ -12,3 +11,10 @@ cache:
     - node_modules
 notifications:
   email:       false
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  on:
+    branch: master
