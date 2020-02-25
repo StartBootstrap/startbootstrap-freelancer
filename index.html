@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Oakland Can't Wait</title>
+  <title>Oakland-Can't-Wait</title>
 
   <!-- Custom fonts for this theme -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -29,7 +29,11 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
+
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Click the Links to the Right</a>
+=======
       <a class="navbar-brand js-scroll-trigger" href="#page-top">Oakland Can't Wait</a>
+
       <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -40,10 +44,17 @@
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#restaurants">Restaurants</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
+
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Order Now</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Submit a Review</a>
+=======
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#ordertogo">Order To Go</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#submitWaitSection">Submit Wait</a>
+
           </li>
         </ul>
       </div>
@@ -55,10 +66,14 @@
     <div class="container d-flex align-items-center flex-column">
 
       <!-- Masthead Avatar Image -->
-      <img class="masthead-avatar mb-5" src="img/avataaars.svg" alt="">
+      <img class="masthead-avatar mb-5" src="img/CathedralofLearning.jpg" alt="">
 
       <!-- Masthead Heading -->
+
+      <h1 class="masthead-heading text-uppercase mb-0">Oakland-Can't-Wait</h1>
+=======
       <h1 class="masthead-heading text-uppercase mb-0">Oakland Can't Wait</h1>
+
 
       <!-- Icon Divider -->
       <div class="divider-custom divider-light">
@@ -70,7 +85,11 @@
       </div>
 
       <!-- Masthead Subheading -->
+
+      <p class="masthead-subheading font-weight-light mb-0">Hail to not waiting!!!</p>
+=======
       <p class="masthead-subheading font-weight-light mb-0">Your solution to getting food without wasting your time.</p>
+
 
     </div>
   </header>
@@ -190,55 +209,55 @@
       </div>
 
       <!-- About Section Content -->
-    
+
 
       <!-- About Section Button -->
-      <div style = "display:flex; justify-content: space-around;"> 
+      <div style = "display:flex; justify-content: space-around;">
        <div class="text-left mt-1">
         <a class="btn btn-xl btn-outline-light" href="https://www.rootsnaturalkitchen.com/"> Roots
-         
 
-       
+
+
         </a>
 
       </div>
-  
+
 
        <div class="text-center mt-1">
         <a class="btn btn-xl btn-outline-light" href="https://www.chick-fil-a.com/?example=1&gclid=EAIaIQobChMI3ry9gJLh5wIVlJOzCh1e0wkcEAAYASAAEgJU0PD_BwE"> Chick Fil-A
-       
-       
+
+
         </a>
        </div>
 
-   
+
       <div class="text-right mt-2">
 
         <a class="btn btn-xl btn-outline-light" href="https://www.chipotle.com/order/#menu"> Chipotle
-         
-       
+
+
         </a>
       </div>
          </div>
-         <div style = "display:flex; justify-content: space-around;"> 
+         <div style = "display:flex; justify-content: space-around;">
       <div class="text-left mt-2">
         <a class="btn btn-xl btn-outline-light" href="https://www.snapfinger.com/o/c/HelloBistro/restaurant/25903"> Hello Bistro
-         
-       
+
+
         </a>
 
       </div>
       <div class="text-center mt-2">
         <a class="btn btn-xl btn-outline-light" href="https://mypiada.com/order/"> Piada
-         
-       
+
+
         </a>
 
       </div>
       <div class="text-right mt-2">
         <a class="btn btn-xl btn-outline-light" href="https://www.mcdonalds.com/us/en-us.html"> McDonald's
-         
-       
+
+
         </a>
 
       </div>
@@ -271,8 +290,13 @@
           <form name="sentMessage" id="contactForm" novalidate="novalidate">
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
+
+                <label>Restaraunt Name</label>
+                <input class="form-control" id="name" type="text" placeholder="Resturant Name" required="required" data-validation-required-message="Please enter the name of the restaraunt you are reviewing">
+=======
                 <label>restaurant Name</label>
                 <input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter the name of the restaurant you are reviewing">
+
                 <p class="help-block text-danger"></p>
               </div>
             </div>
@@ -286,6 +310,20 @@
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Rate Your Experience</label>
+
+                <input class="form-control" id="rating" type="tel" placeholder="Select the word that best describes your experience" required="required" data-validation-required-message="Please rate your experience at the Restaraunt.">
+                <!-- Add icon library -->
+<label for="ratings">How would you best Describe your experience with Oakland Can't Wait: </label>
+<select id ="rating">
+  <option value= "Excellent">Excellent</option>
+  <option value= "Great">Great</option>
+  <option value= "Neutral">Neutral</option>
+  <option value= "Poor">Poor</option>
+  <option value= "Horrible">Horrible</option>
+</select>
+
+
+=======
                 <input class="form-control" id="rating" type="tel" placeholder="Rating" required="required" data-validation-required-message="Please rate your experience at the restaurant.">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -300,6 +338,7 @@
 <span class="fa fa-star"></span>
 <span class="fa fa-star"></span>
 <span class="fa fa-star"></span>
+
                 <p class="help-block text-danger"></p>
               </div>
             </div>
@@ -415,8 +454,13 @@
         <!-- Footer Location -->
         <div class="col-lg-4 mb-5 mb-lg-0">
           <h4 class="text-uppercase mb-4">Location</h4>
+
+          <p class="lead mb-0">Pittsburgh,PA 15213
+            <br></p>
+=======
           <p class="lead mb-0">University of Pittsburgh, 4200 5th Ave.,
             <br> Pittsburgh, PA</p>
+
         </div>
 
         <!-- Footer Social Icons -->
@@ -438,8 +482,13 @@
 
         <!-- Footer About Text -->
         <div class="col-lg-4">
+
+          <h4 class="text-uppercase mb-4">Contributors</h4>
+          <p class="lead mb-0">Created by Chris Godfrey, Diana Kocsis, Aaron Matthew, Sean Linton and Yusef Yaseen.
+=======
           <h4 class="text-uppercase mb-4">Oakland Can't Wait</h4>
           <p class="lead mb-0"><a href="#">Here</a> is some more information about this project.</p>
+
         </div>
 
       </div>
@@ -449,7 +498,11 @@
   <!-- Copyright Section -->
   <section class="copyright py-4 text-center text-white">
     <div class="container">
+
+      <small>Copyright &copy; Oakland Can't Wait 2020</small>
+=======
       <small>Copyright &copy; Oakland Can't Wait</small>
+
     </div>
   </section>
 
