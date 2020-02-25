@@ -17,7 +17,11 @@
 
   <!-- Theme CSS -->
   <link href="css/freelancer.css" rel="stylesheet">
-
+  
+  <script src="jquery.min.js"></script>
+  <script src="getwait.js"></script>
+  <script src="submitwait.js"></script>
+  
 </head>
 
 <body id="page-top">
@@ -92,19 +96,19 @@
 
         <!-- Restaurants Item 1 -->
         <div class="col-md-6 col-lg-4">
-          <div class="restaurants-item mx-auto" data-toggle="modal" data-target="#restaurantsModal1">
+          <div class="restaurants-item mx-auto" data-toggle="modal" data-target="#restaurantsModal1" onClick="getRootsData()">
             <div class="restaurants-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="restaurants-item-caption-content text-center text-white">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/restaurants/roots.jpeg" alt="">
+            <img class="img-fluid" src="img/restaurants/roots.jpeg" alt="" >
           </div>
         </div>
 
         <!-- Restaurants Item 2 -->
         <div class="col-md-6 col-lg-4">
-          <div class="restaurants-item mx-auto" data-toggle="modal" data-target="#restaurantsModal2">
+          <div class="restaurants-item mx-auto" data-toggle="modal" data-target="#restaurantsModal2" onClick="getChicfilaData()">
             <div class="restaurants-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="restaurants-item-caption-content text-center text-white">
                 <i class="fas fa-plus fa-3x"></i>
@@ -116,7 +120,7 @@
 
         <!-- Restaurants Item 3 -->
         <div class="col-md-6 col-lg-4">
-          <div class="restaurants-item mx-auto" data-toggle="modal" data-target="#restaurantsModal3">
+          <div class="restaurants-item mx-auto" data-toggle="modal" data-target="#restaurantsModal3" onClick="getHelloBistroData()">
             <div class="restaurants-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="restaurants-item-caption-content text-center text-white">
                 <i class="fas fa-plus fa-3x"></i>
@@ -128,7 +132,7 @@
 
         <!-- Restaurants Item 4 -->
         <div class="col-md-6 col-lg-4">
-          <div class="restaurants-item mx-auto" data-toggle="modal" data-target="#restaurantsModal4">
+          <div class="restaurants-item mx-auto" data-toggle="modal" data-target="#restaurantsModal4" onClick="getPiadaData()">
             <div class="restaurants-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="restaurants-item-caption-content text-center text-white">
                 <i class="fas fa-plus fa-3x"></i>
@@ -140,7 +144,7 @@
 
         <!-- Restaurants Item 5 -->
         <div class="col-md-6 col-lg-4">
-          <div class="restaurants-item mx-auto" data-toggle="modal" data-target="#restaurantsModal5">
+          <div class="restaurants-item mx-auto" data-toggle="modal" data-target="#restaurantsModal5" onClick="getChipotleData()">
             <div class="restaurants-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="restaurants-item-caption-content text-center text-white">
                 <i class="fas fa-plus fa-3x"></i>
@@ -152,7 +156,7 @@
 
         <!-- Restaurants Item 6 -->
         <div class="col-md-6 col-lg-4">
-          <div class="restaurants-item mx-auto" data-toggle="modal" data-target="#restaurantsModal6">
+          <div class="restaurants-item mx-auto" data-toggle="modal" data-target="#restaurantsModal6" onClick="getMcdonaldsData()">
             <div class="restaurants-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="restaurants-item-caption-content text-center text-white">
                 <i class="fas fa-plus fa-3x"></i>
@@ -240,16 +244,19 @@
       </div>
 </div>
     </div>
+	
+
   </section>
 
-  <!-- Contact Section -->
+<!--
+
   <section class="page-section" id="contact">
     <div class="container">
 
-      <!-- Contact Section Heading -->
+
       <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Submit Review</h2>
 
-      <!-- Icon Divider -->
+
       <div class="divider-custom">
         <div class="divider-custom-line"></div>
         <div class="divider-custom-icon">
@@ -258,10 +265,9 @@
         <div class="divider-custom-line"></div>
       </div>
 
-      <!-- Contact Section Form -->
+
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
           <form name="sentMessage" id="contactForm" novalidate="novalidate">
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
@@ -281,7 +287,7 @@
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Rate Your Experience</label>
                 <input class="form-control" id="rating" type="tel" placeholder="Rating" required="required" data-validation-required-message="Please rate your experience at the restaurant.">
-                <!-- Add icon library -->
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
   .checked{
@@ -315,6 +321,91 @@
 
     </div>
   </section>
+  -->
+  
+  
+  
+    <!-- Wait Time Submission Section -->
+  <section class="page-section" id="contact">
+    <div class="container">
+
+      <!-- Contact Section Heading -->
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Submit Wait Time</h2>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <!-- Contact Section Form -->
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+          <form name="form" id="form" novalidate="novalidate">
+		  
+		  <input type="hidden" id="submitTimeField" name="submitTimeField" value="-1">
+		  
+			<div class="control-group">
+              <div class="form-group controls mb-0 pb-2 ">
+                <label   style="font-size: 1.5em; color: #6C757D;">Restaurant:&nbsp;</label>
+				
+               	<select id="restaurantField" name="restaurantField">
+					<option value="roots">Roots Natural Kitchen</option>
+					<option value="chicfila">Chic-Fil-A</option>
+					<option value="hellobistro">Hello Bistro</option>
+					<option value="piada">Piada</option>
+					<option value="chipotle">Chipotle</option>
+					<option value="mcdonalds">McDonald's</option>
+				</select>
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+			
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>Your current approximate wait time (0 to 90 minutes).</label>
+                <input class="form-control" id="waitTimeField" name="waitTimeField" type="number" min="0" max="90" maxlength="2"  placeholder="Your current approximate wait time (0 to 90 minutes)." required="required" data-validation-required-message="Field is empty, please enter the required information.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>How many people in line are in front of you (0 to 30 people)?</label>
+                <input class="form-control" id="frontPeopleField" name="frontPeopleField" type="number" min="0" max="30" maxlength="2" placeholder="How many people in line are in front of you (0 to 30 people)?" required="required" data-validation-required-message="Field is empty, please enter the required information.">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+			
+			<div class="control-group">
+              <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                <label>How many people in line are in behind you (0 to 30 people)?</label>
+                <input class="form-control" id="behindPeopleField" name="behindPeopleField" type="number" min="0" max="30" maxlength="2" placeholder="How many people in line are in behind you (0 to 30 people)?" required="required" data-validation-required-message="Please enter the approximate wait time experienced">
+                <p class="help-block text-danger"></p>
+              </div>
+            </div>
+			
+			
+			<br>
+            <div id="success"></div>
+            <div class="form-group">
+			  <input class="btn btn-primary btn-xl" id="submit" type="button" value="Submit" onClick="setFormTimeField();">
+            </div>
+          </form>
+		  <h4 style="text-align:center; color: #003594;" class="masthead-subheading font-weight-light mb-0" id="submitResultDisplay"></h4>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  
+  
+  
+  
 
   <!-- Footer -->
   <footer class="footer text-center">
@@ -398,7 +489,7 @@
                 <!-- Restaurants Modal - Image -->
                 <img class="img-fluid rounded mb-5" src="img/restaurants/rootsfood.jpeg" alt="">
                 <!-- Restaurants Modal - Text -->
-                <p class="mb-5"> Current Waiting Time is: </p>
+                <p class="mb-5" id="rootsResultText"> Current Waiting Time is: </p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
                   Close Window
@@ -437,7 +528,7 @@
                 <!-- Restaurants Modal - Image -->
                 <img class="img-fluid rounded mb-5" src="img/restaurants/chikfilafood.png" alt="" height="200" width="600">
                 <!-- Restaurants Modal - Text -->
-                <p class="mb-5">Current Waiting Time is:</p>
+                <p class="mb-5" id="chicfilaResultText">Current Waiting Time is:</p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
                   Close Window
@@ -476,7 +567,7 @@
                 <!-- Restaurants Modal - Image -->
                 <img class="img-fluid rounded mb-5" src="img/restaurants/hellobistrofood.jpeg" alt="" height="200" width="400">
                 <!-- Restaurants Modal - Text -->
-                <p class="mb-5">Current Waiting Time is:</p>
+                <p class="mb-5" id="helloBistroResultText">Current Waiting Time is:</p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
                   Close Window
@@ -515,7 +606,7 @@
                 <!-- Restaruants Modal - Image -->
                 <img class="img-fluid rounded mb-5" src="img/restaurants/piadafood.jpeg" alt="" height="25" width="600">
                 <!-- Restaurants Modal - Text -->
-                <p class="mb-5">Current Waiting Time is:</p>
+                <p class="mb-5" id="piadaResultText">Current Waiting Time is:</p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
                   Close Window
@@ -554,7 +645,7 @@
                 <!-- Restaurants Modal - Image -->
                 <img class="img-fluid rounded mb-5" src="img/restaurants/chipotlefood.png" alt="" height="50">
                 <!-- Restaurants Modal - Text -->
-                <p class="mb-5">Current Waiting Time is:</p>
+                <p class="mb-5" id="chipotleResultText">Current Waiting Time is:</p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
                   Close Window
@@ -593,7 +684,7 @@
                 <!-- Restaurants Modal - Image -->
                 <img class="img-fluid rounded mb-5" src="img/restaurants/mcdonaldsfood.jpeg" alt="" height="100">
                 <!-- Restaurants Modal - Text -->
-                <p class="mb-5">Current Waiting Time is:</p>
+                <p class="mb-5" id="mcdonaldsResultText">Current Waiting Time is:</p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
                   Close Window
