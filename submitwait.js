@@ -7,7 +7,7 @@ $(document).ready(function() {
 		var numPeopleFront = $("#frontPeopleField").val();
 		var numPeopleBehind = $("#behindPeopleField").val();
 		
-		if (waitTime < 90 && numPeopleFront < 30 && numPeopleBehind < 30 && waitTime >= 0 && numPeopleFront >= 0 && numPeopleBehind >= 0){
+		if (waitTime <= 90 && numPeopleFront <= 30 && numPeopleBehind <= 30 && waitTime >= 0 && numPeopleFront >= 0 && numPeopleBehind >= 0){
 			
 			if (submitTime === '' || restaurant === '' || waitTime === '' || numPeopleFront === '' || numPeopleBehind === '') {
 				alert("Please fill out every field!");
