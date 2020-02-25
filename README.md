@@ -6,7 +6,8 @@ Can't Wait is an online service that provides the user with wait times for resta
 
 ## Using site
 
-to use this site, simply click on the restaraunt you wish to see a wait time for and if you want to make a reservation, go to the reservation page and type the reservation for the restaraunt.
+to use this site, simply click on the restaraunt you wish to see a wait time for and type in your approximate wait time, people in front 
+of you/behnid and click submit. 
 
 ## Contributors
 
