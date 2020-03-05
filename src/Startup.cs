@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using System;
 using System.Linq;
 using System.IO;
+using Kentico.Kontent.Delivery.Abstractions;
 
 namespace StartBootstrap.Freelancer.Blazor
 {
