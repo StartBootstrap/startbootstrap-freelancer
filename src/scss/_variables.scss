@@ -25,3 +25,9 @@ $input-btn-border-width: $border-width !default;
 // Override Bootstrap modal variables
 $modal-inner-padding: 4rem 1rem !default;
 $modal-content-border-width: 0 !default;
+
+// Restate the spacer variable for overriding grid gutter width
+$spacer: 1rem !default;
+
+// Override the spacing between columns to add symmetry to the layout
+$grid-gutter-width: $spacer * 3 !default;

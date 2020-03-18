@@ -543,8 +543,8 @@ pre code {
 
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -571,8 +571,8 @@ pre code {
 
 .container-fluid, .container-xl, .container-lg, .container-md, .container-sm {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -600,8 +600,8 @@ pre code {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: -1.5rem;
+  margin-left: -1.5rem;
 }
 
 .no-gutters {
@@ -622,8 +622,8 @@ pre code {
 .col-auto, .col-12, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {
   position: relative;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 .col {
@@ -4440,25 +4440,25 @@ input[type=button].btn-block {
 }
 
 .card-deck .card {
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
 }
 @media (min-width: 576px) {
   .card-deck {
     display: flex;
     flex-flow: row wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+    margin-right: -1.5rem;
+    margin-left: -1.5rem;
   }
   .card-deck .card {
     flex: 1 0 0%;
-    margin-right: 15px;
+    margin-right: 1.5rem;
     margin-bottom: 0;
-    margin-left: 15px;
+    margin-left: 1.5rem;
   }
 }
 
 .card-group > .card {
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
 }
 @media (min-width: 576px) {
   .card-group {
@@ -10111,15 +10111,11 @@ h3 {
     font-size: 1.5rem;
   }
 }
-.portfolio {
-  margin-bottom: -30px;
-}
 .portfolio .portfolio-item {
   cursor: pointer;
   position: relative;
   display: block;
   max-width: 25rem;
-  margin-bottom: 30px;
   border-radius: 0.5rem;
   overflow: hidden;
 }
