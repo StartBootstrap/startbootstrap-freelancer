@@ -5,9 +5,9 @@ const browserSyncPath = path.resolve(path.dirname(__filename), '../node_modules/
 
 concurrently([
     { command: 'node scripts/sb-watch.js', name: 'SB_WATCH', prefixColor: 'bgBlue.bold' },
-    { 
-        command: `${browserSyncPath} --reload-delay 2000 --reload-debounce 2000 dist -w --no-online`,
-        name: 'SB_BROWSER_SYNC', 
+    {
+        command: `"${browserSyncPath}" --reload-delay 2000 --reload-debounce 2000 dist -w --no-online`,
+        name: 'SB_BROWSER_SYNC',
         prefixColor: 'bgGreen.bold',
     }
 ], {
@@ -16,7 +16,7 @@ concurrently([
 }).then(success, failure);
 
 function success() {
-    console.log('Success');    
+    console.log('Success');
 }
 
 function failure() {
