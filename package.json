@@ -1,7 +1,7 @@
 {
     "title": "Freelancer",
     "name": "startbootstrap-freelancer",
-    "version": "6.0.0",
+    "version": "6.0.1",
     "scripts": {
         "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
         "build:assets": "node scripts/build-assets.js",
@@ -41,14 +41,15 @@
         "bootstrap": "4.4.1"
     },
     "devDependencies": {
-        "autoprefixer": "9.7.5",
+        "autoprefixer": "9.7.6",
         "browser-sync": "2.26.7",
         "chokidar": "3.3.1",
         "concurrently": "5.1.0",
         "postcss": "7.0.27",
-        "prettier": "2.0.2",
+        "prettier": "2.0.4",
         "pug": "2.0.4",
         "sass": "1.26.3",
-        "shelljs": "0.8.3"
+        "shelljs": "0.8.3",
+        "upath": "1.2.0"
     }
 }
