@@ -3,6 +3,7 @@
 
 @inject HttpClient Http
 @inject IConfiguration  Configuration
+@inject ITypeProvider TypeProvider
 
 @inherits LayoutComponentBase
 <!-- Navigation menu -->
@@ -35,7 +36,6 @@
 
 @code {
     Home home;
-    private CustomTypeProvider TypeProvider { get; } = new CustomTypeProvider();
 
     protected override async Task OnInitializedAsync()
     {
