@@ -1,9 +1,6 @@
 @using StartBootstrap.Freelancer.Blazor.Models
-@using Microsoft.Extensions.Configuration
 
-@inject HttpClient Http
-@inject IConfiguration  Configuration
-@inject ITypeProvider TypeProvider
+@inject IDeliveryClient DeliveryClient
 
 @inherits LayoutComponentBase
 <!-- Navigation menu -->
@@ -39,9 +36,6 @@
 
     protected override async Task OnInitializedAsync()
     {
-        var projectId = Configuration.GetValue<string>("DeliveryOptions:ProjectId");
-        var client = DeliveryClientBuilder.WithProjectId(projectId).WithDeliveryHttpClient(new DeliveryHttpClient(Http)).WithTypeProvider(TypeProvider).Build();
-        var result = (await client.GetItemAsync<Home>("home"));
-        home = result.Item;
+        home = (await DeliveryClient.GetItemAsync<Home>("home")).Item;
     }
 }

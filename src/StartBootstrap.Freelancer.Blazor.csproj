@@ -9,10 +9,9 @@
     <Content Remove="appsettings.json" />
   </ItemGroup>
   
-  <!--
   <PropertyGroup>
     <BlazorWebAssemblyEnableLinking>true</BlazorWebAssemblyEnableLinking>
-  </PropertyGroup>-->
+  </PropertyGroup>
 
   <ItemGroup>
     <BlazorLinkerDescriptor Include="Linker.xml" />
