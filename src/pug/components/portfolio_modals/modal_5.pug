@@ -1,0 +1,28 @@
+// Portfolio Modal 5
+#portfolioModal5.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='portfolioModal5Label', aria-hidden='true')
+    .modal-dialog.modal-xl(role='document')
+        .modal-content
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+                span(aria-hidden='true')
+                    i.fas.fa-times
+            .modal-body.text-center
+                .container
+                    .row.justify-content-center
+                        .col-lg-8
+                            // Portfolio Modal - Title
+                            h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0 Locked Safe
+                            // Icon Divider
+                            .divider-custom
+                                .divider-custom-line
+                                .divider-custom-icon
+                                    i.fas.fa-star
+                                .divider-custom-line
+                            // Portfolio Modal - Image
+                            img.img-fluid.rounded.mb-5(src='assets/img/portfolio/safe.png', alt='')
+                            // Portfolio Modal - Text
+                            p.mb-5
+                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+                            button.btn.btn-primary(href='#', data-dismiss='modal')
+                                i.fas.fa-times.fa-fw
+                                | Close Window
+
