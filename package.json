@@ -10,7 +10,8 @@
         "build:scss": "node scripts/build-scss.js",
         "clean": "node scripts/clean.js",
         "start": "npm run build && node scripts/start.js",
-        "start:debug": "npm run build && node scripts/start-debug.js"
+        "start:debug": "npm run build && node scripts/start-debug.js",
+        "start:static": "npm run build && node scripts/start-static.js"
     },
     "description": "A freelancer portfolio HTML theme for Bootstrap.",
     "keywords": [
@@ -43,6 +44,7 @@
     "devDependencies": {
         "autoprefixer": "9.7.6",
         "browser-sync": "2.26.7",
+        "http-server": "0.12.3",
         "chokidar": "3.3.1",
         "concurrently": "5.1.0",
         "postcss": "7.0.27",
