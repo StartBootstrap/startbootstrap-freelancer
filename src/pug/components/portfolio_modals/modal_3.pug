@@ -1,4 +1,8 @@
 // Portfolio Modal 3
+
+- var portfolioModalTitle = 'Circus Tent';
+- var imgSrc = 'assets/img/portfolio/circus.png';
+
 #portfolioModal3.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='portfolioModal3Label', aria-hidden='true')
     .modal-dialog.modal-xl(role='document')
         .modal-content
@@ -10,7 +14,7 @@
                     .row.justify-content-center
                         .col-lg-8
                             // Portfolio Modal - Title
-                            h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0 Circus Tent
+                            h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0 #{portfolioModalTitle}
                             // Icon Divider
                             .divider-custom
                                 .divider-custom-line
@@ -18,7 +22,7 @@
                                     i.fas.fa-star
                                 .divider-custom-line
                             // Portfolio Modal - Image
-                            img.img-fluid.rounded.mb-5(src='assets/img/portfolio/circus.png', alt='')
+                            img.img-fluid.rounded.mb-5(src=imgSrc, alt='')
                             // Portfolio Modal - Text
                             p.mb-5
                                 | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
