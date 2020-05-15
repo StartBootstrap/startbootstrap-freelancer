@@ -63,6 +63,10 @@ function _processFile(filePath, watchEvent) {
 }
 
 function _handlePug(filePath, watchEvent) {
+    // delay re-rendering
+    setTimeout(() => {
+        console.log('Finished re-Rendering pugs..');
+    }, 2000);
     return _renderAllPug();
 }
 
