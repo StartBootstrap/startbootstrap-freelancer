@@ -1,3 +1,5 @@
+include modal_mixin.pug
+
 // Portfolio Modal 1
 
 - var portfolioModalTitle = 'Log Cabin';
@@ -6,37 +8,16 @@
 // example for utilization array and "each val in array[]" syntax,
 //  for achieving multiline output.
 -
-  var portfolioModalText = [
+  var portfolioModalTextArray = [
     "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-    "Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae?",
+    "Mollitia neque assumenda ipsam nihil, molestias magnam,",
+    "recusandae quos quis inventore quisquam velit asperiores, vitae?",
     "Reprehenderit soluta, eos quod consequuntur itaque. Nam."
   ]
 
-#portfolioModal1.portfolio-modal.modal.fade(tabindex='-1' role='dialog', aria-labelledby='portfolioModal1Label', aria-hidden='true')
-    .modal-dialog.modal-xl(role='document')
-        .modal-content
-            button.close(type='button', data-dismiss='modal', aria-label='Close')
-                span(aria-hidden='true')
-                    i.fas.fa-times
-            .modal-body.text-center
-                .container
-                    .row.justify-content-center
-                        .col-lg-8
-                            // Portfolio Modal - Title
-                            h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0 #{portfolioModalTitle}
-                            // Icon Divider
-                            .divider-custom
-                                .divider-custom-line
-                                .divider-custom-icon
-                                    i.fas.fa-star
-                                .divider-custom-line
-                            // Portfolio Modal - Image
-                            img.img-fluid.rounded.mb-5(src=imgSrc, alt='')
-                            // Portfolio Modal - Text
-                            p.mb-5
-                                each val in portfolioModalText
-                                    | #{val}
-                                    br
-                            button.btn.btn-primary(href='#', data-dismiss='modal')
-                                i.fas.fa-times.fa-fw
-                                | Close Window
++portfolioModal(
+    1,
+    portfolioModalTitle,
+    imgSrc,
+    portfolioModalTextArray
+)
