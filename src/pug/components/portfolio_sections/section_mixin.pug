@@ -1,0 +1,8 @@
+mixin portfolioSection(dataTargetId=1, imgSrc='assets/img/portfolio/cabin.png')
+    // Portfolio Section Mixin
+    .col-md-6.col-lg-4.mb-5
+        .portfolio-item.mx-auto(data-toggle='modal', data-target='#portfolioModal'+dataTargetId)
+            .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
+                .portfolio-item-caption-content.text-center.text-white
+                    i.fas.fa-plus.fa-3x
+            img.img-fluid(src=imgSrc, alt='')
