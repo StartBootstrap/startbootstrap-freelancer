@@ -12,10 +12,6 @@
   <PropertyGroup>
     <BlazorWebAssemblyEnableLinking>true</BlazorWebAssemblyEnableLinking>
   </PropertyGroup>
-
-  <ItemGroup>
-    <BlazorLinkerDescriptor Include="Linker.xml" />
-  </ItemGroup>
   
   <ItemGroup>
     <Content Include="gulpfile.js" />
@@ -27,15 +23,26 @@
 
   <ItemGroup>
     <PackageReference Include="Kentico.Kontent.Delivery" Version="13.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="3.2.0-preview5.20216.8" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Build" Version="3.2.0-preview5.20216.8" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="3.2.0-preview5.20216.8" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="3.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Build" Version="3.2.0" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="3.2.0" PrivateAssets="all" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.4" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.4" />
   </ItemGroup>
 
-  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="powershell.exe -ExecutionPolicy Bypass -NoProfile -NonInteractive -File GenerateModels.ps1&#xD;&#xA;" />
+  <Target Name="GenerateModels" BeforeTargets="BeforeBuild;BeforeRebuild">
+    <PropertyGroup>
+      <PowerShellExe Condition=" '$(PowerShellExe)'=='' ">%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe</PowerShellExe>
+      <ScriptLocation Condition=" '$(ScriptLocation)'=='' ">$(ProjectDir)\GenerateModels.ps1</ScriptLocation>
+    </PropertyGroup>
+    <Exec Command="&quot;$(PowerShellExe)&quot; -NonInteractive -executionpolicy Unrestricted -command &quot;&amp; { &quot;$(ScriptLocation)&quot; } &quot;">
+    </Exec>
+    <ItemGroup>
+      <Compile Remove="Models\**\*.cs" />
+      <Compile Include="Models\**\*.cs" />
+      <FileWrites Remove="Models\**\*.cs" />
+      <FileWrites Update="Models\**\*.cs" />
+    </ItemGroup>
   </Target>
 
 </Project>
