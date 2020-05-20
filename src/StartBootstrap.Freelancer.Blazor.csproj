@@ -4,11 +4,6 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <RazorLangVersion>3.0</RazorLangVersion>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Content Remove="appsettings.json" />
-    <Content Remove="wwwroot\index.html" />
-  </ItemGroup>
   
   <PropertyGroup>
     <BlazorWebAssemblyEnableLinking>true</BlazorWebAssemblyEnableLinking>
@@ -20,11 +15,6 @@
 
   <ItemGroup>
     <EmbeddedResource Include="wwwroot\appsettings.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\404.html" />
-    <None Include="wwwroot\index.html" />
   </ItemGroup>
 
   <ItemGroup>
