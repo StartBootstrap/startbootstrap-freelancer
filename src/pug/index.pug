@@ -14,7 +14,7 @@ html(lang='en')
         link(rel='icon', type='image/x-icon', href='assets/img/favicon.ico')
 
         // Font Awesome icons (free version)
-        script(src='https://use.fontawesome.com/releases/v5.12.1/js/all.js', crossorigin='anonymous')
+        script(src='https://use.fontawesome.com/releases/v5.13.0/js/all.js', crossorigin='anonymous')
 
         // Google fonts
         link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
@@ -193,13 +193,13 @@ html(lang='en')
                     // Footer Social Icons
                     .col-lg-4.mb-5.mb-lg-0
                         h4.text-uppercase.mb-4 Around the Web
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#')
+                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
                             i.fab.fa-fw.fa-facebook-f
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#')
+                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
                             i.fab.fa-fw.fa-twitter
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#')
+                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
                             i.fab.fa-fw.fa-linkedin-in
-                        a.btn.btn-outline-light.btn-social.mx-1(href='#')
+                        a.btn.btn-outline-light.btn-social.mx-1(href='#!')
                             i.fab.fa-fw.fa-dribbble
                     // Footer About Text
                     .col-lg-4
@@ -209,7 +209,7 @@ html(lang='en')
                             a(href='http://startbootstrap.com') Start Bootstrap
                             | .
         // Copyright Section
-        section.copyright.py-4.text-center.text-white
+        div.copyright.py-4.text-center.text-white
             .container
                 small Copyright © Your Website 2020
         // Scroll to Top Button (Only visible on small and extra-small screen sizes)
@@ -231,7 +231,7 @@ html(lang='en')
                             .row.justify-content-center
                                 .col-lg-8
                                     // Portfolio Modal - Title
-                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0 Log Cabin
+                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0#portfolioModal1Label Log Cabin
                                     // Icon Divider
                                     .divider-custom
                                         .divider-custom-line
@@ -243,7 +243,7 @@ html(lang='en')
                                     // Portfolio Modal - Text
                                     p.mb-5
                                         | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                                    button.btn.btn-primary(href='#', data-dismiss='modal')
+                                    button.btn.btn-primary(data-dismiss='modal')
                                         i.fas.fa-times.fa-fw
                                         | Close Window
         // Portfolio Modal 2
@@ -258,7 +258,7 @@ html(lang='en')
                             .row.justify-content-center
                                 .col-lg-8
                                     // Portfolio Modal - Title
-                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0 Tasty Cake
+                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0#portfolioModal2Label Tasty Cake
                                     // Icon Divider
                                     .divider-custom
                                         .divider-custom-line
@@ -270,7 +270,7 @@ html(lang='en')
                                     // Portfolio Modal - Text
                                     p.mb-5
                                         | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                                    button.btn.btn-primary(href='#', data-dismiss='modal')
+                                    button.btn.btn-primary(data-dismiss='modal')
                                         i.fas.fa-times.fa-fw
                                         | Close Window
         // Portfolio Modal 3
@@ -285,7 +285,7 @@ html(lang='en')
                             .row.justify-content-center
                                 .col-lg-8
                                     // Portfolio Modal - Title
-                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0 Circus Tent
+                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0#portfolioModal3Label Circus Tent
                                     // Icon Divider
                                     .divider-custom
                                         .divider-custom-line
@@ -297,7 +297,7 @@ html(lang='en')
                                     // Portfolio Modal - Text
                                     p.mb-5
                                         | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                                    button.btn.btn-primary(href='#', data-dismiss='modal')
+                                    button.btn.btn-primary(data-dismiss='modal')
                                         i.fas.fa-times.fa-fw
                                         | Close Window
         // Portfolio Modal 4
@@ -312,7 +312,7 @@ html(lang='en')
                             .row.justify-content-center
                                 .col-lg-8
                                     // Portfolio Modal - Title
-                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0 Controller
+                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0#portfolioModal4Label Controller
                                     // Icon Divider
                                     .divider-custom
                                         .divider-custom-line
@@ -324,7 +324,7 @@ html(lang='en')
                                     // Portfolio Modal - Text
                                     p.mb-5
                                         | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                                    button.btn.btn-primary(href='#', data-dismiss='modal')
+                                    button.btn.btn-primary(data-dismiss='modal')
                                         i.fas.fa-times.fa-fw
                                         | Close Window
         // Portfolio Modal 5
@@ -339,7 +339,7 @@ html(lang='en')
                             .row.justify-content-center
                                 .col-lg-8
                                     // Portfolio Modal - Title
-                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0 Locked Safe
+                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0#portfolioModal5Label Locked Safe
                                     // Icon Divider
                                     .divider-custom
                                         .divider-custom-line
@@ -351,7 +351,7 @@ html(lang='en')
                                     // Portfolio Modal - Text
                                     p.mb-5
                                         | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                                    button.btn.btn-primary(href='#', data-dismiss='modal')
+                                    button.btn.btn-primary(data-dismiss='modal')
                                         i.fas.fa-times.fa-fw
                                         | Close Window
         // Portfolio Modal 6
@@ -366,7 +366,7 @@ html(lang='en')
                             .row.justify-content-center
                                 .col-lg-8
                                     // Portfolio Modal - Title
-                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0 Submarine
+                                    h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0#portfolioModal6Label Submarine
                                     // Icon Divider
                                     .divider-custom
                                         .divider-custom-line
@@ -378,13 +378,13 @@ html(lang='en')
                                     // Portfolio Modal - Text
                                     p.mb-5
                                         | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                                    button.btn.btn-primary(href='#', data-dismiss='modal')
+                                    button.btn.btn-primary(data-dismiss='modal')
                                         i.fas.fa-times.fa-fw
                                         | Close Window
 
         // Bootstrap core JS
-        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
-        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js')
 
         // Third party plugin JS
         script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js')
