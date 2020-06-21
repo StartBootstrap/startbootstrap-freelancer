@@ -3,7 +3,7 @@ git:
   depth:       3
 node_js:
   - "node"
-install:       npm install
+install:       npm instal
 script:
   - npm test
 cache:
