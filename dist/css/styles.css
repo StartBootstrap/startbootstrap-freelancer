@@ -10259,3 +10259,8 @@ form .row:first-child .floating-label-form-group {
 .copyright {
   background-color: #1a252f;
 }
+
+.mapHouse {
+  display: flex; 
+  justify-content: center;
+}
