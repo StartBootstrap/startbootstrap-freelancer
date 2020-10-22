@@ -473,6 +473,14 @@ mark,
   content: "— ";
 }
 
+.img-logo{
+width: 200px;
+}
+
+.img-icono{
+  width: 80%;
+}
+
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -6105,7 +6113,7 @@ button.bg-primary:focus {
 }
 
 .bg-secondary {
-  background-color: #2c3e50 !important;
+  background-color: #5499C7 !important;
 }
 
 a.bg-secondary:hover, a.bg-secondary:focus,
