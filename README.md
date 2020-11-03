@@ -1,10 +1,10 @@
-# [Start Bootstrap - Freelancer](https://startbootstrap.com/themes/freelancer/)
+# [Start Bootstrap - Freelancer](https://startbootstrap.com/theme/freelancer/)
 
-[Freelancer](https://startbootstrap.com/themes/freelancer/) is a one page, freelancer portfolio theme built with [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid, modal windows for each portfolio item, and a working PHP based contact form.
+[Freelancer](https://startbootstrap.com/theme/freelancer/) is a one page, freelancer portfolio theme built with [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid, modal windows for each portfolio item, and a working PHP based contact form.
 
 ## Preview
 
-[![Freelancer Preview](https://startbootstrap.com/assets/img/screenshots/themes/freelancer.png)](https://startbootstrap.github.io/startbootstrap-freelancer/)
+[![Freelancer Preview](https://assets.startbootstrap.com/img/screenshots/themes/freelancer.png)](https://startbootstrap.github.io/startbootstrap-freelancer/)
 
 **[View Live Preview](https://startbootstrap.github.io/startbootstrap-freelancer/)**
 
@@ -20,7 +20,7 @@
 
 To begin using this template, choose one of the following options to get started:
 
-- [Download the latest release on Start Bootstrap](https://startbootstrap.com/themes/freelancer/)
+- [Download the latest release on Start Bootstrap](https://startbootstrap.com/theme/freelancer/)
 - Install using npm: `npm i startbootstrap-freelancer`
 - Clone the repo: `git clone https://github.com/StartBootstrap/startbootstrap-freelancer.git`
 - [Fork, Clone, or Download on GitHub](https://github.com/StartBootstrap/startbootstrap-freelancer)
@@ -50,7 +50,7 @@ You must have npm installed in order to use this build environment.
 
 ## Bugs and Issues
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/StartBootstrap/startbootstrap-freelancer/issues) here on GitHub or leave a comment on the [theme overview page at Start Bootstrap](https://startbootstrap.com/themes/freelancer/).
+Have a bug or an issue with this template? [Open a new issue](https://github.com/StartBootstrap/startbootstrap-freelancer/issues) here on GitHub or leave a comment on the [theme overview page at Start Bootstrap](https://startbootstrap.com/theme/freelancer/).
 
 ## About
 
@@ -59,10 +59,10 @@ Start Bootstrap is an open source library of free Bootstrap themes and templates
 - <https://startbootstrap.com>
 - <https://twitter.com/SBootstrap>
 
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**.
+Start Bootstrap was created by and is maintained by **[David Miller](https://davidmiller.io/)**.
 
-- <http://davidmiller.io>
-- <https://twitter.com/davidmillerskt>
+- <https://davidmiller.io>
+- <https://twitter.com/davidmillerhere>
 - <https://github.com/davidtmiller>
 
 Start Bootstrap is based on the [Bootstrap](https://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
