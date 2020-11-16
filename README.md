@@ -9,7 +9,7 @@ This web template is a [Blazor](https://dotnet.microsoft.com/apps/aspnet/web-app
 
 ## Preview
 
-[![Freelancer Preview](https://startbootstrap.com/assets/img/screenshots/themes/freelancer.png)](https://petrsvihlik.github.io/StartBootstrap.Freelancer.Blazor/)
+[![Freelancer Preview](https://assets.startbootstrap.com/img/screenshots/themes/freelancer.high.webp)](https://petrsvihlik.github.io/StartBootstrap.Freelancer.Blazor/)
 
 **[View Live Preview](https://petrsvihlik.github.io/StartBootstrap.Freelancer.Blazor/)**
 
