@@ -1,0 +1,45 @@
+name: .NET 5
+
+on:
+  push:
+    branches: [ master ]
+  repository_dispatch:
+    types: content-changed
+  pull_request:
+    branches: [ master ]
+    
+defaults:
+      run:
+        working-directory: src
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    - name: Install dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+    - name: Test
+      run: dotnet test --configuration Release --no-build --verbosity normal
+    - name: Publish
+      run: dotnet publish --configuration Release --no-build -o ./output   
+    - name: "Artifact : site"
+      uses: actions/upload-artifact@v2
+      with:
+        name: "Site"
+        path: ./output     
+    - name: Deploy 🚀
+      if: github.ref == 'refs/heads/master'
+      uses: JamesIves/github-pages-deploy-action@3.6.2
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: output
+        CLEAN: true # Automatically remove deleted files from the deploy branch
