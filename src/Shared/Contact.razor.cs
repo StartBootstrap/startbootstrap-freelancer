@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNetCore.Components;
+using SendGrid;
+using SendGrid.Helpers.Mail;
 using StartBootstrap.Freelancer.Blazor.Models;
 using System;
 using System.Net;
 using System.Net.Mail;
+using System.Threading.Tasks;
 
 namespace StartBootstrap.Freelancer.Blazor.Shared
 {
@@ -10,24 +13,34 @@ namespace StartBootstrap.Freelancer.Blazor.Shared
     {
         protected ContactForm ContactForm = new();
 
-        protected void HandleValidSubmit()
+        [Inject]
+        private ISendGridClient Client { get; set; }
+
+
+        public ContactBase()
+        {
+        }
+
+        protected async Task HandleValidSubmit()
         {
             ContactForm.Success = null;
             ContactForm.Error = null;
             try
             {
-                SmtpClient client = new("mysmtpserver");
-                client.UseDefaultCredentials = false;
-                client.Credentials = new NetworkCredential("username", "password");
+                // Compose a message
+                var msg = new SendGridMessage()
+                {
+                    From = new EmailAddress(ContactForm.Email),
+                    Subject = $"Message from {ContactForm.Name}"
+                };
+                msg.AddContent(MimeType.Html, $"{ContactForm.Message}{$"<br />Phone: {ContactForm.Phone}"}");
+                msg.AddTo(new EmailAddress("receiver@me.com"));
 
-                MailMessage mailMessage = new();
-                mailMessage.From = new MailAddress(ContactForm.Email);
-                mailMessage.To.Add("receiver@me.com");
-                mailMessage.Body = ContactForm.Message + $"<br />Phone: {ContactForm.Phone}";
-                mailMessage.Subject = $"Message from {ContactForm.Name}";
-                client.Send(mailMessage);
+                // Send the message
+                var response = await Client.SendEmailAsync(msg);
+
+                // Display status
                 ContactForm.Success = "Message sent!";
-
             }
             catch (Exception ex)
             {

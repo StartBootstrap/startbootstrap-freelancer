@@ -8,6 +8,7 @@
     <BlazorWebAssemblyEnableLinking>true</BlazorWebAssemblyEnableLinking>
     <!-- This needs to be disabled when publishing to GH pages-->
     <BlazorEnableCompression>false</BlazorEnableCompression>
+    <UserSecretsId>d752cec5-2a32-413b-a52b-bcc51aa31258</UserSecretsId>
   </PropertyGroup>
   
   <ItemGroup>
@@ -24,6 +25,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.0" PrivateAssets="all" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+    <PackageReference Include="SendGrid" Version="9.21.1" />
+    <PackageReference Include="SendGrid.Extensions.DependencyInjection" Version="1.0.0" />
   </ItemGroup>
 
   <Target Name="GenerateModels" BeforeTargets="BeforeBuild;BeforeRebuild">
