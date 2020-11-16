@@ -29,12 +29,12 @@ jobs:
     - name: Test
       run: dotnet test --configuration Release --no-build --verbosity normal
     - name: Publish
-      run: dotnet publish --configuration Release --no-build -o ./output   
+      run: dotnet publish --configuration Release --no-build -o ../output   
     - name: "Artifact : site"
       uses: actions/upload-artifact@v2
       with:
         name: "Site"
-        path: ./output     
+        path: ../output     
     - name: Deploy 🚀
       if: github.ref == 'refs/heads/master'
       uses: JamesIves/github-pages-deploy-action@3.6.2
