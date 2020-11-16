@@ -6,6 +6,8 @@
   
   <PropertyGroup>
     <BlazorWebAssemblyEnableLinking>true</BlazorWebAssemblyEnableLinking>
+    <!-- This needs to be disabled when publishing to GH pages-->
+    <BlazorEnableCompression>false</BlazorEnableCompression>
   </PropertyGroup>
   
   <ItemGroup>
