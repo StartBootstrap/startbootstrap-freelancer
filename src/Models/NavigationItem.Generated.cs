@@ -15,7 +15,7 @@ namespace StartBootstrap.Freelancer.Blazor.Models
         public const string Codename = "navigation_item";
         public const string TitleCodename = "title";
 
+        public IContentItemSystemAttributes System { get; set; }
         public string Title { get; set; }
-        public ContentItemSystemAttributes System { get; set; }
     }
 }

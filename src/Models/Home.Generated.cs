@@ -13,45 +13,45 @@ namespace StartBootstrap.Freelancer.Blazor.Models
     public partial class Home
     {
         public const string Codename = "home";
-        public const string ContactTitleCodename = "contact_title";
+        public const string AboutButtonCodename = "about_button";
         public const string AboutLeftColumnCodename = "about_left_column";
-        public const string FooterRightColumnTitleCodename = "footer_right_column_title";
-        public const string FooterRightColumnTextCodename = "footer_right_column_text";
-        public const string FooterMiddleColumnTitleCodename = "footer_middle_column_title";
+        public const string AboutRightColumnCodename = "about_right_column";
+        public const string AboutTitleCodename = "about_title";
+        public const string AvatarCodename = "avatar";
         public const string ContactButtonTextCodename = "contact_button_text";
-        public const string SiteTitleCodename = "site_title";
+        public const string ContactTitleCodename = "contact_title";
+        public const string FooterLeftColumnTextCodename = "footer_left_column_text";
+        public const string FooterLeftColumnTitleCodename = "footer_left_column_title";
+        public const string FooterMiddleColumnLinksCodename = "footer_middle_column_links";
+        public const string FooterMiddleColumnTitleCodename = "footer_middle_column_title";
+        public const string FooterRightColumnTextCodename = "footer_right_column_text";
+        public const string FooterRightColumnTitleCodename = "footer_right_column_title";
+        public const string HeaderSubtitleCodename = "header_subtitle";
         public const string NavigationCodename = "navigation";
         public const string PortfolioItemsCodename = "portfolio_items";
-        public const string SiteCopyrightNoteCodename = "site_copyright_note";
-        public const string AboutTitleCodename = "about_title";
-        public const string AboutButtonCodename = "about_button";
         public const string PortfolioTitleCodename = "portfolio_title";
-        public const string FooterLeftColumnTextCodename = "footer_left_column_text";
-        public const string FooterMiddleColumnLinksCodename = "footer_middle_column_links";
-        public const string FooterLeftColumnTitleCodename = "footer_left_column_title";
-        public const string AboutRightColumnCodename = "about_right_column";
-        public const string AvatarCodename = "avatar";
-        public const string HeaderSubtitleCodename = "header_subtitle";
+        public const string SiteCopyrightNoteCodename = "site_copyright_note";
+        public const string SiteTitleCodename = "site_title";
 
-        public string ContactTitle { get; set; }
+        public IEnumerable<object> AboutButton { get; set; }
         public string AboutLeftColumn { get; set; }
-        public string FooterRightColumnTitle { get; set; }
-        public string FooterRightColumnText { get; set; }
-        public string FooterMiddleColumnTitle { get; set; }
+        public string AboutRightColumn { get; set; }
+        public string AboutTitle { get; set; }
+        public IEnumerable<IAsset> Avatar { get; set; }
         public string ContactButtonText { get; set; }
-        public string SiteTitle { get; set; }
+        public string ContactTitle { get; set; }
+        public string FooterLeftColumnText { get; set; }
+        public string FooterLeftColumnTitle { get; set; }
+        public IEnumerable<object> FooterMiddleColumnLinks { get; set; }
+        public string FooterMiddleColumnTitle { get; set; }
+        public string FooterRightColumnText { get; set; }
+        public string FooterRightColumnTitle { get; set; }
+        public string HeaderSubtitle { get; set; }
         public IEnumerable<object> Navigation { get; set; }
         public IEnumerable<object> PortfolioItems { get; set; }
-        public string SiteCopyrightNote { get; set; }
-        public string AboutTitle { get; set; }
-        public IEnumerable<object> AboutButton { get; set; }
         public string PortfolioTitle { get; set; }
-        public string FooterLeftColumnText { get; set; }
-        public IEnumerable<object> FooterMiddleColumnLinks { get; set; }
-        public string FooterLeftColumnTitle { get; set; }
-        public string AboutRightColumn { get; set; }
-        public IEnumerable<Asset> Avatar { get; set; }
-        public string HeaderSubtitle { get; set; }
-        public ContentItemSystemAttributes System { get; set; }
+        public string SiteCopyrightNote { get; set; }
+        public string SiteTitle { get; set; }
+        public IContentItemSystemAttributes System { get; set; }
     }
 }

@@ -17,9 +17,9 @@ namespace StartBootstrap.Freelancer.Blazor.Models
         public const string TextCodename = "text";
         public const string TitleCodename = "title";
 
-        public IEnumerable<Asset> Image { get; set; }
+        public IEnumerable<IAsset> Image { get; set; }
+        public IContentItemSystemAttributes System { get; set; }
         public string Text { get; set; }
         public string Title { get; set; }
-        public ContentItemSystemAttributes System { get; set; }
     }
 }

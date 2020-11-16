@@ -8,7 +8,7 @@ namespace StartBootstrap.Freelancer.Blazor.Shared
 {
     public class ContactBase : ComponentBase
     {
-        protected ContactForm ContactForm = new ContactForm();
+        protected ContactForm ContactForm = new();
 
         protected void HandleValidSubmit()
         {
@@ -16,11 +16,11 @@ namespace StartBootstrap.Freelancer.Blazor.Shared
             ContactForm.Error = null;
             try
             {
-                SmtpClient client = new SmtpClient("mysmtpserver");
+                SmtpClient client = new("mysmtpserver");
                 client.UseDefaultCredentials = false;
                 client.Credentials = new NetworkCredential("username", "password");
 
-                MailMessage mailMessage = new MailMessage();
+                MailMessage mailMessage = new();
                 mailMessage.From = new MailAddress(ContactForm.Email);
                 mailMessage.To.Add("receiver@me.com");
                 mailMessage.Body = ContactForm.Message + $"<br />Phone: {ContactForm.Phone}";
