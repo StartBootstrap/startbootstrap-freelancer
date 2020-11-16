@@ -8,9 +8,6 @@ on:
   pull_request:
     branches: [ master ]
     
-defaults:
-      run:
-        working-directory: src
 jobs:
   build:
 
@@ -25,16 +22,19 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build --configuration Release --no-restore      
+      working-directory: src
     - name: Test
       run: dotnet test --configuration Release --no-build --verbosity normal
+      working-directory: src
     - name: Publish
-      run: dotnet publish --configuration Release --no-build -o ../output   
+      run: dotnet publish --configuration Release --no-build -o ../output 
+      working-directory: src
     - name: "Artifact : site"
       uses: actions/upload-artifact@v2
       with:
         name: "Site"
-        path: ../output     
+        path: ./output     
     - name: Deploy 🚀
       if: github.ref == 'refs/heads/master'
       uses: JamesIves/github-pages-deploy-action@3.6.2
