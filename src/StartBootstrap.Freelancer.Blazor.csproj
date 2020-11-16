@@ -27,9 +27,12 @@
   <Target Name="GenerateModels" BeforeTargets="BeforeBuild;BeforeRebuild">
     <PropertyGroup>
       <PowerShellExe Condition=" '$(PowerShellExe)'=='' ">%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe</PowerShellExe>
-      <ScriptLocation Condition=" '$(ScriptLocation)'=='' ">$(ProjectDir)\GenerateModels.ps1</ScriptLocation>
+      <ScriptLocationWin Condition=" '$(ScriptLocation)'=='' ">$(ProjectDir)\GenerateModels.ps1</ScriptLocationWin>
+      <ScriptLocationUnix Condition=" '$(ScriptLocation)'=='' ">$(ProjectDir)\GenerateModels.sh</ScriptLocationUnix>
     </PropertyGroup>
-    <Exec Command="&quot;$(PowerShellExe)&quot; -NonInteractive -executionpolicy Unrestricted -command &quot;&amp; { &quot;$(ScriptLocation)&quot; } &quot;">
+    <Exec Condition=" '$(OS)' == 'Windows_NT' " Command="&quot;$(PowerShellExe)&quot; -NonInteractive -executionpolicy Unrestricted -command &quot;&amp; { &quot;$(ScriptLocationWin)&quot; } &quot;">
+    </Exec>
+    <Exec Condition=" '$(OS)' != 'Windows_NT' " Command="sh $(ScriptLocationUnix)">
     </Exec>
     <ItemGroup>
       <Compile Remove="Models\**\*.cs" />
