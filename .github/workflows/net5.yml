@@ -8,9 +8,6 @@ on:
   pull_request:
     branches: [ master ]
     
-defaults:
-      run:
-        working-directory: src
 jobs:
   build:
 
@@ -24,12 +21,16 @@ jobs:
         dotnet-version: 5.0.x
     - name: Install dependencies
       run: dotnet restore
+      working-directory: src
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build --configuration Release --no-restore      
+      working-directory: src
     - name: Test
       run: dotnet test --configuration Release --no-build --verbosity normal
+      working-directory: src
     - name: Publish
-      run: dotnet publish --configuration Release --no-build -o ./output   
+      run: dotnet publish --configuration Release --no-build -o ../output 
+      working-directory: src
     - name: "Artifact : site"
       uses: actions/upload-artifact@v2
       with:
@@ -41,5 +42,5 @@ jobs:
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: output
+        FOLDER: output/wwwroot
         CLEAN: true # Automatically remove deleted files from the deploy branch
