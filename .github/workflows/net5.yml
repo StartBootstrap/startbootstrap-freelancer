@@ -21,6 +21,7 @@ jobs:
         dotnet-version: 5.0.x
     - name: Install dependencies
       run: dotnet restore
+      working-directory: src
     - name: Build
       run: dotnet build --configuration Release --no-restore      
       working-directory: src
