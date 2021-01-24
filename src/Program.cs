@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using SendGrid.Extensions.DependencyInjection;
 using StartBootstrap.Freelancer.Blazor.Models;
-using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace StartBootstrap.Freelancer.Blazor
@@ -25,7 +24,7 @@ namespace StartBootstrap.Freelancer.Blazor
                 o.ApiKey = "<YOUR_API_KEY>";
             });
 
-            builder.Services.AddTransient(sp => new HttpClient());
+            builder.Services.AddHttpClient();
 
             await builder.Build().RunAsync();
         }

@@ -20,12 +20,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Kentico.Kontent.Delivery" Version="14.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.0" PrivateAssets="all" />
+    <PackageReference Include="Kentico.Kontent.Delivery" Version="14.2.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.2" PrivateAssets="all" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
-    <PackageReference Include="SendGrid" Version="9.21.1" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
+    <PackageReference Include="SendGrid" Version="9.22.0" />
     <PackageReference Include="SendGrid.Extensions.DependencyInjection" Version="1.0.0" />
   </ItemGroup>
 
