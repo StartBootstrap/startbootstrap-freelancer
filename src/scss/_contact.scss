@@ -2,6 +2,7 @@
 .floating-label-form-group {
     position: relative;
     border-bottom: 1px solid $gray-200;
+
     input,
     textarea {
         font-size: 1.5em;
@@ -15,6 +16,7 @@
         background: none;
         box-shadow: none !important;
     }
+
     label {
         font-size: 0.85em;
         line-height: 1.764705882em;
@@ -29,6 +31,7 @@
         transition: top 0.3s ease, opacity 0.3s ease;
         opacity: 0;
     }
+
     &:not(:first-child) {
         padding-left: 14px;
         border-left: 1px solid $gray-200;
@@ -47,6 +50,7 @@
         color: $primary;
     }
 }
+
 form .row:first-child .floating-label-form-group {
     border-top: 1px solid $gray-200;
 }

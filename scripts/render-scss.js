@@ -17,14 +17,17 @@ module.exports = function renderSCSS() {
         includePaths: [
             upath.resolve(upath.dirname(__filename), '../node_modules')
         ],
-      });
+    });
 
     const destPathDirname = upath.dirname(destPath);
     if (!sh.test('-e', destPathDirname)) {
         sh.mkdir('-p', destPathDirname);
     }
 
-    postcss([ autoprefixer ]).process(results.css, {from: 'styles.css', to: 'styles.css'}).then(result => {
+    postcss([autoprefixer]).process(results.css, {
+        from: 'styles.css',
+        to: 'styles.css'
+    }).then(result => {
         result.warnings().forEach(warn => {
             console.warn(warn.toString())
         })

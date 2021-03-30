@@ -7,6 +7,7 @@
         max-width: 25rem;
         border-radius: $border-radius;
         overflow: hidden;
+
         .portfolio-item-caption {
             position: absolute;
             top: 0;
@@ -14,9 +15,11 @@
             transition: $transition-base;
             opacity: 0;
             background-color: fade-out($primary, 0.1);
+
             &:hover {
                 opacity: 1;
             }
+
             .portfolio-item-caption-content {
                 font-size: 1.5rem;
             }
@@ -29,11 +32,13 @@
     .portfolio-modal-title {
         font-size: 2.25rem;
         line-height: 2rem;
+
         @include media-breakpoint-up(lg) {
             font-size: 3rem;
             line-height: 2.5rem;
         }
     }
+
     .close {
         position: absolute;
         z-index: 1;

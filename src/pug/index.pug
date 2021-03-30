@@ -14,7 +14,7 @@ html(lang='en')
         link(rel='icon', type='image/x-icon', href='assets/img/favicon.ico')
 
         // Font Awesome icons (free version)
-        script(src='https://use.fontawesome.com/releases/v5.15.1/js/all.js', crossorigin='anonymous')
+        script(src='https://use.fontawesome.com/releases/v5.15.3/js/all.js', crossorigin='anonymous')
 
         // Google fonts
         link(href='https://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
@@ -45,7 +45,7 @@ html(lang='en')
         header.masthead.bg-primary.text-white.text-center
             .container.d-flex.align-items-center.flex-column
                 // Masthead Avatar Image
-                img.masthead-avatar.mb-5(src='assets/img/avataaars.svg', alt='')
+                img.masthead-avatar.mb-5(src='assets/img/avataaars.svg', alt='...')
                 // Masthead Heading
                 h1.masthead-heading.text-uppercase.mb-0 Start Bootstrap
                 // Icon Divider
@@ -76,42 +76,42 @@ html(lang='en')
                             .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
                                 .portfolio-item-caption-content.text-center.text-white
                                     i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/cabin.png', alt='')
+                            img.img-fluid(src='assets/img/portfolio/cabin.png', alt='...')
                     // Portfolio Item 2
                     .col-md-6.col-lg-4.mb-5
                         .portfolio-item.mx-auto(data-toggle='modal', data-target='#portfolioModal2')
                             .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
                                 .portfolio-item-caption-content.text-center.text-white
                                     i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/cake.png', alt='')
+                            img.img-fluid(src='assets/img/portfolio/cake.png', alt='...')
                     // Portfolio Item 3
                     .col-md-6.col-lg-4.mb-5
                         .portfolio-item.mx-auto(data-toggle='modal', data-target='#portfolioModal3')
                             .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
                                 .portfolio-item-caption-content.text-center.text-white
                                     i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/circus.png', alt='')
+                            img.img-fluid(src='assets/img/portfolio/circus.png', alt='...')
                     // Portfolio Item 4
                     .col-md-6.col-lg-4.mb-5.mb-lg-0
                         .portfolio-item.mx-auto(data-toggle='modal', data-target='#portfolioModal4')
                             .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
                                 .portfolio-item-caption-content.text-center.text-white
                                     i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/game.png', alt='')
+                            img.img-fluid(src='assets/img/portfolio/game.png', alt='...')
                     // Portfolio Item 5
                     .col-md-6.col-lg-4.mb-5.mb-md-0
                         .portfolio-item.mx-auto(data-toggle='modal', data-target='#portfolioModal5')
                             .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
                                 .portfolio-item-caption-content.text-center.text-white
                                     i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/safe.png', alt='')
+                            img.img-fluid(src='assets/img/portfolio/safe.png', alt='...')
                     // Portfolio Item 6
                     .col-md-6.col-lg-4
                         .portfolio-item.mx-auto(data-toggle='modal', data-target='#portfolioModal6')
                             .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
                                 .portfolio-item-caption-content.text-center.text-white
                                     i.fas.fa-plus.fa-3x
-                            img.img-fluid(src='assets/img/portfolio/submarine.png', alt='')
+                            img.img-fluid(src='assets/img/portfolio/submarine.png', alt='...')
 
         // About Section
         section#about.page-section.bg-primary.text-white.mb-0
@@ -211,7 +211,13 @@ html(lang='en')
         // Copyright Section
         div.copyright.py-4.text-center.text-white
             .container
-                small Copyright © Your Website 2020
+                small
+                    | Copyright &copy; Your Website
+                    // This script automatically adds the current year to your website footer
+                    // (credit: https://updateyourfooter.com/)
+                    script.
+                        document.write(new Date().getFullYear());
+
         // Scroll to Top Button (Only visible on small and extra-small screen sizes)
         .scroll-to-top.d-lg-none.position-fixed
             a.js-scroll-trigger.d-block.text-center.text-white.rounded(href='#page-top')
@@ -239,7 +245,7 @@ html(lang='en')
                                             i.fas.fa-star
                                         .divider-custom-line
                                     // Portfolio Modal - Image
-                                    img.img-fluid.rounded.mb-5(src='assets/img/portfolio/cabin.png', alt='')
+                                    img.img-fluid.rounded.mb-5(src='assets/img/portfolio/cabin.png', alt='...')
                                     // Portfolio Modal - Text
                                     p.mb-5
                                         | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
@@ -266,7 +272,7 @@ html(lang='en')
                                             i.fas.fa-star
                                         .divider-custom-line
                                     // Portfolio Modal - Image
-                                    img.img-fluid.rounded.mb-5(src='assets/img/portfolio/cake.png', alt='')
+                                    img.img-fluid.rounded.mb-5(src='assets/img/portfolio/cake.png', alt='...')
                                     // Portfolio Modal - Text
                                     p.mb-5
                                         | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
@@ -293,7 +299,7 @@ html(lang='en')
                                             i.fas.fa-star
                                         .divider-custom-line
                                     // Portfolio Modal - Image
-                                    img.img-fluid.rounded.mb-5(src='assets/img/portfolio/circus.png', alt='')
+                                    img.img-fluid.rounded.mb-5(src='assets/img/portfolio/circus.png', alt='...')
                                     // Portfolio Modal - Text
                                     p.mb-5
                                         | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
@@ -320,7 +326,7 @@ html(lang='en')
                                             i.fas.fa-star
                                         .divider-custom-line
                                     // Portfolio Modal - Image
-                                    img.img-fluid.rounded.mb-5(src='assets/img/portfolio/game.png', alt='')
+                                    img.img-fluid.rounded.mb-5(src='assets/img/portfolio/game.png', alt='...')
                                     // Portfolio Modal - Text
                                     p.mb-5
                                         | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
@@ -347,7 +353,7 @@ html(lang='en')
                                             i.fas.fa-star
                                         .divider-custom-line
                                     // Portfolio Modal - Image
-                                    img.img-fluid.rounded.mb-5(src='assets/img/portfolio/safe.png', alt='')
+                                    img.img-fluid.rounded.mb-5(src='assets/img/portfolio/safe.png', alt='...')
                                     // Portfolio Modal - Text
                                     p.mb-5
                                         | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
@@ -374,7 +380,7 @@ html(lang='en')
                                             i.fas.fa-star
                                         .divider-custom-line
                                     // Portfolio Modal - Image
-                                    img.img-fluid.rounded.mb-5(src='assets/img/portfolio/submarine.png', alt='')
+                                    img.img-fluid.rounded.mb-5(src='assets/img/portfolio/submarine.png', alt='...')
                                     // Portfolio Modal - Text
                                     p.mb-5
                                         | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
@@ -383,11 +389,11 @@ html(lang='en')
                                         | Close Window
 
         // Bootstrap core JS
-        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')
-        script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js')
+        script(src='https://code.jquery.com/jquery-3.5.1.min.js')
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js')
 
         // Third party plugin JS
-        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js')
 
         // Contact form JS
         script(src='assets/mail/jqBootstrapValidation.js')
