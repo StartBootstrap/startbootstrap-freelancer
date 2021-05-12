@@ -11,7 +11,7 @@ const stylesPath = '../src/scss/styles.scss';
 const destPath = upath.resolve(upath.dirname(__filename), '../dist/css/styles.css');
 
 module.exports = function renderSCSS() {
-
+    
     const results = sass.renderSync({
         data: entryPoint,
         includePaths: [
@@ -36,7 +36,7 @@ module.exports = function renderSCSS() {
 const entryPoint = `/*!
 * Start Bootstrap - ${packageJSON.title} v${packageJSON.version} (${packageJSON.homepage})
 * Copyright 2013-${new Date().getFullYear()} ${packageJSON.author}
-* Licensed under ${packageJSON.license} (https://github.com/BlackrockDigital/${packageJSON.name}/blob/master/LICENSE)
+* Licensed under ${packageJSON.license} (https://github.com/StartBootstrap/${packageJSON.name}/blob/master/LICENSE)
 */
 @import "${stylesPath}"
 `

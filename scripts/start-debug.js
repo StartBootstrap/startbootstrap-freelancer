@@ -5,9 +5,9 @@ const browserSyncPath = upath.resolve(upath.dirname(__filename), '../node_module
 
 concurrently([
     { command: 'node --inspect scripts/sb-watch.js', name: 'SB_WATCH', prefixColor: 'bgBlue.bold' },
-    {
+    { 
         command: `${browserSyncPath} dist -w --no-online`,
-        name: 'SB_BROWSER_SYNC',
+        name: 'SB_BROWSER_SYNC', 
         prefixColor: 'bgBlue.bold',
     }
 ], {
@@ -16,7 +16,7 @@ concurrently([
 }).then(success, failure);
 
 function success() {
-    console.log('Success');
+    console.log('Success');    
 }
 
 function failure() {

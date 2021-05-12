@@ -1,7 +1,7 @@
 {
     "title": "Freelancer",
     "name": "startbootstrap-freelancer",
-    "version": "6.0.3",
+    "version": "7.0.0",
     "scripts": {
         "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
         "build:assets": "node scripts/build-assets.js",
@@ -38,18 +38,18 @@
         "url": "https://github.com/BlackrockDigital/startbootstrap-freelancer.git"
     },
     "dependencies": {
-        "bootstrap": "4.5.0"
+        "bootstrap": "5.0.0"
     },
     "devDependencies": {
-        "autoprefixer": "9.8.0",
-        "browser-sync": "2.26.7",
-        "chokidar": "3.4.0",
-        "concurrently": "5.2.0",
-        "postcss": "7.0.30",
-        "prettier": "2.0.5",
-        "pug": "2.0.4",
-        "sass": "1.26.5",
+        "autoprefixer": "10.2.5",
+        "browser-sync": "2.26.14",
+        "chokidar": "3.5.1",
+        "concurrently": "6.1.0",
+        "postcss": "8.2.15",
+        "prettier": "2.3.0",
+        "pug": "3.0.2",
+        "sass": "1.32.13",
         "shelljs": "0.8.4",
-        "upath": "1.2.0"
+        "upath": "2.0.1"
     }
 }
