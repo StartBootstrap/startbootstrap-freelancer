@@ -23,19 +23,19 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/themes/freelancer",
+    "homepage": "https://startbootstrap.com/theme/freelancer",
     "bugs": {
-        "url": "https://github.com/BlackrockDigital/startbootstrap-freelancer/issues",
+        "url": "https://github.com/StartBootstrap/startbootstrap-freelancer/issues",
         "email": "feedback@startbootstrap.com"
     },
     "license": "MIT",
     "author": "Start Bootstrap",
     "contributors": [
-        "David Miller (http://davidmiller.io/)"
+        "David Miller (https://davidmiller.io/)"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/BlackrockDigital/startbootstrap-freelancer.git"
+        "url": "https://github.com/StartBootstrap/startbootstrap-freelancer.git"
     },
     "dependencies": {
         "bootstrap": "5.0.1"
