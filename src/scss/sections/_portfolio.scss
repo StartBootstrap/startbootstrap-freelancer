@@ -1,4 +1,7 @@
-// Styling for the portfolio grid section
+// 
+// Portfolio
+// 
+
 .portfolio {
     .portfolio-item {
         cursor: pointer;
@@ -14,7 +17,7 @@
             left: 0;
             transition: $transition-base;
             opacity: 0;
-            background-color: fade-out($primary, 0.1);
+            background-color: fade-out($primary, .1);
 
             &:hover {
                 opacity: 1;
@@ -29,6 +32,12 @@
 
 // Styling for the portfolio modals
 .portfolio-modal {
+    .btn-close {
+        color: $primary;
+        font-size: 2rem;
+        padding: 1rem;
+    }
+
     .portfolio-modal-title {
         font-size: 2.25rem;
         line-height: 2rem;
@@ -37,16 +46,5 @@
             font-size: 3rem;
             line-height: 2.5rem;
         }
-    }
-
-    .close {
-        position: absolute;
-        z-index: 1;
-        right: 1.5rem;
-        top: 1rem;
-        font-size: 3rem;
-        line-height: 3rem;
-        color: $primary;
-        opacity: 1;
     }
 }

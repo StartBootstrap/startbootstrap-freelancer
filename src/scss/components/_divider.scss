@@ -1,4 +1,7 @@
-// Custom divider with icon
+// 
+// Divider
+// 
+
 .divider-custom {
     margin: 1.25rem 0 1.5rem;
     width: 100%;
@@ -12,7 +15,7 @@
         height: 0.25rem;
         background-color: $secondary;
         border-radius: 1rem;
-        border-color: $secondary !important;
+        border-color: $secondary;
 
         &:first-child {
             margin-right: 1rem;
@@ -24,7 +27,7 @@
     }
 
     .divider-custom-icon {
-        color: $secondary !important;
+        color: $secondary;
         font-size: 2rem;
     }
 
@@ -34,7 +37,7 @@
         }
 
         .divider-custom-icon {
-            color: $white !important;
+            color: $white;
         }
     }
 }
