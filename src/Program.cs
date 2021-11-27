@@ -1,10 +1,9 @@
 ﻿using Kentico.Kontent.Delivery.Abstractions;
 using Kentico.Kontent.Delivery.Extensions;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Components.Web;
 using SendGrid.Extensions.DependencyInjection;
 using StartBootstrap.Freelancer.Blazor.Models;
-using System.Threading.Tasks;
 
 namespace StartBootstrap.Freelancer.Blazor
 {
@@ -14,6 +13,7 @@ namespace StartBootstrap.Freelancer.Blazor
         {
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
             builder.RootComponents.Add<App>("#app");
+            builder.RootComponents.Add<HeadOutlet>("head::after");
 
             builder.Services.AddDeliveryClient(builder.Configuration.Build());
 

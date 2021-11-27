@@ -1,51 +1,52 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-  </PropertyGroup>
-  
-  <PropertyGroup>
-    <BlazorWebAssemblyEnableLinking>true</BlazorWebAssemblyEnableLinking>
-    <!-- This needs to be disabled when publishing to GH pages-->
-    <BlazorEnableCompression>false</BlazorEnableCompression>
-    <UserSecretsId>d752cec5-2a32-413b-a52b-bcc51aa31258</UserSecretsId>
-  </PropertyGroup>
-  
-  <ItemGroup>
-    <Content Include="gulpfile.js" />
-  </ItemGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <EmbeddedResource Include="wwwroot\appsettings.json" />
-  </ItemGroup>
+	<PropertyGroup>
+		<!-- This needs to be disabled when publishing to GH pages-->
+		<BlazorEnableCompression>false</BlazorEnableCompression>
+		<UserSecretsId>d752cec5-2a32-413b-a52b-bcc51aa31258</UserSecretsId>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<RunAOTCompilation>true</RunAOTCompilation>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Kentico.Kontent.Delivery" Version="14.2.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.2" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
-    <PackageReference Include="SendGrid" Version="9.22.0" />
-    <PackageReference Include="SendGrid.Extensions.DependencyInjection" Version="1.0.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<Content Include="gulpfile.js" />
+	</ItemGroup>
 
-  <Target Name="GenerateModels" BeforeTargets="BeforeBuild;BeforeRebuild">
-    <PropertyGroup>
-      <PowerShellExe Condition=" '$(PowerShellExe)'=='' ">%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe</PowerShellExe>
-      <ScriptLocationWin Condition=" '$(ScriptLocation)'=='' ">$(ProjectDir)\GenerateModels.ps1</ScriptLocationWin>
-      <ScriptLocationUnix Condition=" '$(ScriptLocation)'=='' ">$(ProjectDir)\GenerateModels.sh</ScriptLocationUnix>
-    </PropertyGroup>
-    <Exec Condition=" '$(OS)' == 'Windows_NT' " Command="&quot;$(PowerShellExe)&quot; -NonInteractive -executionpolicy Unrestricted -command &quot;&amp; { &quot;$(ScriptLocationWin)&quot; } &quot;">
-    </Exec>
-    <Exec Condition=" '$(OS)' != 'Windows_NT' " Command="sh $(ScriptLocationUnix)">
-    </Exec>
-    <ItemGroup>
-      <Compile Remove="Models\**\*.cs" />
-      <Compile Include="Models\**\*.cs" />
-      <FileWrites Remove="Models\**\*.cs" />
-      <FileWrites Update="Models\**\*.cs" />
-    </ItemGroup>
-  </Target>
+	<ItemGroup>
+		<EmbeddedResource Include="wwwroot\appsettings.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Kentico.Kontent.Delivery" Version="15.0.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.0" PrivateAssets="all" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
+		<PackageReference Include="SendGrid" Version="9.25.0" />
+		<PackageReference Include="SendGrid.Extensions.DependencyInjection" Version="1.0.1" />
+	</ItemGroup>
+
+	<Target Name="GenerateModels" BeforeTargets="BeforeBuild;BeforeRebuild">
+		<PropertyGroup>
+			<PowerShellExe Condition=" '$(PowerShellExe)'=='' ">%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe</PowerShellExe>
+			<ScriptLocationWin Condition=" '$(ScriptLocation)'=='' ">$(ProjectDir)\GenerateModels.ps1</ScriptLocationWin>
+			<ScriptLocationUnix Condition=" '$(ScriptLocation)'=='' ">$(ProjectDir)\GenerateModels.sh</ScriptLocationUnix>
+		</PropertyGroup>
+		<Exec Condition=" '$(OS)' == 'Windows_NT' " Command="&quot;$(PowerShellExe)&quot; -NonInteractive -executionpolicy Unrestricted -command &quot;&amp; { &quot;$(ScriptLocationWin)&quot; } &quot;">
+		</Exec>
+		<Exec Condition=" '$(OS)' != 'Windows_NT' " Command="sh $(ScriptLocationUnix)">
+		</Exec>
+		<ItemGroup>
+			<Compile Remove="Models\**\*.cs" />
+			<Compile Include="Models\**\*.cs" />
+			<FileWrites Remove="Models\**\*.cs" />
+			<FileWrites Update="Models\**\*.cs" />
+		</ItemGroup>
+	</Target>
 
 </Project>

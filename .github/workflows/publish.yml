@@ -1,4 +1,4 @@
-name: .NET 5
+name: Publish to GitHub Pages
 
 on:
   push:
@@ -18,18 +18,9 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.x
-    - name: Install dependencies
-      run: dotnet restore
-      working-directory: src
-    - name: Build
-      run: dotnet build --configuration Release --no-restore      
-      working-directory: src
-    - name: Test
-      run: dotnet test --configuration Release --no-build --verbosity normal
-      working-directory: src
+        dotnet-version: 6.0.x
     - name: Publish
-      run: dotnet publish --configuration Release --no-build -o ../output 
+      run: dotnet publish --configuration Release -o ../output 
       working-directory: src
     - name: "Artifact : site"
       uses: actions/upload-artifact@v2

@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
-using System.Threading.Tasks;
 
 namespace StartBootstrap.Freelancer.Blazor.Shared
 {
@@ -9,10 +8,10 @@ namespace StartBootstrap.Freelancer.Blazor.Shared
         [Inject]
         private IJSRuntime JSRuntime { get; set; }
 
-        protected override Task OnAfterRenderAsync(bool firstRender)
+        protected override async Task OnAfterRenderAsync(bool firstRender)
         {
-            JSRuntime.InvokeAsync<object>("initNavMenu");
-            return base.OnAfterRenderAsync(firstRender);
+            await JSRuntime.InvokeAsync<object>("initNavMenu");
+            await base.OnAfterRenderAsync(firstRender);
         }
     }
 }
