@@ -11430,8 +11430,16 @@ html {
   color: #6c757d;
 }
 
-header.masthead{
+header.masthead {
+  padding-top: 10.5rem;
+  padding-bottom: 6rem;
+  text-align: center;
+  color: #fff;
   background-image: url("../1.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
 }
 
 .masthead {
