@@ -11433,6 +11433,7 @@ html {
 .masthead {
   padding-top: calc(6rem + 74px);
   padding-bottom: 6rem;
+  background-image: url("../1.jpeg");
 }
 .masthead .masthead-heading {
   font-size: 2.75rem;
