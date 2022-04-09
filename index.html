@@ -452,16 +452,11 @@
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
-    <script src="https://unpkg.com/newbot@latest/dist/newbot.min.js"></script>
-<script src="dist/browser/skill.js"></script>
-
-<script>
-const converse = new NewBot(MainSkill, {
-    model: '/model/model.nlp'
-})
-converse.exec('Hey', (output, done) => {
-    console.log(output)
-    done()
-})
-</script>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="HI"
+  agent-id="3eff35c2-93eb-4e40-8af4-60bbeddd862d"
+  language-code="en"
+></df-messenger>
 </html>
