@@ -7377,7 +7377,7 @@ textarea.form-control-lg {
 }
 
 .mb-5 {
-  margin-bottom: 3rem !important;
+  margin-bottom: 9rem !important;
 }
 
 .mb-auto {
@@ -11441,6 +11441,7 @@ header.masthead {
   background-position: center center;
   background-size: cover;
 }
+
 
 @media (min-width: 992px) {
   .masthead {
