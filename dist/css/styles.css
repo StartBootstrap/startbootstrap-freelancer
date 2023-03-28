@@ -7668,7 +7668,7 @@ textarea.form-control-lg {
 }
 
 .mb-5 {
-  margin-bottom: 3rem !important;
+  margin-bottom: 9rem !important;
 }
 
 .mb-auto {
@@ -10967,20 +10967,18 @@ html {
   color: #6c757d;
 }
 
-.masthead {
-  padding-top: calc(6rem + 74px);
+header.masthead {
+  padding-top: 10.5rem;
   padding-bottom: 6rem;
+  text-align: center;
+  color: #fff;
+  background-image: url("../bg.PNG");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
 }
-.masthead .masthead-heading {
-  font-size: 2.75rem;
-  line-height: 2.75rem;
-}
-.masthead .masthead-subheading {
-  font-size: 1.25rem;
-}
-.masthead .masthead-avatar {
-  width: 15rem;
-}
+
 
 @media (min-width: 992px) {
   .masthead {
